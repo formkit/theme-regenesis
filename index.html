@@ -4,7 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@formkit/themes/tailwindcss": "https://cdn.jsdelivr.net/npm/@formkit/themes@latest/dist/tailwindcss/index.min.mjs?key=20231003"
+        }
+      }
+    </script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script type="module" id="tailindconfig">
+      import FormKitTailwind from "@formkit/themes/tailwindcss";
+
+      window.tailwind.config = {
+        plugins: [FormKitTailwind],
+      };
+    </script>
     <title>FormKit Theme Starter</title>
   </head>
   <body>
