@@ -9,7 +9,7 @@ const spacingValue = ref(2);
 const textSizeScale = ["sm", "base", "lg"];
 const textSizeValue = ref(1);
 const colorScale = [
-  "red",
+  "fuchsia",
   "orange",
   "yellow",
   "green",

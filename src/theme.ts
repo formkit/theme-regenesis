@@ -71,7 +71,7 @@ export default createTheme({
       value: "400",
       scale: ["200", "300", "400", "500", "600"],
     },
-    inputMaxWidth: "max-w-[17em]",
+    inputMaxWidth: "max-w-[17rem]",
   },
   inputs: {
     /**
@@ -213,9 +213,10 @@ export default createTheme({
       fileName:
         "truncate min-w-0 w-full shrink leading-5 group-data-[has-multiple]/list:text-$textSize(-1)",
       fileRemove:
-        "right-$spacing peer-data-[has-multiple]:text-$textSize(-1) peer-data-[has-multiple]:bottom-$spacing peer-data-[has-multiple]:left-$spacing group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10,*) peer-data-[has-multiple]:text-$primaryColor-500 ring-$primaryColor-400 $borderRadius(0,rounded-none,rounded-lg) z-20 flex appearance-none items-center text-[0px] outline-none hover:!text-red-500 focus-visible:ring-2 group-data-[disabled]:pointer-events-none peer-data-[has-multiple]:absolute group-data-[disabled]:!text-$textColor-500 dark:hover:!text-red-400",
+        "right-$spacing peer-data-[has-multiple]:text-$textSize(-1) peer-data-[has-multiple]:bottom-$spacing peer-data-[has-multiple]:left-$spacing group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10,*) peer-data-[has-multiple]:text-$primaryColor-500 ring-$primaryColor-400 $borderRadius z-20 flex appearance-none items-center text-[0px] outline-none hover:!text-red-500 focus-visible:ring-2 group-data-[disabled]:pointer-events-none peer-data-[has-multiple]:absolute group-data-[disabled]:!text-$textColor-500 dark:hover:!text-red-400",
       fileRemoveIcon: "block text-base w-[0.75em] relative z-10",
-      inner: "relative cursor-pointer",
+      inner:
+        "relative cursor-pointer group-data-[multiple]:$borderRadius(0,rounded-none,rounded-lg)",
       input:
         "cursor-pointer text-transparent absolute inset-0 opacity-0 z-10 file:pointer-events-none file:w-0 file:h-0 file:overflow-hidden",
       noFiles:
@@ -259,14 +260,14 @@ export default createTheme({
       wrapper: "mb-$spacing(-1)",
       inner: `
         ${"" /* base styles */}
-        relative flex items-center $inputMaxWidth border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
+        relative flex items-center bg-white $inputMaxWidth border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow group-data-[multiple]:$borderRadius(0,rounded-none,rounded-lg)
       
         ${"" /* dark mode styles */}
         dark:bg-transparent dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
       `,
       input: `
         ${"" /* base styles */}
-        flex-grow p-$spacing pr-[2em] text-ellipsis min-w-0 outline-none bg-transparent group-data-[disabled]:!cursor-not-allowed group-data-[prefix-icon]:!pl-0 group-data-[suffix-icon]:!pr-0 data-[placeholder]:text-$textColor-400 group-data-[multiple]:!p-0 selection:bg-$primaryColor-100
+        grow p-$spacing pr-[2em] text-$textSize text-$textColor-700 text-ellipsis min-w-0 outline-none bg-transparent group-data-[disabled]:!cursor-not-allowed group-data-[prefix-icon]:!pl-0 group-data-[suffix-icon]:!pr-0 data-[placeholder]:text-$textColor-400 group-data-[multiple]:!p-0 selection:bg-$primaryColor-100
 
         ${"" /* dark mode styles */}
         dark:data-[placeholder]:text-$textColor-400/50 dark:text-$textColor-300
@@ -275,7 +276,7 @@ export default createTheme({
         border-none focus:ring-0 bg-none
       `,
       selectIcon:
-        "absolute w-[1em] pointer-events-none right-$spacing group-data-[suffix-icon]:mr-[1.5em]",
+        "absolute w-[1em] text-$textColor-700 pointer-events-none right-$spacing group-data-[suffix-icon]:mr-[1.5em]",
       optGroup:
         "group/optgroup group-data-[multiple]:px-$spacing(-2) pt-$spacing(-2) font-bold text-$textSize(-1)",
       option: `
@@ -285,12 +286,12 @@ export default createTheme({
         ${"" /* dark mode styles */}
         dark:group-data-[multiple]:focus:bg-$primaryColor-700 dark:group-data-[multiple]:checked:bg-$primaryColor-700
       `,
-      prefixIcon: "ml-$spacing",
-      suffixIcon: "mr-$spacing",
+      prefixIcon: "ml-$spacing text-$textColor-600 dark:text-$textColor-300",
+      suffixIcon: "mr-$spacing text-$textColor-600 dark:text-$textColor-300",
     },
     textarea: {
       inner:
-        "flex $inputMaxWidth items-center mb-$spacing(-1) border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400",
+        "flex $inputMaxWidth items-center mb-$spacing(-1) border border-$textColor-$borderColorStrength $borderRadius(0,rounded-none,rounded-lg) focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400",
       input: `
         ${"" /* base styles */}
         text-$textSize(-1) h-$spacing(16,*) text-$textColor-700 min-w-0 grow shrink !p-$spacing outline-none bg-transparent selection:bg-$primaryColor-100 placeholder:text-$textColor-400 group-data-[disabled]:!cursor-not-allowed
@@ -301,8 +302,10 @@ export default createTheme({
         ${"" /* Tailwind Forms overrides */}
         p-0 border-none focus:ring-0
       `,
-      prefixIcon: "ml-$spacing mr-0",
-      suffixIcon: "mr-$spacing ml-0",
+      prefixIcon:
+        "ml-$spacing mr-0 text-$textColor-600 dark:text-$textColor-300",
+      suffixIcon:
+        "mr-$spacing ml-0 text-$textColor-600 dark:text-$textColor-300",
     },
     time: {
       // inherits family:text classes
