@@ -37,7 +37,7 @@ export default createTheme({
       editor: "radius",
       value: "rounded",
       min: "rounded-none",
-      max: "rounded-lg",
+      max: "rounded-full",
     },
     primaryColor: {
       editor: "color",
@@ -213,7 +213,7 @@ export default createTheme({
       fileName:
         "truncate min-w-0 w-full shrink leading-5 group-data-[has-multiple]/list:text-$textSize(-1)",
       fileRemove:
-        "right-$spacing peer-data-[has-multiple]:text-$textSize(-1) peer-data-[has-multiple]:bottom-$spacing peer-data-[has-multiple]:left-$spacing group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10,*) peer-data-[has-multiple]:text-$primaryColor-500 ring-$primaryColor-400 $borderRadius(0,border-none,border-lg) z-20 flex appearance-none items-center text-[0px] outline-none hover:!text-red-500 focus-visible:ring-2 group-data-[disabled]:pointer-events-none peer-data-[has-multiple]:absolute group-data-[disabled]:!text-$textColor-500 dark:hover:!text-red-400",
+        "right-$spacing peer-data-[has-multiple]:text-$textSize(-1) peer-data-[has-multiple]:bottom-$spacing peer-data-[has-multiple]:left-$spacing group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10,*) peer-data-[has-multiple]:text-$primaryColor-500 ring-$primaryColor-400 $borderRadius(0,rounded-none,rounded-lg) z-20 flex appearance-none items-center text-[0px] outline-none hover:!text-red-500 focus-visible:ring-2 group-data-[disabled]:pointer-events-none peer-data-[has-multiple]:absolute group-data-[disabled]:!text-$textColor-500 dark:hover:!text-red-400",
       fileRemoveIcon: "block text-base w-[0.75em] relative z-10",
       inner: "relative cursor-pointer",
       input:

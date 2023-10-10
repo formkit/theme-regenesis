@@ -5,8 +5,8 @@ dependencies:
     specifier: ^1.2.2
     version: 1.2.2
   '@formkit/theme-creator':
-    specifier: ^0.6.0
-    version: 0.6.1
+    specifier: ^0.7.1
+    version: 0.7.1
   '@formkit/vue':
     specifier: 1.3.0-e757b9c
     version: 1.3.0-e757b9c(tailwindcss@3.3.3)
@@ -319,8 +319,8 @@ packages:
       '@formkit/validation': 1.3.0-e757b9c
     dev: false
 
-  /@formkit/theme-creator@0.6.1:
-    resolution: {integrity: sha512-84bHlcBdL7HBYfySAjKu2a5cy5eEG/cCTTrlI+cLJuPrilS85lzCSAf13I4v/uzlFB3ywhKJmRq+uIpoil8UQA==}
+  /@formkit/theme-creator@0.7.1:
+    resolution: {integrity: sha512-gxJ2Kky42unaGyjokNZ8LzZUNrDZTNO+1TMUnsjLiDVrasSGxGBYGuuhL4b45yNEoG2QHCmRVK9M28xquxfaRQ==}
     dependencies:
       '@formkit/core': 1.2.2
       '@formkit/utils': 1.2.2
