@@ -90,7 +90,7 @@ export default createTheme({
         "block text-$textColor-700 text-$textSize(-1) font-bold mb-$spacing(-2) dark:text-$textColor-300",
       legend:
         "block text-$textColor-700 text-$textSize(-1) font-bold dark:text-$textColor-300",
-      input: "appearance-none",
+      input: "appearance-none [color-scheme:light] dark:[color-scheme:dark]",
       help: "text-$textColor-500 text-$textSize(-2) dark:text-$textColor-400",
       message:
         "text-red-500 mb-$spacing(-1) text-$textSize(-2) dark:text-red-400",
@@ -276,7 +276,7 @@ export default createTheme({
         border-none focus:ring-0 bg-none
       `,
       selectIcon:
-        "absolute w-[1em] text-$textColor-700 pointer-events-none right-$spacing group-data-[suffix-icon]:mr-[1.5em]",
+        "absolute w-[1em] text-$textColor-700 pointer-events-none right-$spacing group-data-[suffix-icon]:mr-[1.5em] dark:text-$textColor-300",
       optGroup:
         "group/optgroup group-data-[multiple]:px-$spacing(-2) pt-$spacing(-2) font-bold text-$textSize(-1)",
       option: `
