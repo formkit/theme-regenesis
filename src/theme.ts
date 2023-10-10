@@ -36,6 +36,8 @@ export default createTheme({
     borderRadius: {
       editor: "radius",
       value: "rounded",
+      min: "rounded-none",
+      max: "rounded-lg",
     },
     primaryColor: {
       editor: "color",
@@ -44,18 +46,25 @@ export default createTheme({
     textColor: {
       editor: "color",
       value: "zinc",
+      scale: ["slate", "gray", "zinc", "neutral", "stone"],
     },
     spacing: {
       editor: "spacing",
       value: "2",
+      min: "0.5",
+      max: "3",
     },
     textSize: {
       editor: "fontSize",
       value: "base",
+      min: "xs",
+      max: "lg",
     },
     inputShadow: {
       editor: "shadow",
       value: "shadow",
+      min: "shadow-none",
+      max: "shadow-lg",
     },
     borderColorStrength: {
       editor: "slider",
@@ -67,12 +76,12 @@ export default createTheme({
   inputs: {
     /**
      * === Globals ===
-     * These class lists apply to _all_ inputs that have matching sections.
+     * These class lists apply to all inputs that have matching sections.
      * Use carefully.
      */
     __globals: {
       outer:
-        "group mb-$spacing(5) data-[disabled]:select-none data-[disabled]:opacity-50",
+        "group mb-$spacing(5,*) data-[disabled]:select-none data-[disabled]:opacity-50",
       prefixIcon:
         "flex items-center mr-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
       suffixIcon:
@@ -113,7 +122,7 @@ export default createTheme({
         "peer pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0",
       decorator: `
         ${"" /* base styles */}
-        mr-1.5 ring-$primaryColor-400 peer-checked:border-$primaryColor-500 relative block h-$spacing(5) w-$spacing(5) border border-$textColor-$borderColorStrength text-transparent ring-offset-2 peer-checked:text-$primaryColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:grayscale $inputShadow group-data-[disabled]/listoption:cursor-not-allowed
+        mr-1.5 ring-$primaryColor-400 peer-checked:border-$primaryColor-500 relative block h-$spacing(5,*) w-$spacing(5,*) border border-$textColor-$borderColorStrength text-transparent ring-offset-2 peer-checked:text-$primaryColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:grayscale $inputShadow group-data-[disabled]/listoption:cursor-not-allowed
 
         ${"" /* dark mode styles */}
         dark:border-$textColor-$borderColorStrength(1) dark:group-data-[disabled]:bg-$textColor-700 dark:ring-offset-$primaryColor-300 dark:peer-focus-visible:ring-1
@@ -197,14 +206,14 @@ export default createTheme({
     file: {
       // inherits family:text classes
       fileList:
-        "group/list peer w-full min-w-0 data-[has-multiple]:mb-$spacing(6)",
+        "group/list peer w-full min-w-0 data-[has-multiple]:mb-$spacing(6,*)",
       fileItemIcon: "h-[1em] w-[1em] mr-$spacing shrink-0",
       fileItem:
         "flex min-w-0 items-center text-$textColor-700 mb-$spacing(-1) last:mb-0 dark:text-$textColor-300",
       fileName:
         "truncate min-w-0 w-full shrink leading-5 group-data-[has-multiple]/list:text-$textSize(-1)",
       fileRemove:
-        "right-$spacing peer-data-[has-multiple]:text-$textSize(-1) peer-data-[has-multiple]:bottom-$spacing peer-data-[has-multiple]:left-$spacing group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10) peer-data-[has-multiple]:text-$primaryColor-500 ring-$primaryColor-400 $borderRadius z-20 flex appearance-none items-center text-[0px] outline-none hover:!text-red-500 focus-visible:ring-2 group-data-[disabled]:pointer-events-none peer-data-[has-multiple]:absolute group-data-[disabled]:!text-$textColor-500 dark:hover:!text-red-400",
+        "right-$spacing peer-data-[has-multiple]:text-$textSize(-1) peer-data-[has-multiple]:bottom-$spacing peer-data-[has-multiple]:left-$spacing group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10,*) peer-data-[has-multiple]:text-$primaryColor-500 ring-$primaryColor-400 $borderRadius(0,border-none,border-lg) z-20 flex appearance-none items-center text-[0px] outline-none hover:!text-red-500 focus-visible:ring-2 group-data-[disabled]:pointer-events-none peer-data-[has-multiple]:absolute group-data-[disabled]:!text-$textColor-500 dark:hover:!text-red-400",
       fileRemoveIcon: "block text-base w-[0.75em] relative z-10",
       inner: "relative cursor-pointer",
       input:
@@ -235,7 +244,7 @@ export default createTheme({
         dark:[&::-webkit-slider-runnable-track]:bg-$textColor-700
 
         ${"" /* webkit styles - thumb */}
-        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-$spacing(4) [&::-webkit-slider-thumb]:w-$spacing(4) [&::-webkit-slider-thumb]:bg-$primaryColor-500 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:top-1/2 [&::-webkit-slider-thumb]:-translate-y-1/2 [&::-webkit-slider-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-webkit-slider-thumb]:group-data-[disabled]:!ring-$textColor-$borderColorStrength(-1) [&::-webkit-slider-thumb]:focus-visible:ring-2 [&::-webkit-slider-thumb]:focus:!ring-$primaryColor-400 [&::-webkit-slider-thumb]:focus:ring-offset-2 [&::-webkit-slider-thumb]:$inputShadow
+        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-$spacing(4,*) [&::-webkit-slider-thumb]:w-$spacing(4,*) [&::-webkit-slider-thumb]:bg-$primaryColor-500 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:top-1/2 [&::-webkit-slider-thumb]:-translate-y-1/2 [&::-webkit-slider-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-webkit-slider-thumb]:group-data-[disabled]:!ring-$textColor-$borderColorStrength(-1) [&::-webkit-slider-thumb]:focus-visible:ring-2 [&::-webkit-slider-thumb]:focus:!ring-$primaryColor-400 [&::-webkit-slider-thumb]:focus:ring-offset-2 [&::-webkit-slider-thumb]:$inputShadow
       
         ${"" /* moz styles - track */}
         [&::-moz-range-track]:bg-$textColor-200 [&::-moz-range-track]:h-$spacing(-1) [&::-moz-range-track]:min-h-[0.25em] [&::-moz-range-track]:max-h-[1em] [&::-moz-range-track]:$borderRadius
@@ -243,7 +252,7 @@ export default createTheme({
         dark:[&::-moz-range-track]:bg-$textColor-700
 
         ${"" /* moz styles - thumb */}
-        [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:h-$spacing(4) [&::-moz-range-thumb]:w-$spacing(4) [&::-moz-range-thumb]:bg-$primaryColor-500 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-moz-range-thumb]:group-data-[disabled]:!ring-$textColor-300 [&::-moz-range-thumb]:focus-visible:ring-2 [&::-moz-range-thumb]:focus:!ring-$primaryColor-400 [&::-moz-range-thumb]:focus:ring-offset-2 [&::-moz-range-thumb]:$inputShadow
+        [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:h-$spacing(4,*) [&::-moz-range-thumb]:w-$spacing(4,*) [&::-moz-range-thumb]:bg-$primaryColor-500 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-moz-range-thumb]:group-data-[disabled]:!ring-$textColor-300 [&::-moz-range-thumb]:focus-visible:ring-2 [&::-moz-range-thumb]:focus:!ring-$primaryColor-400 [&::-moz-range-thumb]:focus:ring-offset-2 [&::-moz-range-thumb]:$inputShadow
       `,
     },
     select: {
@@ -284,7 +293,7 @@ export default createTheme({
         "flex $inputMaxWidth items-center mb-$spacing(-1) border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400",
       input: `
         ${"" /* base styles */}
-        text-$textSize(-1) h-$spacing(16) text-$textColor-700 min-w-0 grow shrink !p-$spacing outline-none bg-transparent selection:bg-$primaryColor-100 placeholder:text-$textColor-400 group-data-[disabled]:!cursor-not-allowed
+        text-$textSize(-1) h-$spacing(16,*) text-$textColor-700 min-w-0 grow shrink !p-$spacing outline-none bg-transparent selection:bg-$primaryColor-100 placeholder:text-$textColor-400 group-data-[disabled]:!cursor-not-allowed
 
         ${"" /* dark mode styles */}
         dark:placeholder-$textColor-400/50 dark:text-$textColor-300
