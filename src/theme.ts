@@ -122,10 +122,10 @@ export default createTheme({
         "peer pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0",
       decorator: `
         ${"" /* base styles */}
-        mr-1.5 ring-$primaryColor-400 peer-checked:border-$primaryColor-500 relative block h-$spacing(5,*) w-$spacing(5,*) border border-$textColor-$borderColorStrength text-transparent ring-offset-2 peer-checked:text-$primaryColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:grayscale $inputShadow group-data-[disabled]/listoption:cursor-not-allowed
+        mr-1.5 bg-white ring-$primaryColor-400 peer-checked:border-$primaryColor-500 relative block h-$spacing(5,*) w-$spacing(5,*) border border-$textColor-$borderColorStrength text-transparent ring-offset-2 peer-checked:text-$primaryColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:grayscale $inputShadow group-data-[disabled]/listoption:cursor-not-allowed
 
         ${"" /* dark mode styles */}
-        dark:border-$textColor-$borderColorStrength(1) dark:group-data-[disabled]:bg-$textColor-700 dark:ring-offset-$primaryColor-300 dark:peer-focus-visible:ring-1
+        dark:border-$textColor-$borderColorStrength(1) dark:bg-transparent dark:group-data-[disabled]:bg-$textColor-700 dark:ring-offset-$primaryColor-300 dark:peer-focus-visible:ring-1
       `,
       decoratorIcon:
         "absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2",
@@ -174,7 +174,7 @@ export default createTheme({
     },
     checkbox: {
       // inherits family:box classes
-      decorator: "$borderRadius",
+      decorator: "$borderRadius(0,rounded-none,rounded-lg)",
       decoratorIcon: "max-w-[66.66%]",
     },
     color: {
@@ -291,7 +291,7 @@ export default createTheme({
     },
     textarea: {
       inner:
-        "flex $inputMaxWidth items-center mb-$spacing(-1) border border-$textColor-$borderColorStrength $borderRadius(0,rounded-none,rounded-lg) focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400",
+        "flex $inputMaxWidth items-center mb-$spacing(-1) bg-white border border-$textColor-$borderColorStrength $borderRadius(0,rounded-none,rounded-lg) focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400 dark:bg-transparent",
       input: `
         ${"" /* base styles */}
         text-$textSize(-1) h-$spacing(16,*) text-$textColor-700 min-w-0 grow shrink !p-$spacing outline-none bg-transparent selection:bg-$primaryColor-100 placeholder:text-$textColor-400 group-data-[disabled]:!cursor-not-allowed
