@@ -41,17 +41,17 @@ export default createTheme({
     },
     primaryColor: {
       editor: "color",
-      value: "fuchsia",
+      value: "blue",
     },
     textColor: {
       editor: "color",
-      value: "zinc",
+      value: "slate",
       scale: ["slate", "gray", "zinc", "neutral", "stone"],
     },
     spacing: {
       editor: "spacing",
       value: "2",
-      min: "0.5",
+      min: "1",
       max: "3",
     },
     textSize: {
@@ -67,11 +67,15 @@ export default createTheme({
       max: "shadow-lg",
     },
     borderColorStrength: {
-      editor: "slider",
+      editor: "buttons",
       value: "400",
-      scale: ["200", "300", "400", "500", "600"],
+      scale: ["100", "200", "300", "400", "500", "600"],
     },
-    inputMaxWidth: "max-w-[17rem]",
+    inputMaxWidth: {
+      editor: "select",
+      value: "max-w-[17em]",
+      scale: ["max-w-[15em]", "max-w-[17em]", "max-w-[20em]"],
+    },
   },
   inputs: {
     /**
@@ -81,23 +85,23 @@ export default createTheme({
      */
     __globals: {
       outer:
-        "group mb-$spacing(5,*) data-[disabled]:select-none data-[disabled]:opacity-50",
-      prefixIcon:
-        "flex items-center mr-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
-      suffixIcon:
-        "flex items-center ml-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
+        "group mb-$spacing(5,*) data-[disabled]:select-none data-[disabled]:opacity-50 text-$textSize",
       label:
         "block text-$textColor-700 text-$textSize(-1) font-bold mb-$spacing(-2) dark:text-$textColor-300",
       legend:
         "block text-$textColor-700 text-$textSize(-1) font-bold dark:text-$textColor-300",
       input: "appearance-none [color-scheme:light] dark:[color-scheme:dark]",
+      prefixIcon:
+        "flex items-center mr-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
+      suffixIcon:
+        "flex items-center ml-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
       help: "text-$textColor-500 text-$textSize(-2) dark:text-$textColor-400",
       message:
         "text-red-500 mb-$spacing(-1) text-$textSize(-2) dark:text-red-400",
     },
 
     /**
-     * === Family groupings ===
+     * === Core family groupings ===
      * These class lists apply to all inputs that are part of the matching family.
      * There is a comment in each input class list that indicates which family it belongs to.
      */
@@ -106,7 +110,7 @@ export default createTheme({
       outer: "data-[disabled]:opacity-100",
       input: `
         ${"" /* base styles */}
-        bg-$primaryColor-500 $borderRadius !text-$textSize(-1) outline-none flex items-center p-3 mb-$spacing(-1) text-white text-$textSize(-1) active:text-$primaryColor-100 active:bg-$primaryColor-700 hover:bg-$primaryColor-600 ring-offset-2 ring-$primaryColor-400 focus-visible:ring-2 disabled:border-$textColor-$borderColorStrength disabled:bg-$textColor-400 disabled:text-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
+        bg-$primaryColor-500 $borderRadius !text-$textSize(-1) p-$spacing(3,1,5) outline-none flex items-center mb-$spacing(-1) text-white text-$textSize(-1) active:text-$primaryColor-100 active:bg-$primaryColor-700 hover:bg-$primaryColor-600 ring-offset-2 ring-$primaryColor-400 focus-visible:ring-2 disabled:border-$textColor-$borderColorStrength disabled:bg-$textColor-400 disabled:text-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
       
         ${"" /* dark mode styles */}
         dark:disabled:border-$textColor-100 dark:disabled:bg-$textColor-500 dark:disabled:text-$textColor-200 dark:ring-offset-$primaryColor-300
@@ -122,7 +126,7 @@ export default createTheme({
         "peer pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0",
       decorator: `
         ${"" /* base styles */}
-        mr-1.5 bg-white ring-$primaryColor-400 peer-checked:border-$primaryColor-500 relative block h-$spacing(5,*) w-$spacing(5,*) border border-$textColor-$borderColorStrength text-transparent ring-offset-2 peer-checked:text-$primaryColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:grayscale $inputShadow group-data-[disabled]/listoption:cursor-not-allowed
+        mr-1.5 bg-white ring-$primaryColor-400 peer-checked:border-$primaryColor-500 relative block w-$spacing(5,1,6) aspect-square border border-$textColor-$borderColorStrength text-transparent ring-offset-2 peer-checked:text-$primaryColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:grayscale $inputShadow group-data-[disabled]/listoption:cursor-not-allowed
 
         ${"" /* dark mode styles */}
         dark:border-$textColor-$borderColorStrength(1) dark:bg-transparent dark:group-data-[disabled]:bg-$textColor-700 dark:ring-offset-$primaryColor-300 dark:peer-focus-visible:ring-1
@@ -240,20 +244,20 @@ export default createTheme({
         group/input cursor-pointer
         
         ${"" /* webkit styles - track */}
-        [&::-webkit-slider-runnable-track]:bg-$textColor-$borderColorStrength(-1) [&::-webkit-slider-runnable-track]:h-$spacing(-1) [&::-webkit-slider-runnable-track]:min-h-[0.25em] ::-webkit-slider-runnable-track]:max-h-[1em] [&::-webkit-slider-runnable-track]:$borderRadius
+        [&::-webkit-slider-runnable-track]:bg-$textColor-$borderColorStrength(-1) [&::-webkit-slider-runnable-track]:h-$spacing(-1,1,1.5) [&::-webkit-slider-runnable-track]:min-h-[0.25em] ::-webkit-slider-runnable-track]:max-h-[1em] [&::-webkit-slider-runnable-track]:$borderRadius
 
         dark:[&::-webkit-slider-runnable-track]:bg-$textColor-700
 
         ${"" /* webkit styles - thumb */}
-        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-$spacing(4,*) [&::-webkit-slider-thumb]:w-$spacing(4,*) [&::-webkit-slider-thumb]:bg-$primaryColor-500 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:top-1/2 [&::-webkit-slider-thumb]:-translate-y-1/2 [&::-webkit-slider-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-webkit-slider-thumb]:group-data-[disabled]:!ring-$textColor-$borderColorStrength(-1) [&::-webkit-slider-thumb]:focus-visible:ring-2 [&::-webkit-slider-thumb]:focus:!ring-$primaryColor-400 [&::-webkit-slider-thumb]:focus:ring-offset-2 [&::-webkit-slider-thumb]:$inputShadow
+        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-$spacing(3,2,5) [&::-webkit-slider-thumb]:aspect-square [&::-webkit-slider-thumb]:bg-$primaryColor-500 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:top-1/2 [&::-webkit-slider-thumb]:-translate-y-1/2 [&::-webkit-slider-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-webkit-slider-thumb]:group-data-[disabled]:!ring-$textColor-$borderColorStrength(-1) [&::-webkit-slider-thumb]:focus-visible:ring-2 [&::-webkit-slider-thumb]:focus:!ring-$primaryColor-400 [&::-webkit-slider-thumb]:focus:ring-offset-2 [&::-webkit-slider-thumb]:$inputShadow
       
         ${"" /* moz styles - track */}
-        [&::-moz-range-track]:bg-$textColor-200 [&::-moz-range-track]:h-$spacing(-1) [&::-moz-range-track]:min-h-[0.25em] [&::-moz-range-track]:max-h-[1em] [&::-moz-range-track]:$borderRadius
+        [&::-moz-range-track]:bg-$textColor-200 [&::-moz-range-track]:h-$spacing(-1,1,1.5) [&::-moz-range-track]:min-h-[0.25em] [&::-moz-range-track]:max-h-[1em] [&::-moz-range-track]:$borderRadius
 
         dark:[&::-moz-range-track]:bg-$textColor-700
 
         ${"" /* moz styles - thumb */}
-        [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:h-$spacing(4,*) [&::-moz-range-thumb]:w-$spacing(4,*) [&::-moz-range-thumb]:bg-$primaryColor-500 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-moz-range-thumb]:group-data-[disabled]:!ring-$textColor-300 [&::-moz-range-thumb]:focus-visible:ring-2 [&::-moz-range-thumb]:focus:!ring-$primaryColor-400 [&::-moz-range-thumb]:focus:ring-offset-2 [&::-moz-range-thumb]:$inputShadow
+        [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:w-$spacing(3,2,5) [&::-moz-range-thumb]:aspect-square [&::-moz-range-thumb]:bg-$primaryColor-500 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-moz-range-thumb]:group-data-[disabled]:!ring-$textColor-300 [&::-moz-range-thumb]:focus-visible:ring-2 [&::-moz-range-thumb]:focus:!ring-$primaryColor-400 [&::-moz-range-thumb]:focus:ring-offset-2 [&::-moz-range-thumb]:$inputShadow
       `,
     },
     select: {
@@ -289,6 +293,9 @@ export default createTheme({
       prefixIcon: "ml-$spacing text-$textColor-600 dark:text-$textColor-300",
       suffixIcon: "mr-$spacing text-$textColor-600 dark:text-$textColor-300",
     },
+    submit: {
+      // inherits family:button classes
+    },
     textarea: {
       inner:
         "flex $inputMaxWidth items-center mb-$spacing(-1) bg-white border border-$textColor-$borderColorStrength $borderRadius(0,rounded-none,rounded-lg) focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400 dark:bg-transparent",
@@ -316,6 +323,85 @@ export default createTheme({
       // inherits family:text classes
       input:
         "focus:[&::-webkit-datetime-edit-week-field]:bg-$primaryColor-100 focus:[&::-webkit-datetime-edit-year-field]:bg-$primaryColor-100",
+    },
+
+    /**
+     * === Pro family groupings ===
+     * These class lists apply to all inputs that are part of the matching pro family.
+     * There is a comment in each input class list that indicates which family it belongs to.
+     */
+    "family:dropdown": {
+      // autocomplete, dropdown, taglist
+      wrapper: "mb-$spacing(-1)",
+      inner: `
+        ${"" /* base styles */}
+        relative flex items-center bg-white $inputMaxWidth border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
+      
+        ${"" /* dark mode styles */}
+        dark:bg-transparent dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
+      `,
+      input: `
+        ${"" /* base styles */}
+        grow p-$spacing pr-0 text-$textSize text-$textColor-700 text-ellipsis min-w-0 outline-none bg-transparent group-data-[disabled]:!cursor-not-allowed group-data-[prefix-icon]:!pl-0 group-data-[suffix-icon]:!pr-0 data-[placeholder]:text-$textColor-400 selection:bg-$primaryColor-100
+
+        ${"" /* dark mode styles */}
+        dark:data-[placeholder]:text-$textColor-400/50 dark:text-$textColor-300
+
+        ${"" /* Tailwind Forms overrides */}
+        border-none focus:ring-0 bg-none
+      `,
+      listboxButton:
+        "w-[2.5em] self-stretch text-$textSize flex items-center text-$textColor-700 z-10 dark:text-$textColor-300",
+      removeSelection:
+        "w-[2.5em] self-stretch text-$textSize flex items-center text-$textColor-700 hover:text-red-400 z-10 dark:text-$textColor-300",
+      selectIcon:
+        "text-$textSize inline w-[1em] relative m-auto [&>svg]:w-[1em]",
+      closeIcon: "text-$textSize w-[0.75em] relative m-auto",
+      prefixIcon:
+        "ml-$spacing !mr-0 text-$textColor-600 dark:text-$textColor-300",
+      suffixIcon:
+        "mr-$spacing !ml-0 text-$textColor-600 dark:text-$textColor-300",
+      dropdownWrapper:
+        "hidden $borderRadius(0,rounded-none,rounded-lg) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-1,1,2) group-data-[expanded]:block",
+      listbox: "bg-white",
+      listitem:
+        "flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$textColor-700 text-$textSize aria-selected:text-white aria-selected:bg-$primaryColor-500 hover:bg-$primaryColor-100",
+      selectedIcon:
+        "flex absolute items-center left-$spacing text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
+      option: "ml-[1.5em]",
+      selectionWrapper: "grow flex items-center text-$textColor-700",
+      selection:
+        "grow [&>*]:ml-$spacing text-$textColor-700 group-data-[multiple]:p-$spacing",
+      tagsWrapper: "w-full",
+      tags: "flex flex-wrap -mb-$spacing(-2)",
+      tag: "flex items-center cursor-default rounded-full text-$textSize(-2) px-$spacing(-1) py-$spacing(-4) mr-$spacing(-2) mb-$spacing(-2) bg-$primaryColor-500 text-white [&>div]:!w-[0.5em] [&>div]:aspect-square [&>div]:!text-inherit [&>div]:cursor-pointer",
+      tagLabel: "mr-1",
+      emptyMessage:
+        "flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$textColor-700 text-$textSize(-1) aria-selected:text-white aria-selected:bg-$primaryColor-500",
+    },
+    autocomplete: {
+      // inherits family:dropdown classes
+      selections:
+        "flex absolute inset-0 group-data-[multiple]:static group-data-[multiple]:block group-data-[empty]:hidden $inputMaxWidth group-data-[multiple]:mt-$spacing(-1,0.5,2)",
+      selectionWrapper:
+        "bg-$textColor-100 $borderRadius group-data-[multiple]:border group-data-[multiple]:border-$textColor-$borderColorStrength(-1,200,600) group-data-[multiple]:mb-$spacing(-1,0.5,2)",
+      selection: "$borderRadius just",
+    },
+    dropdown: {
+      placeholder: "text-$textColor-400 grow",
+      selector: `
+        ${"" /* base styles */}
+        flex grow justify-between w-full p-$spacing pr-0 text-$textSize text-$textColor-700 text-left group-data-[disabled]:!cursor-not-allowed group-data-[prefix-icon]:!pl-0 group-data-[suffix-icon]:!pr-0 data-[placeholder]:text-$textColor-400 selection:bg-$primaryColor-100
+
+        ${"" /* dark mode styles */}
+        dark:data-[placeholder]:text-$textColor-400/50 dark:text-$textColor-300
+      `,
+      selectIcon: "mx-$spacing shrink-0",
+      selectionsWrapper: "w-[85%] overflow-hidden",
+      selections: "inline-flex items-center",
+      selectionsItem: "whitespace-nowrap mr-1",
+      truncationCount:
+        "flex items-center justify-center h-[1.5em] $borderRadius bg-$textColor-400 text-white whitespace-nowrap text-$textSize(-3) tracking-tighter leading-0 py-$spacing(-4,0.5,1) px-$spacing(-2,0.5,1) shrink-0 my-auto",
     },
   },
 });

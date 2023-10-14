@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #f4f4f4;
+  --bg-color: #fafafa;
   --text-color: red;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -25,11 +25,37 @@ body {
 }
 
 #app {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
 }
 
 html.dark {
   --bg-color: #242424;
+}
+
+.formkit-kitchen-sink {
+  width: 100%;
+  max-width: 1400px;
+}
+.formkit-input-type {
+  display: block;
+  font-size: 2em;
+  font-family: sans-serif;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #000;
+}
+.formkit-specimen-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 360px);
+  margin-bottom: 3em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 2em;
+}
+.formkit-specimen {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
 }
