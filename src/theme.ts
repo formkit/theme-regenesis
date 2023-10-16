@@ -52,13 +52,13 @@ export default createTheme({
       editor: "spacing",
       value: "2",
       min: "1",
-      max: "3",
+      max: "2.5",
     },
     textSize: {
       editor: "fontSize",
       value: "base",
       min: "xs",
-      max: "lg",
+      max: "base",
     },
     inputShadow: {
       editor: "shadow",
@@ -178,7 +178,7 @@ export default createTheme({
     },
     checkbox: {
       // inherits family:box classes
-      decorator: "$borderRadius(0,rounded-none,rounded-lg)",
+      decorator: "$borderRadius(0,rounded-none,rounded-2xl)",
       decoratorIcon: "max-w-[66.66%]",
     },
     color: {
@@ -220,7 +220,7 @@ export default createTheme({
         "right-$spacing peer-data-[has-multiple]:text-$textSize(-1) peer-data-[has-multiple]:bottom-$spacing peer-data-[has-multiple]:left-$spacing group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10,*) peer-data-[has-multiple]:text-$primaryColor-500 ring-$primaryColor-400 $borderRadius z-20 flex appearance-none items-center text-[0px] outline-none hover:!text-red-500 focus-visible:ring-2 group-data-[disabled]:pointer-events-none peer-data-[has-multiple]:absolute group-data-[disabled]:!text-$textColor-500 dark:hover:!text-red-400",
       fileRemoveIcon: "block text-base w-[0.75em] relative z-10",
       inner:
-        "relative cursor-pointer group-data-[multiple]:$borderRadius(0,rounded-none,rounded-lg)",
+        "relative cursor-pointer group-data-[multiple]:$borderRadius(0,rounded-none,rounded-2xl)",
       input:
         "cursor-pointer text-transparent absolute inset-0 opacity-0 z-10 file:pointer-events-none file:w-0 file:h-0 file:overflow-hidden",
       noFiles:
@@ -264,7 +264,7 @@ export default createTheme({
       wrapper: "mb-$spacing(-1)",
       inner: `
         ${"" /* base styles */}
-        relative flex items-center bg-white $inputMaxWidth border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow group-data-[multiple]:$borderRadius(0,rounded-none,rounded-lg)
+        relative flex items-center bg-white $inputMaxWidth border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow group-data-[multiple]:$borderRadius(0,rounded-none,rounded-2xl)
       
         ${"" /* dark mode styles */}
         dark:bg-transparent dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
@@ -298,7 +298,7 @@ export default createTheme({
     },
     textarea: {
       inner:
-        "flex $inputMaxWidth items-center mb-$spacing(-1) bg-white border border-$textColor-$borderColorStrength $borderRadius(0,rounded-none,rounded-lg) focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400 dark:bg-transparent",
+        "flex $inputMaxWidth items-center mb-$spacing(-1) bg-white border border-$textColor-$borderColorStrength $borderRadius(0,rounded-none,rounded-2xl) focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 $inputShadow dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400 dark:bg-transparent",
       input: `
         ${"" /* base styles */}
         text-$textSize(-1) h-$spacing(16,*) text-$textColor-700 min-w-0 grow shrink !p-$spacing outline-none bg-transparent selection:bg-$primaryColor-100 placeholder:text-$textColor-400 group-data-[disabled]:!cursor-not-allowed
@@ -362,19 +362,19 @@ export default createTheme({
       suffixIcon:
         "mr-$spacing !ml-0 text-$textColor-600 dark:text-$textColor-300",
       dropdownWrapper:
-        "hidden $borderRadius(0,rounded-none,rounded-lg) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-1,1,2) group-data-[expanded]:block",
-      listbox: "bg-white",
+        "hidden $borderRadius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-1,1,2) group-data-[expanded]:block",
+      listbox:
+        "bg-white $borderRadius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) overflow-clip",
       listitem:
         "flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$textColor-700 text-$textSize aria-selected:text-white aria-selected:bg-$primaryColor-500 hover:bg-$primaryColor-100",
       selectedIcon:
         "flex absolute items-center left-$spacing text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
       option: "ml-[1.5em]",
       selectionWrapper: "grow flex items-center text-$textColor-700",
-      selection:
-        "grow [&>*]:ml-$spacing text-$textColor-700 group-data-[multiple]:p-$spacing",
+      selection: "grow text-$textColor-700 group-data-[multiple]:p-$spacing",
       tagsWrapper: "w-full",
       tags: "flex flex-wrap -mb-$spacing(-2)",
-      tag: "flex items-center cursor-default rounded-full text-$textSize(-2) px-$spacing(-1) py-$spacing(-4) mr-$spacing(-2) mb-$spacing(-2) bg-$primaryColor-500 text-white [&>div]:!w-[0.5em] [&>div]:aspect-square [&>div]:!text-inherit [&>div]:cursor-pointer",
+      tag: "flex items-center cursor-default rounded-full text-$textSize(-2) px-$spacing(-1,1,2) py-$spacing(-2,0.5,1.5) mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) bg-$primaryColor-500 text-white [&>div]:!w-[0.5em] [&>div]:aspect-square [&>div]:!text-inherit [&>div]:cursor-pointer",
       tagLabel: "mr-1",
       emptyMessage:
         "flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$textColor-700 text-$textSize(-1) aria-selected:text-white aria-selected:bg-$primaryColor-500",
@@ -385,7 +385,7 @@ export default createTheme({
         "flex absolute inset-0 group-data-[multiple]:static group-data-[multiple]:block group-data-[empty]:hidden $inputMaxWidth group-data-[multiple]:mt-$spacing(-1,0.5,2)",
       selectionWrapper:
         "bg-$textColor-100 $borderRadius group-data-[multiple]:border group-data-[multiple]:border-$textColor-$borderColorStrength(-1,200,600) group-data-[multiple]:mb-$spacing(-1,0.5,2)",
-      selection: "$borderRadius just",
+      selection: "$borderRadius just pl-$spacing [&>*]:ml-0",
     },
     dropdown: {
       placeholder: "text-$textColor-400 grow",
@@ -398,6 +398,7 @@ export default createTheme({
       `,
       selectIcon: "mx-$spacing shrink-0",
       selectionsWrapper: "w-[85%] overflow-hidden",
+      selection: "[&>*]:ml-0",
       selections: "inline-flex items-center",
       selectionsItem: "whitespace-nowrap mr-1",
       truncationCount:
