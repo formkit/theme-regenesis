@@ -388,6 +388,7 @@ export default createTheme({
       selection: "$borderRadius just pl-$spacing [&>*]:ml-0",
     },
     dropdown: {
+      // inherits family:dropdown classes
       placeholder: "text-$textColor-400 grow",
       selector: `
         ${"" /* base styles */}
@@ -404,7 +405,32 @@ export default createTheme({
       truncationCount:
         "flex items-center justify-center h-[1.5em] $borderRadius bg-$textColor-400 text-white whitespace-nowrap text-$textSize(-3) tracking-tighter leading-0 py-$spacing(-4,0.5,1) px-$spacing(-2,0.5,1) shrink-0 my-auto",
     },
+    repeater: {
+      outer: "group/repeater [&_.formkit-outer]:mb-0",
+      fieldset:
+        "p-$spacing(1) border border-$textColor-$borderColorStrength(-1,200,600) $borderRadius(0,rounded-none,rounded-2xl) group-data-[invalid]/repeater:border-red-500 group-data-[invalid]/repeater:border-2",
+      legend: "px-$spacing(-2)",
+      content: "grow p-$spacing(0,2,6) flex flex-col align-center",
+      controlLabel: "absolute opacity-0 pointer-events-none",
+      controls:
+        "flex flex-col items-center justify-center bg-$textColor-100 p-$spacing [&>li]:aspect-square",
+      downControl:
+        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+      upControl:
+        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+      removeControl:
+        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+      insertControl:
+        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+      help: "mb-$spacing",
+      item: "flex w-full mb-$spacing bg-white rounded border border-$textColor-$borderColorStrength(-1,200,600) overflow-clip $borderRadius(0,rounded-none,rounded-2xl) $inputShadow [&_.formkit-outer_.formkit-inner]:!shadow-none",
+      moveDownIcon: "block w-[0.75em] aspect-square my-$spacing(-2)",
+      moveUpIcon: "block w-[0.75em] aspect-square my-$spacing(-2)",
+      removeIcon: "block w-[1.25em] aspect-square my-$spacing(-2)",
+      addIcon: "block w-[1.25em] aspect-square my-$spacing(-2)",
+    },
     taglist: {
+      // inherits family:dropdown classes
       inner: "py-$spacing pr-0 pl-0",
       tags: "px-$spacing",
       input: "!p-0 !w-[0%] min-w-[1em] inline-block mb-$spacing(-2)",
