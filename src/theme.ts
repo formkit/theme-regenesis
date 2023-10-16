@@ -41,7 +41,7 @@ export default createTheme({
     },
     primaryColor: {
       editor: "color",
-      value: "blue",
+      value: "fuchsia",
     },
     textColor: {
       editor: "color",
@@ -373,8 +373,8 @@ export default createTheme({
       selectionWrapper: "grow flex items-center text-$textColor-700",
       selection: "grow text-$textColor-700 group-data-[multiple]:p-$spacing",
       tagsWrapper: "w-full",
-      tags: "flex flex-wrap -mb-$spacing(-2)",
-      tag: "flex items-center cursor-default rounded-full text-$textSize(-2) px-$spacing(-1,1,2) py-$spacing(-2,0.5,1.5) mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) bg-$primaryColor-500 text-white [&>div]:!w-[0.5em] [&>div]:aspect-square [&>div]:!text-inherit [&>div]:cursor-pointer",
+      tags: "flex flex-wrap -mb-$spacing(-2) empty:mb-0",
+      tag: "flex items-center cursor-default rounded-full text-$textSize(-2) px-$spacing(-1,1,2) py-$spacing(-2,0.5,1.5) mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) bg-$primaryColor-500 text-white [&>.formkit-removeSelection]:!w-[0.5em] [&>.formkit-removeSelection]:aspect-square [&>.formkit-removeSelection]:!text-inherit [&>.formkit-removeSelection]:cursor-pointer",
       tagLabel: "mr-1",
       emptyMessage:
         "flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$textColor-700 text-$textSize(-1) aria-selected:text-white aria-selected:bg-$primaryColor-500",
@@ -403,6 +403,12 @@ export default createTheme({
       selectionsItem: "whitespace-nowrap mr-1",
       truncationCount:
         "flex items-center justify-center h-[1.5em] $borderRadius bg-$textColor-400 text-white whitespace-nowrap text-$textSize(-3) tracking-tighter leading-0 py-$spacing(-4,0.5,1) px-$spacing(-2,0.5,1) shrink-0 my-auto",
+    },
+    taglist: {
+      inner: "py-$spacing pr-0 pl-0",
+      tags: "px-$spacing",
+      input: "!p-0 !w-[0%] min-w-[1em] inline-block mb-$spacing(-2)",
+      listboxButton: "ml-auto shrink-0",
     },
   },
 });
