@@ -73,8 +73,8 @@ export default createTheme({
     },
     inputMaxWidth: {
       editor: "select",
-      value: "max-w-[17em]",
-      scale: ["max-w-[15em]", "max-w-[17em]", "max-w-[20em]"],
+      value: "max-w-[20em]",
+      scale: ["max-w-[15em]", "max-w-[17em]", "max-w-[20em]", "max-w-[24em]"],
     },
   },
   inputs: {
@@ -178,7 +178,7 @@ export default createTheme({
     },
     checkbox: {
       // inherits family:box classes
-      decorator: "$borderRadius(0,rounded-none,rounded-2xl)",
+      decorator: "$borderRadius(0,rounded-none,rounded-md)",
       decoratorIcon: "max-w-[66.66%]",
     },
     color: {
@@ -374,7 +374,7 @@ export default createTheme({
       selection: "grow text-$textColor-700 group-data-[multiple]:p-$spacing",
       tagsWrapper: "w-full",
       tags: "flex flex-wrap -mb-$spacing(-2) empty:mb-0",
-      tag: "flex items-center cursor-default rounded-full text-$textSize(-2) px-$spacing(-1,1,2) py-$spacing(-2,0.5,1.5) mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) bg-$primaryColor-500 text-white [&>.formkit-removeSelection]:!w-[0.5em] [&>.formkit-removeSelection]:aspect-square [&>.formkit-removeSelection]:!text-inherit [&>.formkit-removeSelection]:cursor-pointer",
+      tag: "flex items-center cursor-default rounded-full text-$textSize(-1,xs,sm) px-$spacing(-1,1,2) py-$spacing(-2,0.5,1.5) mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) bg-$primaryColor-500 text-white [&>.formkit-removeSelection]:!w-[0.5em] [&>.formkit-removeSelection]:aspect-square [&>.formkit-removeSelection]:!text-inherit [&>.formkit-removeSelection]:cursor-pointer",
       tagLabel: "mr-1",
       emptyMessage:
         "flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$textColor-700 text-$textSize(-1) aria-selected:text-white aria-selected:bg-$primaryColor-500",
@@ -411,27 +411,27 @@ export default createTheme({
         "p-$spacing(1) border border-$textColor-$borderColorStrength(-1,200,600) $borderRadius(0,rounded-none,rounded-2xl) group-data-[invalid]/repeater:border-red-500 group-data-[invalid]/repeater:border-2",
       legend: "px-$spacing(-2)",
       content: "grow p-$spacing(0,2,6) flex flex-col align-center",
-      controlLabel: "absolute opacity-0 pointer-events-none",
+      controlLabel: "absolute opacity-0 pointer-events-none text-[0px]",
       controls:
         "flex flex-col items-center justify-center bg-$textColor-100 p-$spacing [&>li]:aspect-square",
       downControl:
-        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+        "w-[1.5em] h-[1.5em] my-$spacing(-2) flex items-center appearance-none justify-center aspect-square text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
       upControl:
-        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+        "w-[1.5em] h-[1.5em] my-$spacing(-2) flex items-center appearance-none justify-center aspect-square text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
       removeControl:
-        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+        "w-[1.5em] h-[1.5em] my-$spacing(-2) flex items-center appearance-none justify-center aspect-square text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
       insertControl:
-        "text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
+        "w-[1.5em] h-[1.5em] my-$spacing(-2) flex items-center appearance-none justify-center aspect-square text-$textColor-500 hover:text-$primaryColor-500 disabled:hover:text-inherit disabled:opacity-25 disabled:!text-$textColor-500",
       help: "mb-$spacing",
       item: "flex w-full mb-$spacing bg-white rounded border border-$textColor-$borderColorStrength(-1,200,600) overflow-clip $borderRadius(0,rounded-none,rounded-2xl) $inputShadow [&_.formkit-outer_.formkit-inner]:!shadow-none",
-      moveDownIcon: "block w-[0.75em] aspect-square my-$spacing(-2)",
-      moveUpIcon: "block w-[0.75em] aspect-square my-$spacing(-2)",
-      removeIcon: "block w-[1.25em] aspect-square my-$spacing(-2)",
-      addIcon: "block w-[1.25em] aspect-square my-$spacing(-2)",
+      moveDownIcon: "block w-[0.75em] aspect-square",
+      moveUpIcon: "block w-[0.75em] aspect-square",
+      removeIcon: "block w-[1.25em] aspect-square",
+      addIcon: "block w-[1.25em] aspect-square",
     },
     taglist: {
       // inherits family:dropdown classes
-      inner: "py-$spacing pr-0 pl-0",
+      inner: "py-$spacing pr-0 pl-0 $borderRadius(0,rounded-none,rounded-2xl)",
       tags: "px-$spacing",
       input: "!p-0 !w-[0%] min-w-[1em] inline-block mb-$spacing(-2)",
       listboxButton: "ml-auto shrink-0",
