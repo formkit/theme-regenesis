@@ -8,11 +8,14 @@ export default createTheme({
     authorName: "FormKit Inc",
     authorWebsite: "https://formkit.com",
     supportedInputs: [
+      "autocomplete",
       "button",
       "checkbox",
       "color",
       "date",
+      "datepicker",
       "datetime-local",
+      "dropdown",
       "email",
       "file",
       "month",
@@ -20,8 +23,10 @@ export default createTheme({
       "password",
       "radio",
       "range",
+      "repeater",
       "search",
       "select",
+      "taglist",
       "tel",
       "text",
       "textarea",
@@ -111,7 +116,7 @@ export default createTheme({
       input: `
         ${"" /* base styles */}
         bg-$primaryColor-500 $borderRadius !text-$textSize(-1,*) p-$spacing(3,1,5) outline-none flex items-center mb-$spacing(-1) text-white text-$textSize(-1,*) active:text-$primaryColor-100 active:bg-$primaryColor-700 hover:bg-$primaryColor-600 ring-offset-2 ring-$primaryColor-400 focus-visible:ring-2 disabled:border-$textColor-$borderColorStrength disabled:bg-$textColor-400 disabled:text-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
-      
+
         ${"" /* dark mode styles */}
         dark:disabled:border-$textColor-100 dark:disabled:bg-$textColor-500 dark:disabled:text-$textColor-200 dark:ring-offset-$primaryColor-300
       `,
@@ -242,7 +247,7 @@ export default createTheme({
       inner: "relative !border-none !ring-0 !px-0 !bg-transparent !shadow-none",
       input: `
         group/input cursor-pointer
-        
+
         ${"" /* webkit styles - track */}
         [&::-webkit-slider-runnable-track]:bg-$textColor-$borderColorStrength(-1) [&::-webkit-slider-runnable-track]:h-$spacing(-1,1,1.5) [&::-webkit-slider-runnable-track]:min-h-[0.25em] ::-webkit-slider-runnable-track]:max-h-[1em] [&::-webkit-slider-runnable-track]:$borderRadius
 
@@ -250,7 +255,7 @@ export default createTheme({
 
         ${"" /* webkit styles - thumb */}
         [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-$spacing(3,2,5) [&::-webkit-slider-thumb]:aspect-square [&::-webkit-slider-thumb]:bg-$primaryColor-500 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:top-1/2 [&::-webkit-slider-thumb]:-translate-y-1/2 [&::-webkit-slider-thumb]:group-data-[disabled]:bg-$textColor-500 [&::-webkit-slider-thumb]:group-data-[disabled]:!ring-$textColor-$borderColorStrength(-1) [&::-webkit-slider-thumb]:focus-visible:ring-2 [&::-webkit-slider-thumb]:focus:!ring-$primaryColor-400 [&::-webkit-slider-thumb]:focus:ring-offset-2 [&::-webkit-slider-thumb]:$inputShadow
-      
+
         ${"" /* moz styles - track */}
         [&::-moz-range-track]:bg-$textColor-200 [&::-moz-range-track]:h-$spacing(-1,1,1.5) [&::-moz-range-track]:min-h-[0.25em] [&::-moz-range-track]:max-h-[1em] [&::-moz-range-track]:$borderRadius
 
@@ -265,7 +270,7 @@ export default createTheme({
       inner: `
         ${"" /* base styles */}
         relative flex items-center bg-white $inputMaxWidth border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow group-data-[multiple]:$borderRadius(0,rounded-none,rounded-2xl)
-      
+
         ${"" /* dark mode styles */}
         dark:bg-transparent dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
       `,
@@ -336,7 +341,7 @@ export default createTheme({
       inner: `
         ${"" /* base styles */}
         relative flex items-center bg-white $inputMaxWidth border border-$textColor-$borderColorStrength $borderRadius focus-within:ring-1 focus-within:!ring-$primaryColor-400 focus-within:!border-$primaryColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$textColor-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
-      
+
         ${"" /* dark mode styles */}
         dark:bg-transparent dark:border-$textColor-$borderColorStrength(2) dark:group-data-[disabled]:bg-$textColor-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
       `,
@@ -417,26 +422,24 @@ export default createTheme({
       timeInput:
         "w-full border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius p-$spacing my-$spacing(5,*) focus-visible:outline-$primaryColor-500",
       daysHeader: "flex items-center justify-center",
-      prev: "mr-auto px-$spacing(1,*) py-$spacing(-3,*) hover:bg-$textColor-100 $borderRadius col-start-1 col-end-1",
+      prev: "mr-auto px-$spacing(1,*) py-$spacing(-3,*) hover:bg-$textColor-100 $borderRadius col-start-1 col-end-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
       prevLabel: "hidden",
       prevIcon:
         "flex w-[0.75em] select-none text-$textColor-700 [&>svg]:w-full",
       dayButton:
-        "appearance-none text-$textColor-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500",
+        "appearance-none text-$textColor-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
       monthButton:
-        "appearance-none text-$textColor-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500",
+        "appearance-none text-$textColor-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
       yearButton:
-        "appearance-none text-$textColor-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500",
-      next: "ml-auto px-$spacing(1,*) py-$spacing(-3,*) hover:bg-$textColor-100 hover:rounded col-start-3 col-end-3",
+        "appearance-none text-$textColor-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
+      next: "ml-auto px-$spacing(1,*) py-$spacing(-3,*) $borderRadius hover:bg-$textColor-100 hover:rounded col-start-3 col-end-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
       nextLabel: "hidden",
       nextIcon:
         "flex w-[0.75em] select-none text-$textColor-700 [&>svg]:w-full",
-      openButton: `
-        appearance-none border-0 bg-transparent flex p-0 self-stretch cursor-pointer
-        focus-visible:outline-none focus-visible:text-white focus-visible:bg-$primaryColor-500
-      `,
+      openButton:
+        "appearance-none border-0 bg-transparent flex p-0 self-stretch cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2 focus-visible:$borderRadius(0,rounded-none,rounded-2xl)",
       calendarIcon:
-        "text-$textColor-600 flex w-8 grow-0 shrink-0 self-stretch select-none [&>svg]:w-full [&>svg]:m-auto [&>svg]:max-h-[1em] [&>svg]:max-w-[1em]",
+        "text-$textColor-600 focus-visible:text-$primaryColor-500 flex w-[1em] grow-0 shrink-0 self-stretch select-none [&>svg]:w-full [&>svg]:m-auto [&>svg]:max-h-[1em] [&>svg]:max-w-[1em]",
     },
     dropdown: {
       // inherits family:dropdown classes
@@ -486,6 +489,20 @@ export default createTheme({
       tags: "px-$spacing",
       input: "!p-0 !w-[0%] min-w-[1em] inline-block mb-$spacing(-2)",
       listboxButton: "ml-auto shrink-0",
+    },
+    toggle: {
+      altLabel:
+        "block w-full mb-$spacing(-1) font-bold text-$textSize(-2) text-$textColor-700",
+      inner: "inline-block mr-$spacing",
+      input: "peer absolute opacity-0 w-0 h-0",
+      innerLabel:
+        "absolute text-$textColor-200 text-[10px] font-bold select-none left-full top-1/2 -translate-x-full -translate-y-1/2 px-1",
+      thumb:
+        "relative left-0 aspect-square rounded-full transition-all w-[1.25em] bg-$textColor-50 text-$textColor-600 shadow-base",
+      track:
+        "p-0.5 min-w-[3em] relative cursor-pointer select-none rounded-full transition-all bg-$textColor-400 peer-checked:bg-$primaryColor-500 peer-checked:[&>div:last-child]:left-full peer-checked:[&>div:last-child]:-translate-x-full peer-checked:[&>div:first-child:not(:last-child)]:left-0 peer-checked:[&>div:first-child:not(:last-child)]:translate-x-0 $inputShadow(-1,*) peer-focus-visible:ring-2 peer-focus-visible:ring-$primaryColor-400 peer-focus-visible:ring-offset-2",
+      valueLabel: "font-bold text-$textSize(-2) text-$textColor-700",
+      wrapper: "flex flex-wrap items-center mb-$spacing(-2)",
     },
   },
 });
