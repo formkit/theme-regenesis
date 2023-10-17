@@ -1,6 +1,8 @@
 :root {
   --bg-color: #fafafa;
   --text-color: red;
+  --border-color: #eaeaea;
+  --headline-color: #000;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,6 +19,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html.dark {
+  --bg-color: #232427;
+  --border-color: #333;
+  --headline-color: #fff;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -30,10 +38,6 @@ body {
   padding: 2rem;
 }
 
-html.dark {
-  --bg-color: #242424;
-}
-
 .formkit-kitchen-sink {
   width: 100%;
   max-width: 1400px;
@@ -45,15 +49,17 @@ html.dark {
   margin-bottom: 0.25em;
   font-weight: bold;
   text-transform: capitalize;
-  color: #000;
+  color: var(--headline-color);
 }
+
 .formkit-specimen-group {
   display: grid;
   grid-template-columns: repeat(auto-fit, 360px);
   margin-bottom: 3em;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color);
   padding: 2em;
 }
+
 .formkit-specimen {
   display: flex;
   flex-direction: column;

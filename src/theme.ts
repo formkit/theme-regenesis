@@ -103,6 +103,10 @@ export default createTheme({
       help: "text-$textColor-500 text-$textSize(-2,*) dark:text-$textColor-400",
       message:
         "text-red-500 mb-$spacing(-1) text-$textSize(-2,*) dark:text-red-400",
+      overlayPlaceholder: "text-$textColor-400",
+      overlayLiteral: "text-$textColor-700",
+      overlayChar: "text-$textColor-700",
+      overlayEnum: "text-$textColor-700",
     },
 
     /**
@@ -402,9 +406,6 @@ export default createTheme({
       input: "pl-$spacing placeholder:text-$textColor-400",
       monthsHeader: "flex items-center justify-center col-start-2 col-end-2",
       timeHeader: "flex items-center justify-center col-start-2 col-end-2",
-      overlayPlaceholder: "text-$textColor-400",
-      overlayLiteral: "text-$textColor-700",
-      overlayEnum: "text-$textColor-700",
       months: "grid grid-cols-3 w-full",
       month:
         "m-$spacing(-1) p-$spacing(-2) text-center text-$textColor-700 $borderRadius bg-$textColor-200 aria-selected:bg-$primaryColor-500 aria-selected:text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white focus:text-$textColor-700 data-[is-extra=true]:opacity-25 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none",
@@ -459,6 +460,10 @@ export default createTheme({
       truncationCount:
         "flex items-center justify-center h-[1.5em] $borderRadius bg-$textColor-400 text-white whitespace-nowrap text-$textSize(-3) tracking-tighter leading-0 py-$spacing(-4,1,1.5) px-$spacing(-2,1,1.5) shrink-0 my-auto",
     },
+    mask: {
+      // inherits family:text classes
+      inner: "relative",
+    },
     repeater: {
       outer: "group/repeater [&_.formkit-outer]:mb-0",
       fieldset:
@@ -498,7 +503,7 @@ export default createTheme({
       innerLabel:
         "absolute text-$textColor-200 text-[10px] font-bold select-none left-full top-1/2 -translate-x-full -translate-y-1/2 px-1",
       thumb:
-        "relative left-0 aspect-square rounded-full transition-all w-[1.25em] bg-$textColor-50 text-$textColor-600 shadow-base",
+        "relative p-0.5 left-0 aspect-square rounded-full transition-all w-[1.25em] bg-$textColor-50 text-$textColor-600 shadow-base",
       track:
         "p-0.5 min-w-[3em] relative cursor-pointer select-none rounded-full transition-all bg-$textColor-400 peer-checked:bg-$primaryColor-500 peer-checked:[&>div:last-child]:left-full peer-checked:[&>div:last-child]:-translate-x-full peer-checked:[&>div:first-child:not(:last-child)]:left-0 peer-checked:[&>div:first-child:not(:last-child)]:translate-x-0 $inputShadow(-1,*) peer-focus-visible:ring-2 peer-focus-visible:ring-$primaryColor-400 peer-focus-visible:ring-offset-2",
       valueLabel: "font-bold text-$textSize(-2) text-$textColor-700",
