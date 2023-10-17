@@ -12,25 +12,32 @@ export default createTheme({
       "button",
       "checkbox",
       "color",
+      "colorpicker",
       "date",
       "datepicker",
       "datetime-local",
       "dropdown",
       "email",
       "file",
+      "mask",
       "month",
       "number",
       "password",
       "radio",
       "range",
+      "rating",
       "repeater",
       "search",
       "select",
+      "slider",
+      "submit",
       "taglist",
       "tel",
       "text",
       "textarea",
       "time",
+      "toggle",
+      "transferlist",
       "url",
       "week",
     ],
@@ -41,6 +48,8 @@ export default createTheme({
     borderRadius: {
       editor: "radius",
       value: "rounded",
+      min: "rounded-none",
+      max: "rounded-full",
     },
     primaryColor: {
       editor: "color",
@@ -74,7 +83,7 @@ export default createTheme({
       value: "400",
       scale: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
       min: "100",
-      max: "600",
+      max: "700",
     },
     inputMaxWidth: {
       editor: "select",
@@ -459,7 +468,7 @@ export default createTheme({
       selections: "inline-flex items-center",
       selectionsItem: "whitespace-nowrap mr-1",
       truncationCount:
-        "flex items-center justify-center h-[1.5em] $borderRadius bg-$textColor-400 text-white whitespace-nowrap text-$textSize(-3) tracking-tighter leading-0 py-$spacing(-4,1,1.5) px-$spacing(-2,1,1.5) shrink-0 my-auto",
+        "flex items-center justify-center h-[1.5em] $borderRadius bg-$textColor-400 text-white whitespace-nowrap text-$textSize(-3,*) tracking-tighter leading-0 py-$spacing(-4,1,1.5) px-$spacing(-2,1,1.5) shrink-0 my-auto",
     },
     mask: {
       // inherits family:text classes
@@ -500,6 +509,34 @@ export default createTheme({
       removeIcon: "block w-[1.25em] aspect-square",
       addIcon: "block w-[1.25em] aspect-square",
     },
+    slider: {
+      outer: "data-[disabled]:pointer-events-none",
+      help: "-mt-0.5 mb-$spacing(-2)",
+      sliderInner:
+        'flex items-center [&>.formkit-maxValue]:mb-0 [&>.formkit-maxValue]:ml-$spacing(2) [&>.formkit-maxValue]:shrink [&>.formkit-maxValue]:grow-0 [&>.formkit-icon]:bg-none [&>.formkit-icon]:border-none [&>.formkit-icon]:p-0 [&[data-has-mark-labels="true"]_.formkit-track]:mb-$spacing(5,3,6)',
+      track: "grow relative z-20 py-$spacing(1) select-none",
+      trackWrapper:
+        "px-[2px] rounded-full bg-$textColor-$borderColorStrength(-1,200,400)",
+      trackInner: "h-$spacing(-1,1,1.5) mx-0.5 relative",
+      fill: "h-full rounded-full absolute top-0 -mx-1 bg-$primaryColor-500 group-data-[disabled]:bg-$textColor-500",
+      marks: "absolute pointer-events-none inset-0",
+      mark: 'absolute top-1/2 w-[3px] h-[3px] rounded-full -translate-x-1/2 -translate-y-1/2 bg-$textColor-$borderColorStrength(0,300,500) data-[active="true"]:bg-white',
+      markLabel:
+        "absolute top-[calc(100%+0.5em)] left-1/2 text-$textColor-400 text-xs -translate-x-1/2",
+      handles: "m-0 p-0 list-none",
+      handle:
+        'group select-none w-4 h-4 rounded-full bg-white absolute top-1/2 left-0 z-30 -translate-x-1/2 -translate-y-1/2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1),0_1px_2px_0_rgba(0,0,0,0.5)] focus-visible:outline-0 focus-visible:ring-2 ring-$primaryColor-500 data-[is-target="true"]:z-20',
+      tooltip:
+        'absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-[4px] bg-$primaryColor-500 text-white py-$spacing(-2,1,3) px-$spacing(-1,1,3) text-xs leading-none whitespace-nowrap $borderRadius(0,rounded-none,rounded-sm) opacity-0 pointer-events-none transition-opacity after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:-translate-y-[1px] after:border-4 after:border-transparent after:border-t-$primaryColor-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-data-[show-tooltip="true"]:opacity-100',
+      linkedValues: "flex items-start justify-between",
+      minValue:
+        'grow max-w-[45%] mb-0 relative [&_.formkit-inner::after]:content-[""] [&_.formkit-inner::after]:absolute [&_.formkit-inner::after]:left-[105%] [&_.formkit-inner::after]:-translate-y-1/2 [&_.formkit-inner::after]:w-[10%] [&_.formkit-inner::after]:h-[1px] [&_.formkit-inner::after]:bg-$textColor-500',
+      maxValue: "grow max-w-[45%] mb-0 relative",
+      chart:
+        "relative z-20 mb-2 flex justify-between items-center w-full aspect-[3/1]",
+      chartBar:
+        'absolute bottom-0 h-full bg-$textColor-400 data-[active="false"]:bg-$textColor-200',
+    },
     taglist: {
       // inherits family:dropdown classes
       inner: "py-$spacing pr-0 pl-0 $borderRadius(0,rounded-none,rounded-2xl)",
@@ -510,7 +547,7 @@ export default createTheme({
     toggle: {
       outer: "max-w-none",
       altLabel:
-        "block w-full mb-$spacing(-1) font-bold text-$textSize(-2) text-$textColor-700",
+        "block w-full mb-$spacing(-1) font-bold text-$textSize(-2,*) text-$textColor-700",
       inner: "inline-block mr-$spacing",
       input: "peer absolute opacity-0 w-0 h-0",
       innerLabel:
@@ -519,8 +556,51 @@ export default createTheme({
         "relative p-0.5 left-0 aspect-square rounded-full transition-all w-[1.25em] bg-$textColor-50 text-$textColor-600 shadow-base",
       track:
         "p-0.5 min-w-[3em] relative cursor-pointer select-none rounded-full transition-all bg-$textColor-400 peer-checked:bg-$primaryColor-500 peer-checked:[&>div:last-child]:left-full peer-checked:[&>div:last-child]:-translate-x-full peer-checked:[&>div:first-child:not(:last-child)]:left-0 peer-checked:[&>div:first-child:not(:last-child)]:translate-x-0 $inputShadow(-1,*) peer-focus-visible:ring-2 peer-focus-visible:ring-$primaryColor-400 peer-focus-visible:ring-offset-2",
-      valueLabel: "font-bold text-$textSize(-2) text-$textColor-700",
+      valueLabel: "font-bold text-$textSize(-2,*) text-$textColor-700",
       wrapper: "flex flex-wrap items-center mb-$spacing(-2)",
+    },
+    transferlist: {
+      outer:
+        "max-w-none [&_.dnd-placeholder]:bg-$primaryColor-500 [&_.dnd-placeholder]:text-white",
+      wrapper: "flex flex-col sm:flex-row justify-between w-full max-w-none",
+      help: "pb-$spacing",
+      transferlist:
+        "grow shrink min-w-0 $inputShadow aspect-[4/5] flex flex-col min-h-[350px] border border-$textColor-$borderColorStrength(-1,200,900) $borderRadius(0,rounded-none,rounded-2xl) overflow-hidden select-none",
+      transferlistHeader:
+        "flex bg-$textColor-100 text-$textColor-600 text-$textSize(-1,*) justify-between items-center border-b border-$textColor-$borderColorStrength(-1,200,900) py-$spacing px-$spacing(1)",
+      transferlistHeaderItemCount:
+        "ml-auto text-xs min-w-[1.5em] [line-height:1.5em] px-$spacing text-center $borderRadius(2) bg-$textColor-200 text-$textColor-700",
+      transferlistListItems:
+        "list-none bg-white h-full overflow-x-hidden overflow-y-auto",
+      transferlistListItem:
+        "py-$spacing px-$spacing pl-[1.5em] relative text-$textColor-700 aria-selected:bg-$primaryColor-600 border-$textColor-$borderColorStrength(-2,200,400) aria-selected:data-[is-active=true]:bg-$primaryColor-600 aria-selected:text-white aria-selected:data-[is-active=true]:text-white first:-mt-px first:border-t flex border-b bg-white data-[is-active=true]:text-$primaryColor-500 data-[is-active=true]:bg-$textColor-100 cursor-pointer group-data-[is-max=true]:cursor-not-allowed items-center",
+      transferlistOption: "text-$textSize(-1,*)",
+      transferControls:
+        "inline-flex grow-0 shrink border border-$textColor-$borderColorStrength(-1,200,900) flex-row sm:flex-col justify-center my-$spacing sm:my-auto mx-auto sm:mx-$spacing $borderRadius overflow-clip $inputShadow(-2)",
+      sourceEmptyMessage:
+        "appearance-none border-none w-full my-$spacing text-center text-$textColor-500 italic",
+      sourceListItems: "group-data-[is-max=true]:opacity-50",
+      targetEmptyMessage:
+        "appearance-none border-none w-full my-$spacing text-center text-$textColor-500 italic",
+      emptyMessageInner: "flex items-center justify-center p-$spacing text-sm",
+      transferlistControls:
+        "bg-white p-$spacing border-b border-$textColor-$borderColorStrength(-2,200,900)",
+      transferlistSearch:
+        "flex border border-$textColor-$borderColorStrength(-1,200,900) $borderRadius items-center text-$textColor-700 selection:bg-$primaryColor-100",
+      transferlistSearchInput:
+        "border-none px-$spacing py-$spacing(-1) w-full bg-transparent outline-none text-$textSize(-1,*)",
+      controlLabel: "hidden",
+      selectedIcon: "w-[0.75em] absolute left-[0.5em] select-none",
+      transferlistButton:
+        "sm:w-5 flex justify-center text-$textSize(-2) shrink-0 box-content text-$textColor-700 disabled:bg-$textColor-200 disabled:!text-$textColor-400 bg-$textColor-50 hover:text-$primaryColor-500 cursor-pointer appearance-none rounded-none border-none p-$spacing(2) first:rounded-l last:rounded-r hover:z-10 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:text-current disabled:hover:outline-none sm:rounded-none sm:first:rounded-t sm:last:rounded-b",
+      fastForwardIcon:
+        "w-4 flex select-none [&>svg]:m-auto [&>svg]:w-full [&>svg]:max-w-[1rem] [&>svg]:max-h-[1rem] rotate-90 sm:rotate-0",
+      moveRightIcon:
+        "w-4 flex select-none [&>svg]:m-auto [&>svg]:w-full [&>svg]:max-w-[1rem] [&>svg]:max-h-[1rem] rotate-90 sm:rotate-0",
+      moveLeftIcon:
+        "w-4 flex select-none [&>svg]:m-auto [&>svg]:w-full [&>svg]:max-w-[1rem] [&>svg]:max-h-[1rem] rotate-90 sm:rotate-0",
+      rewindIcon:
+        "w-4 flex select-none [&>svg]:m-auto [&>svg]:w-full [&>svg]:max-w-[1rem] [&>svg]:max-h-[1rem] rotate-90 sm:rotate-0",
     },
   },
 });

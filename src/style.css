@@ -59,8 +59,12 @@ body {
   border: 1px solid var(--border-color);
   padding: 2em;
 }
+.formkit-specimen-group:has([data-type="transferlist"]) {
+  grid-template-columns: repeat(auto-fit, 650px);
+}
 
 .formkit-specimen {
+  max-width: 75vw;
   display: flex;
   flex-direction: column;
   padding: 0.5em;
