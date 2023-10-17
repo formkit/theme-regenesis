@@ -103,6 +103,7 @@ export default createTheme({
       help: "text-$textColor-500 text-$textSize(-2,*) dark:text-$textColor-400",
       message:
         "text-red-500 mb-$spacing(-1) text-$textSize(-2,*) dark:text-red-400",
+      overlay: "text-$textColor-700",
       overlayPlaceholder: "text-$textColor-400",
       overlayLiteral: "text-$textColor-700",
       overlayChar: "text-$textColor-700",
@@ -463,6 +464,17 @@ export default createTheme({
     mask: {
       // inherits family:text classes
       inner: "relative",
+    },
+    rating: {
+      inner: "flex w-[130px] items-center relative",
+      itemsWrapper: "w-full",
+      onItems: "text-yellow-400",
+      offItems: "text-$textColor-400",
+      onItemWrapper:
+        "[&>*]:w-full [&>*]:h-auto [&>*]:max-w-none [&>*]:max-h-none",
+      offItemWrapper:
+        "[&>*]:w-full [&>*]:h-auto [&>*]:max-w-none [&>*]:max-h-none",
+      ratingIcon: "w-full",
     },
     repeater: {
       outer: "group/repeater [&_.formkit-outer]:mb-0",
