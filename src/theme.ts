@@ -139,7 +139,8 @@ export default createTheme({
     },
     "family:box": {
       // checkbox, radio
-      wrapper: "flex items-center mb-$spacing(-2) group-data-[multiple]:mb-0",
+      wrapper:
+        "inline-flex items-center mb-$spacing(-2) group-data-[multiple]:mb-0",
       legend: "mb-$spacing",
       input:
         "peer pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0",
@@ -406,6 +407,106 @@ export default createTheme({
         "bg-$textColor-100 $borderRadius group-data-[multiple]:border group-data-[multiple]:border-$textColor-$borderColorStrength(-1,200,600) group-data-[multiple]:mb-$spacing(-1,0.5,2)",
       selection: "$borderRadius just pl-$spacing [&>*]:ml-0",
     },
+    colorpicker: {
+      // inherits from family:text classes
+      outer:
+        "data-[disabled]:cursor-not-allowed data-[disabled]:pointer-events-none",
+      help: "group-data-[inline]:-mt-1 group-data-[inline]:mb-$spacing",
+      inner:
+        "relative inline-flex !w-auto group-data-[inline]:border-none group-data-[inline]:shadow-none group-data-[inline]:p-0 group-data-[inline]:bg-transparent group-data-[inline]:outline-none group-data-[inline]:ring-0 group-data-[inline]:!w-full",
+      swatchPreview:
+        "w-full flex justify-start items-center $borderRadius text-sm cursor-pointer outline-none",
+      canvasSwatchPreviewWrapper:
+        "relative before:content-[''] before:absolute before:inset-0 before:$borderRadius before:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.2)] before:z-[2]",
+      canvasSwatchPreview:
+        "text-$textSize $borderRadius aspect-square shrink-0 grow !w-[1.5em]",
+      valueString:
+        "text-$textSize text-$textColor-700 font-mono inline-block ml-$spacing mr-$spacing(-2)",
+      panel: `
+        ${"" /* base styles */}
+        absolute left-0 top-full z-10 flex w-[100vw] max-w-[18.5em] touch-manipulation flex-col $borderRadius(0,rounded-none,rounded-2xl) border bg-white p-$spacing(0,1,3) $inputShadow(1,*) group-data-[inline]:static group-data-[inline]:max-w-none group-data-[inline]:border group-data-[inline]:border-$textColor-$borderColorStrength group-data-[inline]:z-auto group-data-[inline]:w-full group-data-[inline]:$inputShadow group-data-[inline]:group-data-[disabled]:!cursor-not-allowed group-data-[inline]:group-data-[disabled]:!pointer-events-none
+
+        ${"" /* mobile touch styles */}
+        [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:!fixed
+        [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:top-auto
+        [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:max-w-none
+        [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:bottom-0
+        [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:left-0
+        [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:rounded-none
+      `,
+      panelClose:
+        "flex justify-end items-center text-$textColor-600 mb-$spacing(-1) -mt-1 border-none bg-none border-b border-$textColor-$borderColorStrength(-1) w-[calc(100%+1rem)] -ml-2 pt-0 pr-$spacing pb-$spacing(-2) pl-$spacing",
+      closeIcon:
+        "w-[2rem] aspect-square p-1 $borderRadius border [&>svg]:w-full [&>svg]:aspect-square [&>svg]:max-w-none [&>svg]:max-h-none",
+      controlGroup:
+        "grid [grid-template-areas:'a_a_a'_'b_c_e'_'b_d_e']  mb-$spacing",
+      LS: "[grid-area:a] relative mb-$spacing",
+      canvas: "block w-full",
+      canvasLS:
+        "aspect-[2/1] cursor-pointer $borderRadius(-1,rounded-none,rounded-xl)",
+      canvasHue: "$borderRadius(-1,rounded-none,rounded-xl)",
+      canvasAlpha: "$borderRadius(-1,rounded-none,rounded-xl)",
+      preview:
+        "$borderRadius after:$borderRadius relative inline-flex aspect-square overflow-hidden [grid-area:b] after:absolute after:left-0 after:top-0 after:h-full after:w-full after:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.2)] after:content-[''] w-[2em]",
+      hue: "[grid-area:c] relative inline-flex h-3/4 pl-$spacing",
+      alpha: "[grid-area:d] relative inline-flex h-3/4 pl-$spacing",
+      eyeDropper:
+        "[grid-area:e] w-[2em] ml-$spacing inline-flex self-center justify-center justify-self-center aspect-square $borderRadius(0,rounded-none,rounded-2xl) border border-$textColor-$borderColorStrength(-1) cursor-pointer content-center items-center text-$textColor-600",
+      eyeDropperIcon: `w-auto [&>svg]:w-[1em]`,
+      control:
+        "absolute bg-white shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] -translate-x-1/2 -translate-y-1/2 pointer-events-none data-[prevent-focus-style]:shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-$primaryColor-400",
+      controlLS: "w-[10px] h-[10px] rounded-full",
+      controlHue:
+        "w-[4px] h-[calc(100%-2px)] top-1/2 $borderRadius(0,rounded-none,rounded-2xl)",
+      controlAlpha:
+        "w-[4px] h-[calc(100%-2px)] top-1/2 $borderRadius(0,rounded-none,rounded-2xl)",
+      formatField: "flex items-center justify-center grow",
+      colorInputGroup: "flex items-center justify-center grow",
+      fieldGroup: `
+        ${"" /* base styles */}
+        flex flex-col items-center justify-center w-full mr-$spacing(-2,0.5,1.5)
+
+        ${"" /* nested input styles */}
+        [&>input]:p-1 [&>input]:text-$textSize(-1) [&>input]:text-$textColor-700 [&>input]:selection:bg-$primaryColor-100 [&>input]:m-0 [&>input]:grow [&>input]:shrink [&>input]:w-full [&>input]:border [&>input]:border-$textColor-$borderColorStrength(-1) [&>input]:$borderRadius [&>input]:text-center [&>input]:appearance-none [&>input::-webkit-outer-spin-button]:appearance-none  [&>input::-webkit-inner-spin-button]:appearance-none [&>input::-webkit-inner-spin-button]:m-0 [&>input:focus]:outline-none [&>input:focus]:ring-1 [&>input:focus]:ring-$primaryColor-500 [&>input:focus]:border-$primaryColor-500 max-[431px]:[&>input]:text-base
+      `,
+      fieldLabel:
+        "text-$textSize(-2,xs,sm) text-$textColor-500 mt-$spacing(-3)",
+      formatSwitcher:
+        "flex justify-end self-start uppercase shrink-0 p-1 mt-0.5 text-$textColor-600 $borderRadius(0,rounded-none,rounded-sm) select-none",
+      switchIcon: "[&>svg]:w-3",
+      swatches:
+        "inline-flex flex-wrap justify-self-center w-auto min-w-0 mx-auto pt-$spacing pb-$spacing mt-$spacing -mb-$spacing border-t overflow-auto max-h-[200px] select-none first:mt-0 first:pt-0 first:border-t-0",
+      swatchGroup: "flex flex-wrap w-full mb-$spacing last:mb-0",
+      swatchGroupLabel:
+        "ml-1 block w-full text-$textSize(-1,xs,sm) text-$textColor-500",
+      swatch: `
+        ${"" /* base styles */} 
+        relative min-w-[1rem] w-[calc((100%/10)-0.5rem)] aspect-square m-1 cursor-pointer
+
+        ${"" /* decorator styles */} 
+        before:content-[''] before:absolute before:inset-0 before:$borderRadius before:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.2)] before:pointer-events-none before:z-[2]
+
+        ${"" /* active styles */}
+        data-[active='true']:after:content-['']
+        data-[active='true']:after:block
+        data-[active='true']:after:absolute
+        data-[active='true']:after:w-1.5
+        data-[active='true']:after:h-1.5
+        data-[active='true']:after:top-1/2
+        data-[active='true']:after:left-1/2
+        data-[active='true']:after:pointer-events-none
+        data-[active='true']:after:rounded-full
+        data-[active='true']:after:-translate-x-1/2
+        data-[active='true']:after:-translate-y-1/2
+        data-[active='true']:after:bg-white
+        data-[active='true']:after:z-[2]
+        data-[active='true']:after:ring-1
+        data-[active='true']:after:ring-[rgba(0,0,0,0.33)]
+
+        ${"" /* canvas styles */}
+        [&>canvas]:block [&>canvas]:w-full [&>canvas]:aspect-square [&>canvas]:$borderRadius [&>canvas:focus-visible]:outline-none [&>canvas:focus-visible]:shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_4px_rgba(59,130,246,1)]
+      `,
+    },
     datepicker: {
       inner: "relative pl-0",
       panelWrapper:
@@ -429,7 +530,7 @@ export default createTheme({
       calendarWeeks: "",
       week: "grid grid-cols-7 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none",
       dayCell:
-        "flex items-center justify-center text-center text-$textColor-700 w-[2.25em] h-[2.25em] m-1 p-$spacing $borderRadius bg-$textColor-200 aria-selected:bg-$primaryColor-500 aria-selected:text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white data-[is-extra=true]:opacity-25 formkit-disabled:opacity-50 formkit-disabled:cursor-default formkit-disabled:pointer-events-none",
+        "flex items-center justify-center text-center text-$textColor-700 w-[2.25em] h-[2.25em] m-1 p-$spacing $borderRadius bg-$textColor-200 aria-selected:bg-$primaryColor-500 aria-selected:text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white data-[is-extra=true]:opacity-25 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none",
       timeInput:
         "w-full border-2 border-$textColor-$borderColorStrength(-1,200,600) $borderRadius p-$spacing my-$spacing(5,*) focus-visible:outline-$primaryColor-500",
       daysHeader: "flex items-center justify-center",
