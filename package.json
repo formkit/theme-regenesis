@@ -18,7 +18,9 @@
     "dev": "vite",
     "build": "tsup",
     "preview": "vite preview",
-    "release": "pnpm build && npx bumpp && pnpm publish"
+    "release": "pnpm build && npx bumpp && pnpm publish",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linting enabled'"
   },
   "files": [
     "dist"
