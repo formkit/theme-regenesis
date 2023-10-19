@@ -131,7 +131,7 @@ export default createTheme({
       legend:
         "block text-$colorTemperature-700 text-$textSize(-1,*) font-bold dark:text-$colorTemperature-300",
       input:
-        "appearance-none [color-scheme:light] dark:[color-scheme:dark] selection:bg-$primaryColor-100 selection:text-$colorTemperature-700",
+        "appearance-none [color-scheme:light] dark:[color-scheme:dark] selection:bg-$primaryColor-100 selection:text-$colorTemperature-700 group-data-[has-overlay]:selection:!text-transparent",
       prefixIcon:
         "flex items-center mr-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
       suffixIcon:
@@ -548,44 +548,48 @@ export default createTheme({
     datepicker: {
       inner: "relative pl-0",
       panelWrapper:
-        "absolute min-w-[22em] top-[calc(100%_+_0.5em)] shadow-[0_0_1.25em_rgba(0,0,0,.25)] $borderRadius(0,rounded-none,rounded-2xl) p-$spacing(4,*) bg-white z-10",
+        "absolute min-w-[22em] top-[calc(100%_+_0.5em)] shadow-[0_0_1.25em_rgba(0,0,0,.25)] $borderRadius(0,rounded-none,rounded-2xl) p-$spacing(4,*) bg-white z-10 dark:bg-$colorTemperature-800",
       panelHeader:
-        "grid grid-cols-[2.5em_1fr_2.5em] justify-center items-center border-b-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) mb-$spacing pb-$spacing(1,*)",
+        "grid grid-cols-[2.5em_1fr_2.5em] justify-center items-center border-b-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) mb-$spacing pb-$spacing(1,*) dark:border-$colorTemperature-$borderShadeDarkMode(1,400,700)",
       panel: "flex justify-center",
       input: "pl-$spacing placeholder:text-$colorTemperature-400",
       monthsHeader: "flex items-center justify-center col-start-2 col-end-2",
       timeHeader: "flex items-center justify-center col-start-2 col-end-2",
       months: "grid grid-cols-3 w-full",
       month:
-        "m-$spacing(-1) p-$spacing(-2) text-center text-$colorTemperature-700 $borderRadius bg-$colorTemperature-200 aria-selected:bg-$primaryColor-500 aria-selected:text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white focus:text-$colorTemperature-700 data-[is-extra=true]:opacity-25 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none",
+        "m-$spacing(-1) p-$spacing(-2) text-center text-$colorTemperature-700 $borderRadius bg-$colorTemperature-200 aria-selected:!bg-$primaryColor-500 aria-selected:!text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white focus:text-$colorTemperature-700 data-[is-extra=true]:opacity-25 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none dark:bg-$colorTemperature-700 dark:text-$colorTemperature-300",
       yearsHeader:
-        "flex items-center justify-center text-$colorTemperature-700 col-start-2 col-end-2",
+        "flex items-center justify-center text-$colorTemperature-700 col-start-2 col-end-2 dark:text-$colorTemperature-300",
       years: "grid grid-cols-5 w-full",
-      year: "text-$textSize text-center text-$colorTemperature-700 items-center m-$spacing(-1) p-$spacing(-2) $borderRadius bg-$colorTemperature-200 aria-selected:bg-$primaryColor-500 aria-selected:text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white data-[is-extra=true]:opacity-25 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none",
+      year: "text-$textSize text-center text-$colorTemperature-700 items-center m-$spacing(-1) p-$spacing(-2) $borderRadius bg-$colorTemperature-200 aria-selected:!bg-$primaryColor-500 aria-selected:!text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white data-[is-extra=true]:opacity-25 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none dark:bg-$colorTemperature-700 dark:text-$colorTemperature-300",
       weekDays: "grid grid-cols-7",
       weekDay:
         "w-[2.25em] text-$colorTemperature-700 m-$spacing(-1) $borderRadius font-medium lowercase",
       calendarWeeks: "",
       week: "grid grid-cols-7 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none",
-      dayCell:
-        "flex items-center justify-center text-center text-$colorTemperature-700 w-[2.25em] h-[2.25em] m-1 p-$spacing $borderRadius bg-$colorTemperature-200 aria-selected:bg-$primaryColor-500 aria-selected:text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white data-[is-extra=true]:opacity-25 group-data-[disabled]:opacity-50 group-data-[disabled]:cursor-default group-data-[disabled]:pointer-events-none",
+      dayCell: `
+        flex items-center justify-center text-center text-$colorTemperature-700 w-[2.25em] h-[2.25em] m-1 p-$spacing $borderRadius bg-$colorTemperature-200 aria-selected:bg-$primaryColor-500 aria-selected:text-white focus:outline focus:outline-2 focus:outline-$primaryColor-500 focus:outline-offset-2 focus:bg-white data-[is-extra=true]:opacity-25 data-[disabled]:opacity-50 data-[disabled]:cursor-default data-[disabled]:pointer-events-none
+
+        ${"" /* dark mode styles */}
+        dark:bg-$colorTemperature-600 dark:text-$colorTemperature-300 dark:aria-selected:bg-$primaryColor-500 dark:aria-selected:text-white dark:focus:outline-$primaryColor-500 dark:focus:bg-$colorTemperature-200 dark:focus:text-$colorTemperature-700
+      `,
       timeInput:
         "w-full border-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) $borderRadius p-$spacing my-$spacing(5,*) focus-visible:outline-$primaryColor-500",
       daysHeader: "flex items-center justify-center",
       prev: "mr-auto px-$spacing(1,*) py-$spacing(-3,*) hover:bg-$colorTemperature-100 $borderRadius col-start-1 col-end-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
       prevLabel: "hidden",
       prevIcon:
-        "flex w-[0.75em] select-none text-$colorTemperature-700 [&>svg]:w-full",
+        "flex w-[0.75em] select-none text-$colorTemperature-700 [&>svg]:w-full dark:text-$colorTemperature-300",
       dayButton:
-        "appearance-none text-$colorTemperature-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
+        "appearance-none text-$colorTemperature-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2 dark:text-$colorTemperature-300 dark:border-$colorTemperature-$borderShadeDarkMode(1,300,700) dark:hover:border-$primaryColor-400",
       monthButton:
-        "appearance-none text-$colorTemperature-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
+        "appearance-none text-$colorTemperature-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2 dark:text-$colorTemperature-300 dark:border-$colorTemperature-$borderShadeDarkMode(1,300,700) dark:hover:border-$primaryColor-400 ",
       yearButton:
-        "appearance-none text-$colorTemperature-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
+        "appearance-none text-$colorTemperature-700 cursor-pointer px-$spacing(1,*) py-$spacing(-3,*) border-2 border-$colorTemperature-$borderShadeLightMode(-1,200,600) $borderRadius mx-1 hover:border-$primaryColor-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2 dark:text-$colorTemperature-300 dark:border-$colorTemperature-$borderShadeDarkMode(1,300,700) dark:hover:border-$primaryColor-400",
       next: "ml-auto px-$spacing(1,*) py-$spacing(-3,*) $borderRadius hover:bg-$colorTemperature-100 hover:rounded col-start-3 col-end-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2",
       nextLabel: "hidden",
       nextIcon:
-        "flex w-[0.75em] select-none text-$colorTemperature-700 [&>svg]:w-full",
+        "flex w-[0.75em] select-none text-$colorTemperature-700 [&>svg]:w-full dark:text-$colorTemperature-300",
       openButton:
         "appearance-none border-0 bg-transparent flex p-0 self-stretch cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-$primaryColor-400 focus-visible:ring-offset-2 focus-visible:$borderRadius(0,rounded-none,rounded-2xl)",
       calendarIcon:
