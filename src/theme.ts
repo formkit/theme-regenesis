@@ -683,15 +683,16 @@ export default createTheme({
       wrapper: "flex flex-col sm:flex-row justify-between w-full max-w-none",
       help: "pb-$spacing",
       transferlist:
-        "grow shrink min-w-0 $inputShadow aspect-[4/5] flex flex-col min-h-[350px] border border-$textColor-$borderShadeLightMode(-1,200,900) $borderRadius(0,rounded-none,rounded-2xl) overflow-hidden select-none dark:border-$textColor-$borderShadeDarkMode(1,100,800)",
+        "grow shrink min-w-0 $inputShadow aspect-[4/5] flex flex-col min-h-[350px] border border-$textColor-$borderShadeLightMode(-1,200,900) $borderRadius(0,rounded-none,rounded-2xl) overflow-hidden select-none dark:border-$textColor-$borderShadeDarkMode(1,100,800) dark:bg-$textColor-900/50",
       transferlistHeader:
-        "flex bg-$textColor-100 text-$textColor-600 text-$textSize(-1,*) justify-between items-center border-b border-$textColor-$borderShadeLightMode(-1,200,900) py-$spacing px-$spacing(1)",
+        "flex bg-$textColor-100 text-$textColor-600 text-$textSize(-1,*) justify-between items-center border-b border-$textColor-$borderShadeLightMode(-1,200,900) py-$spacing px-$spacing(1) dark:bg-$textColor-700 dark:border-$textColor-$borderShadeDarkMode(1,100,800) dark:text-$textColor-400",
       transferlistHeaderItemCount:
-        "ml-auto text-xs min-w-[1.5em] [line-height:1.5em] px-$spacing text-center $borderRadius(2) bg-$textColor-200 text-$textColor-700",
+        "ml-auto text-xs min-w-[1.5em] [line-height:1.5em] px-$spacing text-center $borderRadius(2) bg-$textColor-200 text-$textColor-700 dark:bg-$textColor-500 dark:text-$textColor-300",
       transferlistListItems:
         "list-none bg-white h-full overflow-x-hidden overflow-y-auto dark:bg-transparent",
-      transferlistListItem:
-        "py-$spacing px-$spacing pl-[1.5em] relative text-$textColor-700 aria-selected:bg-$primaryColor-600 border-$textColor-$borderShadeLightMode(-2,200,400) aria-selected:data-[is-active=true]:bg-$primaryColor-600 aria-selected:text-white aria-selected:data-[is-active=true]:text-white first:-mt-px first:border-t flex border-b bg-white data-[is-active=true]:text-$primaryColor-500 data-[is-active=true]:bg-$textColor-100 cursor-pointer group-data-[is-max=true]:cursor-not-allowed items-center dark:bg-transparent dark:border-$textColor-$borderShadeDarkMode(2,400,600)",
+      transferlistListItem: `py-$spacing px-$spacing pl-[1.5em] relative text-$textColor-700 aria-selected:bg-$primaryColor-600 border-$textColor-$borderShadeLightMode(-2,200,400) aria-selected:bg-$primaryColor-600 aria-selected:text-white first:-mt-px first:border-t flex border-b bg-white data-[is-active=true]:text-$primaryColor-500 data-[is-active=true]:bg-$textColor-100 cursor-pointer group-data-[is-max=true]:cursor-not-allowed items-center 
+      
+      dark:bg-$textColor-800 dark:text-$textColor-300 dark:border-$textColor-$borderShadeDarkMode(2,400,600) dark:aria-selected:bg-$primaryColor-600 dark:aria-selected:border-$primaryColor-400`,
       transferlistOption: "text-$textSize(-1,*)",
       transferControls:
         "inline-flex grow-0 shrink border border-$textColor-$borderShadeLightMode(-1,200,900) flex-row sm:flex-col justify-center my-$spacing sm:my-auto mx-auto sm:mx-$spacing $borderRadius overflow-clip $inputShadow(-2)",
@@ -702,9 +703,9 @@ export default createTheme({
         "appearance-none border-none w-full my-$spacing text-center text-$textColor-500 italic",
       emptyMessageInner: "flex items-center justify-center p-$spacing text-sm",
       transferlistControls:
-        "bg-white p-$spacing border-b border-$textColor-$borderShadeLightMode(-2,200,900)",
+        "bg-white p-$spacing border-b border-$textColor-$borderShadeLightMode(-2,200,900) dark:bg-$textColor-700 dark:border-$textColor-$borderShadeDarkMode(2,100,700)",
       transferlistSearch:
-        "flex border border-$textColor-$borderShadeLightMode(-1,200,900) $borderRadius items-center text-$textColor-700 selection:bg-$primaryColor-100",
+        "flex border border-$textColor-$borderShadeLightMode(-1,200,900) $borderRadius items-center text-$textColor-700 selection:bg-$primaryColor-100 dark:bg-$textColor-700 dark:border-$textColor-$borderShadeDarkMode(1,100,800) dark:text-$textColor-300 dark:selection:bg-$primaryColor-100 dark:selection:text-$textColor-700 dark:bg-$textColor-800",
       transferlistSearchInput:
         "border-none px-$spacing py-$spacing(-1) w-full bg-transparent outline-none text-$textSize(-1,*)",
       controlLabel: "hidden",
