@@ -122,6 +122,11 @@ export default createTheme({
       value: "max-w-[20em]",
       scale: ["max-w-[15em]", "max-w-[17em]", "max-w-[20em]", "max-w-[24em]"],
     },
+    tagRadius: {
+      editor: "radius",
+      value: "rounded",
+      scale: ["rounded-none", "rounded", "rounded-full"],
+    },
   },
   inputs: {
     /**
@@ -131,20 +136,20 @@ export default createTheme({
      */
     __globals: {
       outer:
-        "group $inputMaxWidth mb-$spacing(5,*) data-[disabled]:select-none data-[disabled]:opacity-50 text-$textSize",
+        "group $inputMaxWidth mb-$spacing(5,*) data-[disabled]:select-none data-[disabled]:opacity-50 text-$scale",
       label:
-        "block text-$colorTemperature-700 text-$textSize(-1,*) font-bold mb-$spacing(-2) dark:text-$colorTemperature-300",
+        "block text-$colorTemperature-700 text-$scale(-1,*) font-bold mb-$spacing(-2) dark:text-$colorTemperature-300",
       legend:
-        "block text-$colorTemperature-700 text-$textSize(-1,*) font-bold dark:text-$colorTemperature-300",
+        "block text-$colorTemperature-700 text-$scale(-1,*) font-bold dark:text-$colorTemperature-300",
       input:
-        "appearance-none [color-scheme:light] dark:[color-scheme:dark] selection:bg-$primaryColor-100 selection:text-$colorTemperature-700 group-data-[has-overlay]:selection:!text-transparent",
+        "appearance-none [color-scheme:light] dark:[color-scheme:dark] selection:bg-$accentColor-100 selection:text-$colorTemperature-700 group-data-[has-overlay]:selection:!text-transparent",
       prefixIcon:
-        "flex items-center mr-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
+        "flex items-center mr-$spacing(0) text-$scale h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
       suffixIcon:
-        "flex items-center ml-$spacing(0) text-$textSize h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
-      help: "text-$colorTemperature-500 text-$textSize(-2,*) dark:text-$colorTemperature-400",
+        "flex items-center ml-$spacing(0) text-$scale h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
+      help: "text-$colorTemperature-500 text-$scale(-2,*) dark:text-$colorTemperature-400",
       message:
-        "text-red-500 mb-$spacing(-1) text-$textSize(-2,*) dark:text-red-400",
+        "text-red-500 mb-$spacing(-1) text-$scale(-2,*) dark:text-red-400",
       overlay: "text-$colorTemperature-700 dark:text-$colorTemperature-300",
       overlayPlaceholder:
         "text-$colorTemperature-400 dark:text-$colorTemperature-400/50",
