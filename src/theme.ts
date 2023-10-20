@@ -127,6 +127,11 @@ export default createTheme({
       value: "rounded",
       scale: ["rounded-none", "rounded", "rounded-full"],
     },
+    swatchRadius: {
+      editor: "radius",
+      value: "rounded",
+      scale: ["rounded-none", "rounded", "rounded-full"],
+    },
   },
   inputs: {
     /**
@@ -203,8 +208,7 @@ export default createTheme({
         ${"" /* dark mode styles */}
         dark:text-$colorTemperature-300
       `,
-      optionHelp:
-        "text-$colorTemperature-500 text-$scale(-2,*) mt-$spacing(-3)",
+      optionHelp: "text-$colorTemperature-500 text-$scale(-2,*)",
       help: "mb-$spacing(-3) group-data-[multiple]:mb-$spacing group-data-[multiple]:-mt-$spacing",
     },
     "family:text": {
@@ -539,16 +543,16 @@ export default createTheme({
         "flex justify-end self-start uppercase shrink-0 p-1 mt-0.5 text-$colorTemperature-600 $radius(0,rounded-none,rounded) select-none dark:text-$colorTemperature-400",
       switchIcon: "[&>svg]:w-3",
       swatches:
-        "inline-flex flex-wrap justify-self-center w-auto min-w-0 mx-auto pt-$spacing pb-$spacing mt-$spacing -mb-$spacing border-t border-$colorTemperature-$borderShadeLightMode(-1) overflow-auto max-h-[200px] select-none first:mt-0 first:pt-0 first:border-t-0 dark:border-$colorTemperature-$borderShadeDarkMode(1)",
+        "inline-flex flex-wrap w-full justify-self-center min-w-0 mx-auto pt-$spacing pb-$spacing mt-$spacing -mb-$spacing border-t border-$colorTemperature-$borderShadeLightMode(-1) overflow-auto max-h-[200px] select-none first:mt-0 first:pt-0 first:border-t-0 dark:border-$colorTemperature-$borderShadeDarkMode(1)",
       swatchGroup: "flex flex-wrap w-full mb-$spacing last:mb-0",
       swatchGroupLabel:
         "ml-1 block w-full text-$scale(-1,xs,sm) text-$colorTemperature-500 dark:text-$colorTemperature-400",
       swatch: `
         ${"" /* base styles */} 
-        relative min-w-[1rem] w-[calc((100%/10)-0.5rem)] aspect-square m-1 cursor-pointer
+        relative text-$scale w-[calc((100%/10)-0.5em)] max-w-[22px] m-[0.16em] cursor-pointer
 
         ${"" /* decorator styles */} 
-        before:content-[''] before:absolute before:inset-0 before:$radius before:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.2)] before:pointer-events-none before:z-[2] dark:before:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)]
+        before:content-[''] before:absolute before:inset-0 before:$swatchRadius before:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.2)] before:pointer-events-none before:z-[2] dark:before:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)]
 
         ${"" /* active styles */}
         data-[active='true']:after:content-['']
@@ -568,7 +572,7 @@ export default createTheme({
         data-[active='true']:after:ring-[rgba(0,0,0,0.33)]
 
         ${"" /* canvas styles */}
-        [&>canvas]:block [&>canvas]:w-full [&>canvas]:aspect-square [&>canvas]:$radius [&>canvas:focus-visible]:outline-none [&>canvas:focus-visible]:ring-2 [&>canvas:focus-visible]:ring-$accentColor-400 [&>canvas:focus-visible]:ring-offset-2 [&>canvas:focus-visible]:ring-offset-white dark:[&>canvas:focus-visible]:ring-offset-$colorTemperature-700
+        [&>canvas]:block [&>canvas]:w-full [&>canvas]:aspect-square [&>canvas]:$swatchRadius [&>canvas:focus-visible]:outline-none [&>canvas:focus-visible]:ring-2 [&>canvas:focus-visible]:ring-$accentColor-400 [&>canvas:focus-visible]:ring-offset-2 [&>canvas:focus-visible]:ring-offset-white dark:[&>canvas:focus-visible]:ring-offset-$colorTemperature-700
       `,
     },
     datepicker: {
