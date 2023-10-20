@@ -15,7 +15,7 @@ const config = defaultConfig({
   plugins: [proPlugin],
   icons: genesisIcons,
   config: {
-    rootClasses: rootClasses(theme().tailwind())!,
+    rootClasses: rootClasses(theme().tailwind()),
   },
 });
 
