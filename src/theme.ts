@@ -48,12 +48,18 @@ export default createTheme({
     borderRadius: {
       editor: "radius",
       value: "rounded",
-      min: "rounded-none",
-      max: "rounded-full",
+      scale: [
+        "rounded-none",
+        "rounded",
+        "rounded-lg",
+        "rounded-xl",
+        "rounded-2xl",
+        "rounded-full",
+      ],
     },
     primaryColor: {
       editor: "color",
-      value: "fuchsia",
+      value: "blue",
       scale: [
         "red",
         "orange",
@@ -76,7 +82,7 @@ export default createTheme({
     },
     colorTemperature: {
       editor: "color",
-      value: "slate",
+      value: "gray",
       scale: ["slate", "gray", "zinc", "neutral", "stone"],
     },
     spacing: {
@@ -228,7 +234,7 @@ export default createTheme({
     },
     checkbox: {
       // inherits family:box classes
-      decorator: "$borderRadius(0,rounded-none,rounded-md)",
+      decorator: "$borderRadius(0,rounded-none,rounded-lg)",
       decoratorIcon: "max-w-[66.66%]",
     },
     color: {
@@ -510,7 +516,7 @@ export default createTheme({
       fieldLabel:
         "text-$textSize(-2,xs,sm) text-$colorTemperature-500 mt-$spacing(-3) dark:text-$colorTemperature-400",
       formatSwitcher:
-        "flex justify-end self-start uppercase shrink-0 p-1 mt-0.5 text-$colorTemperature-600 $borderRadius(0,rounded-none,rounded-sm) select-none dark:text-$colorTemperature-400",
+        "flex justify-end self-start uppercase shrink-0 p-1 mt-0.5 text-$colorTemperature-600 $borderRadius(0,rounded-none,rounded) select-none dark:text-$colorTemperature-400",
       switchIcon: "[&>svg]:w-3",
       swatches:
         "inline-flex flex-wrap justify-self-center w-auto min-w-0 mx-auto pt-$spacing pb-$spacing mt-$spacing -mb-$spacing border-t border-$colorTemperature-$borderShadeLightMode(-1) overflow-auto max-h-[200px] select-none first:mt-0 first:pt-0 first:border-t-0 dark:border-$colorTemperature-$borderShadeDarkMode(1)",
@@ -673,7 +679,7 @@ export default createTheme({
       handle:
         'group select-none w-4 h-4 rounded-full bg-white absolute top-1/2 left-0 z-30 -translate-x-1/2 -translate-y-1/2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1),0_1px_2px_0_rgba(0,0,0,0.5)] focus-visible:outline-0 focus-visible:ring-2 ring-$primaryColor-500 data-[is-target="true"]:z-20 dark:bg-$colorTemperature-200',
       tooltip:
-        'absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-[4px] bg-$primaryColor-500 text-white py-$spacing(-2,1,3) px-$spacing(-1,1,3) text-xs leading-none whitespace-nowrap $borderRadius(0,rounded-none,rounded-sm) opacity-0 pointer-events-none transition-opacity after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:-translate-y-[1px] after:border-4 after:border-transparent after:border-t-$primaryColor-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-data-[show-tooltip="true"]:opacity-100',
+        'absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-[4px] bg-$primaryColor-500 text-white py-$spacing(-2,1,3) px-$spacing(-1,1,3) text-xs leading-none whitespace-nowrap $borderRadius(0,rounded-none,rounded) opacity-0 pointer-events-none transition-opacity after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:-translate-y-[1px] after:border-4 after:border-transparent after:border-t-$primaryColor-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-data-[show-tooltip="true"]:opacity-100',
       linkedValues: "flex items-start justify-between",
       minValue:
         'grow max-w-[45%] mb-0 relative [&_.formkit-inner::after]:content-[""] [&_.formkit-inner::after]:absolute [&_.formkit-inner::after]:left-[105%] [&_.formkit-inner::after]:-translate-y-1/2 [&_.formkit-inner::after]:w-[10%] [&_.formkit-inner::after]:h-[1px] [&_.formkit-inner::after]:bg-$colorTemperature-500',

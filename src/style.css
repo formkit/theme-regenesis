@@ -1,6 +1,6 @@
 :root {
   --bg-color: #fafafa;
-  --text-color: red;
+  --text-color: red; /* for debugging — red text means you're missing styles */
   --border-color: #eaeaea;
   --headline-color: #000;
 
@@ -40,7 +40,7 @@ body {
 
 .formkit-kitchen-sink {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
 }
 .formkit-input-type {
   display: block;
@@ -50,14 +50,15 @@ body {
   font-weight: bold;
   text-transform: capitalize;
   color: var(--headline-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
 }
 
 .formkit-specimen-group {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 360px);
-  margin-bottom: 3em;
-  border: 1px solid var(--border-color);
-  padding: 2em;
+  grid-template-columns: repeat(auto-fit, 400px);
+  margin-bottom: 4em;
 }
 .formkit-specimen-group:has([data-type="transferlist"]) {
   grid-template-columns: repeat(auto-fit, 650px);
