@@ -45,7 +45,7 @@ export default createTheme({
     darkMode: true,
   },
   variables: {
-    borderRadius: {
+    radius: {
       editor: "radius",
       value: "rounded",
       scale: [
@@ -57,7 +57,7 @@ export default createTheme({
         "rounded-full",
       ],
     },
-    primaryColor: {
+    accentColor: {
       editor: "color",
       value: "blue",
       scale: [
@@ -88,10 +88,10 @@ export default createTheme({
     spacing: {
       editor: "spacing",
       value: "2",
-      min: "1",
-      max: "2.5",
+      min: "1.5",
+      max: "2",
     },
-    textSize: {
+    scale: {
       editor: "fontSize",
       value: "base",
       min: "sm",
