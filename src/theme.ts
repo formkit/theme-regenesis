@@ -152,7 +152,7 @@ export default createTheme({
       outer:
         "group $inputMaxWidth mb-$spacing(2,*) data-[disabled]:select-none data-[disabled]:opacity-50 text-$scale",
       label:
-        "block text-$colorTemperature-700 text-$scale(-1,*) font-bold mb-$spacing(-2) dark:text-$colorTemperature-300",
+        "block text-$colorTemperature-700 text-$scale(-1,*) font-bold mb-$spacing(-2,0.5,1.5) dark:text-$colorTemperature-300",
       legend:
         "block text-$colorTemperature-700 text-$scale(-1,*) font-bold dark:text-$colorTemperature-300",
       input:
@@ -380,6 +380,7 @@ export default createTheme({
       // inherits family:button classes
     },
     textarea: {
+      label: "-mt-1",
       inner:
         "flex items-center mb-$spacing(-1) bg-white border border-$colorTemperature-$borderShadeLightMode $radius(0,rounded-none,rounded-2xl) focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 $inputShadow dark:border-$colorTemperature-$borderShadeDarkMode dark:group-data-[disabled]:bg-$colorTemperature-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400 dark:bg-transparent",
       input: `
@@ -416,6 +417,7 @@ export default createTheme({
     "family:dropdown": {
       // autocomplete, dropdown, taglist
       wrapper: "mb-$spacing(-1)",
+      label: "-mt-1",
       inner: `
         ${"" /* base styles */}
         relative flex items-center bg-white border border-$colorTemperature-$borderShadeLightMode $radius focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
@@ -445,25 +447,23 @@ export default createTheme({
       suffixIcon:
         "!mr-$spacing !ml-0 text-$colorTemperature-600 dark:text-$colorTemperature-300",
       dropdownWrapper:
-        "hidden $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-1,1,2) group-data-[expanded]:block",
+        "hidden $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-2,0.5,2) group-data-[expanded]:block group-data-[overscroll]:m-0  group-data-[overscroll]:shadow-none dark:bg-$colorTemperature-700",
       listbox:
-        "bg-white $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) overflow-clip dark:bg-$colorTemperature-700",
+        "bg-white $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) overflow-hidden border border-$colorTemperature-$borderShadeLightMode(-1,200,700) dark:bg-$colorTemperature-700 dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)",
       listitem: `
-        relative flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$colorTemperature-700 text-$scale aria-selected:!text-white aria-selected:!bg-$accentColor-500 data-[is-active]:bg-$accentColor-100 dark:text-$colorTemperature-200 dark:data-[is-active]:text-$colorTemperature-700 data-[is-active]:bg-$accentColor-100
+        relative flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$colorTemperature-700 text-$scale aria-selected:!bg-$accentColor-100 data-[is-active]:bg-$accentColor-100 dark:text-$colorTemperature-200 dark:aria-selected:text-$colorTemperature-700 dark:data-[is-active]:text-$colorTemperature-700
 
         ${"" /* keyboard focus on active items */}
         before:content-['']
         before:absolute
         before:inset-0
         data-[is-active]:aria-selected:before:ring-2
-        data-[is-active]:aria-selected:before:ring-white
+        data-[is-active]:aria-selected:before:ring-$accentColor-300
         data-[is-active]:aria-selected:before:ring-inset
-        data-[is-active]:aria-selected:before:ring-offset-2
-        data-[is-active]:aria-selected:before:ring-offset-$accentColor-500
-        data-[is-active]:aria-selected:before:$radius(0,rounded-none,rounded-2xl)
+        data-[is-active]:aria-selected:before:ring-offset-$accentColor-100
       `,
       selectedIcon:
-        "flex absolute items-center left-$spacing text-$scale h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
+        "flex absolute items-center text-$accentColor-500 left-$spacing text-$scale h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
       option: "ml-[1.5em]",
       selectionWrapper: "grow flex items-center text-$colorTemperature-700",
       selection:

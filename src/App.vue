@@ -102,6 +102,10 @@ const registrationForm = [
   {
     $formkit: "form",
     submitLabel: "Proceed to checkout",
+    submitAttrs: {
+      prefixIcon: "dollar",
+      suffixIcon: "submit",
+    },
     children: [
       {
         $el: "h1",
@@ -117,6 +121,9 @@ const registrationForm = [
         label: "Attendees",
         help: "Please register as many tickets as you need for your team.",
         addLabel: "Add attendee",
+        addAttrs: {
+          prefixIcon: "add",
+        },
         children: [
           {
             $el: "div",
@@ -225,6 +232,184 @@ const registrationForm = [
     ],
   },
 ];
+
+const jobApplicationForm = [
+  {
+    $el: "h1",
+    children: "Job Application Form",
+  },
+  {
+    $el: "p",
+    children:
+      "Please fill out this form to apply for a job with us. We appreciate your interest in our company.",
+  },
+  {
+    $formkit: "form",
+    submitLabel: "Submit Application",
+    submitAttrs: {
+      suffixIcon: "submit",
+    },
+    key: "formkey",
+    children: [
+      {
+        $el: "div",
+        attrs: {
+          class: "double",
+        },
+        children: [
+          {
+            $formkit: "text",
+            label: "First Name",
+            name: "firstname",
+            validation: "required",
+          },
+          {
+            $formkit: "text",
+            label: "Last Name",
+            name: "lastname",
+            validation: "required",
+          },
+        ],
+      },
+      {
+        $el: "div",
+        attrs: {
+          class: "double",
+        },
+        children: [
+          {
+            $formkit: "email",
+            label: "Email Address",
+            name: "email",
+            validation: "required|email",
+          },
+          {
+            $formkit: "mask",
+            mask: "+1 (###) ###-####",
+            label: "Phone Number",
+            name: "phone",
+            validation: "required",
+          },
+        ],
+      },
+      {
+        $el: "div",
+        attrs: {
+          class: "double",
+        },
+        children: [
+          {
+            $formkit: "dropdown",
+            label: "Job Type",
+            name: "jobType",
+            value: "part_time",
+            options: [
+              { label: "Internship", value: "internship" },
+              { label: "Part Time", value: "part_time" },
+              { label: "Full Time", value: "full_time" },
+            ],
+            validation: "required",
+          },
+          {
+            $formkit: "text",
+            label: "Desired Position",
+            name: "desiredPosition",
+            validation: "required",
+          },
+        ],
+      },
+      {
+        $el: "div",
+        attrs: {
+          class: "triple",
+        },
+        children: [
+          {
+            $formkit: "text",
+            key: "universitykey",
+            label: "University",
+            name: "university",
+            validation: "required",
+          },
+          {
+            $formkit: "text",
+            key: "degreekey",
+            label: "Degree",
+            name: "degree",
+            validation: "required",
+          },
+          {
+            $formkit: "text",
+            key: "majorkey",
+            label: "Major",
+            name: "major",
+            validation: "required",
+          },
+        ],
+      },
+      {
+        $formkit: "textarea",
+        key: "coverletterkey",
+        label: "Cover Letter",
+        name: "coverLetter",
+        validation: "required",
+      },
+      {
+        $el: "div",
+        if: "$value.jobType === 'full_time' || $value.jobType === 'part_time'",
+        attrs: {
+          class: "double",
+        },
+        children: [
+          {
+            $formkit: "text",
+            if: "$value.jobType === 'full_time' || $value.jobType === 'part_time'",
+            key: "prevcompkey",
+            label: "Previous Company",
+            name: "previousCompany",
+          },
+          {
+            $formkit: "text",
+            if: "$value.jobType === 'full_time' || $value.jobType === 'part_time'",
+            key: "prevposkey",
+            label: "Previous Position",
+            name: "previousPosition",
+          },
+        ],
+      },
+      {
+        $el: "div",
+        if: "$value.jobType === 'full_time' || $value.jobType === 'part_time'",
+        attrs: {
+          class: "double",
+        },
+        children: [
+          {
+            $formkit: "datepicker",
+            if: "$value.jobType === 'full_time' || $value.jobType === 'part_time'",
+            key: "startdatekey",
+            label: "Start Date",
+            name: "startDate",
+          },
+          {
+            $formkit: "datepicker",
+            if: "$value.jobType === 'full_time' || $value.jobType === 'part_time'",
+            key: "enddatekey",
+            label: "End Date",
+            name: "endDate",
+          },
+        ],
+      },
+      {
+        $formkit: "textarea",
+        if: "$value.jobType === 'full_time' || $value.jobType === 'full_time' || $value.jobType === 'part_time'",
+        key: "jobdesckey",
+        label: "Job Description",
+        name: "jobDescription",
+      },
+    ],
+  },
+];
 </script>
 
 <template>
@@ -241,6 +426,10 @@ const registrationForm = [
       <FormKitSchema :schema="registrationForm" />
     </div>
 
+    <div class="example-form">
+      <FormKitSchema :schema="jobApplicationForm" />
+    </div>
+
     <Suspense>
       <FormKitKitchenSink :pro="true" />
     </Suspense>
@@ -252,7 +441,7 @@ const registrationForm = [
   color: var(--headline-color);
   max-width: 800px;
   padding: 2em;
-  margin-left: auto;
+  margin-left: 3em;
   margin-right: auto;
   margin-bottom: 10rem;
   padding: 5rem;
@@ -274,12 +463,26 @@ const registrationForm = [
   display: flex;
 }
 :deep(.double > *) {
+  width: 50%;
   flex-grow: 1;
 }
 :deep(.double > *:first-child) {
   margin-right: 0.25em;
 }
 :deep(.double > *:last-child) {
+  margin-left: 0.25em;
+}
+:deep(.triple) {
+  display: flex;
+}
+:deep(.triple > *) {
+  flex-grow: 1;
+  width: 33.333%;
+}
+:deep(.triple > *:first-child) {
+  margin-right: 0.25em;
+}
+:deep(.triple > *:last-child) {
   margin-left: 0.25em;
 }
 </style>
