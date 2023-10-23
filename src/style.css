@@ -1,7 +1,9 @@
 :root {
   --bg-color: #fafafa;
+  --panel-bg-color: #fff;
   --text-color: red; /* for debugging — red text means you're missing styles */
   --border-color: #eaeaea;
+  --panel-border-color: rgb(226, 226, 226);
   --headline-color: #000;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -21,6 +23,8 @@
 
 html.dark {
   --bg-color: #171717;
+  --panel-bg-color: #1e1e1e;
+  --panel-border-color: #333;
   --border-color: #333;
   --headline-color: #fff;
 }
