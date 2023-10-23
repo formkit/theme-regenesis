@@ -2,7 +2,7 @@ import { createTheme } from "@formkit/theme-creator";
 
 export default createTheme({
   meta: {
-    name: "Regenisis",
+    name: "Regenesis",
     description: "The official Regenisis theme from FormKit.",
     formKitVersion: "^1.0.0",
     authorName: "FormKit Inc",
