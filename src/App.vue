@@ -77,6 +77,7 @@ const tshirtForm = [
         name: "tshirtColor",
         panelControls: false,
         panelFormat: false,
+        value: "hsla(352, 98%, 41%, 1)",
         options: [
           "hsla(352, 98%, 41%, 1)",
           "rgb(245, 166, 35)",
@@ -240,9 +241,9 @@ const registrationForm = [
       <FormKitSchema :schema="registrationForm" />
     </div>
 
-    <!-- <Suspense>
+    <Suspense>
       <FormKitKitchenSink :pro="true" />
-    </Suspense> -->
+    </Suspense>
   </div>
 </template>
 
