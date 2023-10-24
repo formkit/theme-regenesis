@@ -164,6 +164,17 @@ const surveyForm = [
         ],
       },
       {
+        $formkit: "slider",
+        label:
+          "On a scale of 1 - 10 how happy are you with your current form development tooling?",
+        name: "happiness",
+        value: "5",
+        min: 1,
+        max: 10,
+        prefixIcon: "sad",
+        suffixIcon: "happy",
+      },
+      {
         $formkit: "checkbox",
         key: "checkboxkey",
         label: "What are your biggest pain points when building forms?",

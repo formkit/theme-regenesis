@@ -150,7 +150,7 @@ export default createTheme({
      */
     __globals: {
       outer:
-        "group $inputMaxWidth mb-$spacing(2,0.5,4) data-[disabled]:select-none data-[disabled]:opacity-50 text-$scale",
+        "group $inputMaxWidth mb-$spacing(4,0.5,4) data-[disabled]:select-none data-[disabled]:opacity-50 text-$scale",
       label:
         "block text-$colorTemperature-700 text-$scale(-1,*) font-bold mb-$spacing(-2,0.5,1.5) dark:text-$colorTemperature-300",
       legend:
@@ -222,11 +222,12 @@ export default createTheme({
     },
     "family:text": {
       // color, date, datetime-local, email, file, month, number, password, search, tel, text, time, url, week
-      wrapper: "flex flex-col items-start justify-start",
+      wrapper:
+        "flex flex-col items-start justify-start mb-$spacing(-1,0.5,2) last:mb-0",
       label: "!inline-flex mb-$spacing(-2,1,1.5)",
       inner: `
         ${"" /* base styles */}
-        text-$scale flex items-center w-full py-$spacing px-$spacing(2,2,4) mb-$spacing(-1) last:mb-0 $radius border border-$colorTemperature-$borderShadeLightMode bg-white focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
+        text-$scale flex items-center w-full py-$spacing px-$spacing(2,2,4) $radius border border-$colorTemperature-$borderShadeLightMode bg-white focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
 
         ${"" /* dark mode styles */}
         dark:bg-transparent dark:border-$colorTemperature-$borderShadeDarkMode dark:group-data-[disabled]:bg-$colorTemperature-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
@@ -254,7 +255,7 @@ export default createTheme({
     },
     checkbox: {
       // inherits family:box classes
-      decorator: "$radius(0,rounded-none,rounded-lg)",
+      decorator: "$radius(0,rounded-none,rounded)",
       decoratorIcon: "max-w-[66.66%]",
     },
     color: {
@@ -673,6 +674,7 @@ export default createTheme({
       legend: "mb-$spacing",
       content:
         "grow p-$spacing(5,2,10) flex flex-col align-center [&>.formkit-outer]:max-w-none [&>.formkit-outer:last-child]:mb-0",
+      addButton: "!mb-0",
       controlLabel: "absolute opacity-0 pointer-events-none text-[0px]",
       controls:
         "flex flex-col items-center justify-center bg-$colorTemperature-100 p-$spacing [&>li]:aspect-square dark:bg-$colorTemperature-800",
