@@ -121,18 +121,12 @@ const tshirtForm = [
 
 const surveyForm = [
   {
-    $el: "h1",
-    children: "FormKit Survey",
-  },
-  {
-    $el: "p",
-    children:
-      "Complete the survey below and you'll be entered for a chance to win!",
-  },
-  {
     $formkit: "form",
     key: "formkey",
     onSubmit: "$handleSubmit",
+    submitAttrs: {
+      suffixIcon: "submit",
+    },
     children: [
       {
         $formkit: "radio",
@@ -171,6 +165,7 @@ const surveyForm = [
         value: "5",
         min: 1,
         max: 10,
+        marks: true,
         prefixIcon: "sad",
         suffixIcon: "happy",
       },
