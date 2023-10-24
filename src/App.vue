@@ -53,25 +53,22 @@ const tshirtForm = [
   },
   {
     $formkit: "form",
-    key: "formkey",
     children: [
       {
         $formkit: "text",
-        key: "namekey",
         label: "Name",
         name: "name",
+        value: "Andrew Boyd",
         placeholder: "Enter your name",
       },
       {
         $formkit: "select",
-        key: "sizekey",
         label: "T-Shirt Size",
         name: "tshirtSize",
         options: ["XS", "Small", "Medium", "Large", "XL", "2XL", "3XL"],
       },
       {
         $formkit: "colorpicker",
-        key: "colorkey",
         inline: true,
         label: "T-Shirt Color",
         name: "tshirtColor",
@@ -90,15 +87,19 @@ const tshirtForm = [
       {
         $formkit: "checkbox",
         label: "What add-ons would you like?",
+        value: ["monogram"],
         options: [
           {
+            value: "pocket",
             label: "Pocket",
           },
           {
+            value: "monogram",
             label: "Monogram",
             help: "Include your initials in the notes section.",
           },
           {
+            value: "giftwrap",
             label: "Gift Wrap",
             help: "Currently unavailable. 😢",
             attrs: {
@@ -113,6 +114,97 @@ const tshirtForm = [
         label: "Additional Notes",
         name: "notes",
         placeholder: "Enter any additional notes or specifications here.",
+      },
+    ],
+  },
+];
+
+const surveyForm = [
+  {
+    $el: "h1",
+    children: "FormKit Survey",
+  },
+  {
+    $el: "p",
+    children:
+      "Complete the survey below and you'll be entered for a chance to win!",
+  },
+  {
+    $formkit: "form",
+    key: "formkey",
+    onSubmit: "$handleSubmit",
+    children: [
+      {
+        $formkit: "radio",
+        key: "radiokey1",
+        label: "Which front-end framework do you use most?",
+        name: "framework",
+        validation: "required",
+        value: "vue",
+        options: [
+          { label: "Svelte", value: "svelte" },
+          { label: "React", value: "react" },
+          { label: "Vue", value: "vue" },
+          { label: "Solid", value: "solid" },
+        ],
+      },
+      {
+        $formkit: "radio",
+        key: "radiokey2",
+        label: "How much of your development time is spent working on forms?",
+        name: "timeSpent",
+        validation: "required",
+        value: "50",
+        options: [
+          { label: "Less than 10%", value: "10" },
+          { label: "About 25%", value: "25" },
+          { label: "About 50%", value: "50" },
+          { label: "About 75%", value: "75" },
+          { label: "All of it", value: "100" },
+        ],
+      },
+      {
+        $formkit: "checkbox",
+        key: "checkboxkey",
+        label: "What are your biggest pain points when building forms?",
+        name: "painPoints",
+        validation: "required",
+        value: ["boilerplate", "validation", "formState"],
+        options: [
+          { label: "Boilerplate code", value: "boilerplate" },
+          { label: "Validation", value: "validation" },
+          { label: "Form state", value: "formState" },
+          { label: "Accessibility", value: "accessibility" },
+          { label: "Internationalization", value: "internationalization" },
+        ],
+      },
+      {
+        $formkit: "taglist",
+        label: "What backend(s) do you use for handling form submissions?",
+        list: "frameworks",
+        name: "backend",
+        validation: "required",
+        value: ["Laravel", "Express"],
+        options: [
+          "Laravel",
+          "Django",
+          "Express",
+          "Koa",
+          "Spring",
+          "ASP.NET",
+          "Rails",
+          "Flask",
+          "Struts",
+          "Hybernate",
+        ],
+        help: "Please specify the backend technology or platform that accepts your form submissions.",
+      },
+      {
+        $formkit: "email",
+        label: "Enter your email address",
+        name: "email",
+        value: "andrew@formkit.com",
+        validation: "required|email",
       },
     ],
   },
@@ -173,6 +265,7 @@ const registrationForm = [
           },
           {
             $formkit: "radio",
+            value: "2",
             label: "Choose your ticket",
             validation: "required",
             validationLabel: "Ticket",
@@ -283,12 +376,14 @@ const jobApplicationForm = [
           {
             $formkit: "text",
             label: "First Name",
+            placeholder: "Enter your first name",
             name: "firstname",
             validation: "required",
           },
           {
             $formkit: "text",
             label: "Last Name",
+            placeholder: "Enter your last name",
             name: "lastname",
             validation: "required",
           },
@@ -303,6 +398,7 @@ const jobApplicationForm = [
           {
             $formkit: "email",
             label: "Email Address",
+            placeholder: "Enter your email address",
             name: "email",
             validation: "required|email",
           },
@@ -336,6 +432,7 @@ const jobApplicationForm = [
           {
             $formkit: "text",
             label: "Desired Position",
+            placeholder: "Enter your desired position",
             name: "desiredPosition",
             validation: "required",
           },
@@ -373,6 +470,7 @@ const jobApplicationForm = [
       {
         $formkit: "textarea",
         key: "coverletterkey",
+        help: "Please enter a brief cover letter about why you want to work for FormCorp.",
         label: "Cover Letter",
         name: "coverLetter",
         validation: "required",
@@ -428,6 +526,7 @@ const jobApplicationForm = [
         if: "$value.jobType === 'full_time' || $value.jobType === 'full_time' || $value.jobType === 'part_time'",
         key: "jobdesckey",
         label: "Job Description",
+        help: "Please enter a brief description of your responsibilities.",
         name: "jobDescription",
       },
     ],
@@ -443,6 +542,10 @@ const jobApplicationForm = [
 
     <div class="example-form">
       <FormKitSchema :schema="tshirtForm" />
+    </div>
+
+    <div class="example-form">
+      <FormKitSchema :schema="surveyForm" />
     </div>
 
     <div class="example-form">
@@ -503,9 +606,9 @@ const jobApplicationForm = [
   width: 33.333%;
 }
 :deep(.triple > *:first-child) {
-  margin-right: 0.25em;
+  margin-right: 0.5em;
 }
 :deep(.triple > *:last-child) {
-  margin-left: 0.25em;
+  margin-left: 0.5em;
 }
 </style>

@@ -150,7 +150,7 @@ export default createTheme({
      */
     __globals: {
       outer:
-        "group $inputMaxWidth mb-$spacing(2,*) data-[disabled]:select-none data-[disabled]:opacity-50 text-$scale",
+        "group $inputMaxWidth mb-$spacing(2,0.5,4) data-[disabled]:select-none data-[disabled]:opacity-50 text-$scale",
       label:
         "block text-$colorTemperature-700 text-$scale(-1,*) font-bold mb-$spacing(-2,0.5,1.5) dark:text-$colorTemperature-300",
       legend:
@@ -183,10 +183,10 @@ export default createTheme({
       outer: "data-[disabled]:opacity-100",
       input: `
         ${"" /* base styles */}
-        bg-$accentColor-500 $radius !text-$scale(-1,*) px-$spacing(7,*) py-$spacing(2,3,10) outline-none flex items-center mb-$spacing(-1) text-white text-$scale(-1,*) active:text-$accentColor-100 active:bg-$accentColor-700 hover:bg-$accentColor-600 ring-offset-2 ring-$accentColor-400 focus-visible:ring-2 disabled:border-$colorTemperature-$borderShadeLightMode disabled:bg-$colorTemperature-400 disabled:text-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow group-data-[prefix-icon]:pl-$spacing(5,*) group-data-[suffix-icon]:pr-$spacing(5,*)
+        font-bold bg-$accentColor-500 $radius !text-$scale(-1,*) px-$spacing(7,*) py-$spacing(2,3,10) outline-none flex items-center mb-$spacing(-1) text-white text-$scale(-1,*) active:text-$accentColor-100 active:bg-$accentColor-700 hover:bg-$accentColor-600 ring-offset-2 ring-$accentColor-400 focus-visible:ring-2 disabled:border-$colorTemperature-$borderShadeLightMode disabled:bg-$colorTemperature-400 disabled:text-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow group-data-[prefix-icon]:pl-$spacing(5,*) group-data-[suffix-icon]:pr-$spacing(5,*)
 
         ${"" /* dark mode styles */}
-        dark:disabled:border-$colorTemperature-100 dark:disabled:bg-$colorTemperature-500 dark:disabled:text-$colorTemperature-200 dark:ring-offset-$accentColor-300
+        dark:bg-$accentColor-600 dark:disabled:border-$colorTemperature-100 dark:disabled:bg-$colorTemperature-500 dark:disabled:text-$colorTemperature-200 dark:ring-offset-$accentColor-300
       `,
       prefixIcon: "text-$colorTemperature-100",
       suffixIcon: "text-$colorTemperature-100",
@@ -195,21 +195,20 @@ export default createTheme({
       // checkbox, radio
       wrapper:
         "inline-flex items-center mb-$spacing(-2,*) group-data-[multiple]:mb-0",
-      legend: "mb-$spacing -mt-1",
+      legend: "mb-$spacing(0,1,2.5)",
       input:
         "peer pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0",
       decorator: `
         ${"" /* base styles */}
-        mr-$spacing(-1,1.5,2.5) bg-white ring-$accentColor-400 peer-checked:border-$accentColor-500 relative block text-$scale(1,*) w-[1em] aspect-square border border-$colorTemperature-$borderShadeLightMode text-transparent peer-checked:bg-$accentColor-50 peer-checked:text-$accentColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed peer-disabled:bg-$colorTemperature-100 group-data-[disabled]:grayscale $inputShadow peer-disabled:cursor-not-allowed
+        mr-$spacing(-1,1.5,2.5) bg-white ring-$accentColor-400 peer-checked:border-$accentColor-500 relative block text-$scale(1,*) w-[1em] aspect-square border border-$colorTemperature-$borderShadeLightMode text-transparent peer-checked:bg-$accentColor-50 peer-checked:text-$accentColor-500 peer-focus-visible:ring-2 peer-focus-visible:ring-offset-1 select-none group-data-[disabled]:!cursor-not-allowed peer-disabled:bg-$colorTemperature-100 group-data-[disabled]:grayscale $inputShadow peer-disabled:cursor-not-allowed
 
         ${"" /* dark mode styles */}
-        dark:border-$colorTemperature-$borderShadeDarkMode dark:bg-transparent dark:ring-offset-$accentColor-300 dark:peer-focus-visible:ring-1 dark:peer-disabled:bg-$colorTemperature-600/50
+        dark:border-$colorTemperature-$borderShadeDarkMode dark:bg-transparent dark:ring-offset-$accentColor-300 dark:peer-focus-visible:ring-1 dark:peer-disabled:bg-$colorTemperature-600/50 dark:peer-checked:bg-$accentColor-800 dark:peer-checked:text-$accentColor-200
       `,
       decoratorIcon:
         "absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2",
-      options: "mb-$spacing",
       option:
-        "mb-$spacing(1,*) last:mb-0 data-[disabled]:opacity-50 data-[disabled]:select-none group-data-[disabled]:data-[disabled]:opacity-100",
+        "mb-$spacing(-1,0.5,1.5) last:mb-0 data-[disabled]:opacity-50 data-[disabled]:select-none group-data-[disabled]:data-[disabled]:opacity-100",
       label: `
         ${"" /* base styles */}
         !mb-0 !font-normal !text-$scale(-1,sm,lg)
@@ -218,16 +217,16 @@ export default createTheme({
         dark:text-$colorTemperature-300
       `,
       optionHelp:
-        "text-$colorTemperature-500 text-$scale(-2,*) -mt-1 ml-[min(2em,1.7rem)] relative left-$spacing(-4,*)",
-      help: "mb-$spacing(-1) group-data-[multiple]:mb-$spacing group-data-[multiple]:-mt-$spacing",
+        "text-$colorTemperature-500 text-$scale(-2,*) -mt-1 mb-$spacing(-2,1.5,3) ml-[min(2em,1.7rem)] relative left-$spacing(-4,*)",
+      help: "mb-$spacing(-2,0.5,2) group-data-[multiple]:mb-$spacing group-data-[multiple]:-mt-1.5",
     },
     "family:text": {
       // color, date, datetime-local, email, file, month, number, password, search, tel, text, time, url, week
       wrapper: "flex flex-col items-start justify-start",
-      label: "!inline-flex -mt-1",
+      label: "!inline-flex mb-$spacing(-2,1,1.5)",
       inner: `
         ${"" /* base styles */}
-        text-$scale flex items-center w-full mb-$spacing(-1) py-$spacing px-$spacing(2,2,4) $radius border border-$colorTemperature-$borderShadeLightMode bg-white focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
+        text-$scale flex items-center w-full py-$spacing px-$spacing(2,2,4) mb-$spacing(-1) last:mb-0 $radius border border-$colorTemperature-$borderShadeLightMode bg-white focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
 
         ${"" /* dark mode styles */}
         dark:bg-transparent dark:border-$colorTemperature-$borderShadeDarkMode dark:group-data-[disabled]:bg-$colorTemperature-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
@@ -341,7 +340,6 @@ export default createTheme({
       `,
     },
     select: {
-      label: "-mt-1",
       wrapper: "mb-$spacing(-1)",
       inner: `
         ${"" /* base styles */}
@@ -380,7 +378,6 @@ export default createTheme({
       // inherits family:button classes
     },
     textarea: {
-      label: "-mt-1",
       inner:
         "flex items-center mb-$spacing(-1) bg-white border border-$colorTemperature-$borderShadeLightMode $radius(0,rounded-none,rounded-2xl) focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 $inputShadow dark:border-$colorTemperature-$borderShadeDarkMode dark:group-data-[disabled]:bg-$colorTemperature-800/5 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400 dark:bg-transparent",
       input: `
@@ -417,7 +414,6 @@ export default createTheme({
     "family:dropdown": {
       // autocomplete, dropdown, taglist
       wrapper: "mb-$spacing(-1)",
-      label: "-mt-1",
       inner: `
         ${"" /* base styles */}
         relative flex items-center bg-white border border-$colorTemperature-$borderShadeLightMode $radius focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
@@ -444,9 +440,9 @@ export default createTheme({
       suffixIcon:
         "!mr-$spacing !ml-0 text-$colorTemperature-600 dark:text-$colorTemperature-300",
       dropdownWrapper:
-        "$radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-2,0.5,2) group-data-[expanded]:block group-data-[overscroll]:m-0  group-data-[overscroll]:shadow-none dark:bg-$colorTemperature-700",
+        "$radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-2,0.5,2) group-data-[expanded]:opacity-100 group-data-[overscroll]:m-0 group-data-[overscroll]:shadow-none",
       listbox:
-        "bg-white $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) overflow-hidden border border-$colorTemperature-$borderShadeLightMode(-1,200,700) dark:bg-$colorTemperature-700 dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)",
+        "bg-white $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) overflow-clip border border-$colorTemperature-$borderShadeLightMode(-1,200,700) dark:bg-$colorTemperature-700 dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)",
       listitem: `
         relative flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$colorTemperature-700 text-$scale aria-selected:!bg-$accentColor-100 data-[is-active]:bg-$accentColor-100 dark:text-$colorTemperature-200 dark:aria-selected:text-$colorTemperature-700 dark:data-[is-active]:text-$colorTemperature-700
         ${"" /* keyboard focus on active items */}
@@ -466,7 +462,7 @@ export default createTheme({
         "grow text-$colorTemperature-700 group-data-[multiple]:p-$spacing dark:text-$colorTemperature-300",
       tagsWrapper: "w-full",
       tagWrapper:
-        "group/tag rounded-full mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) outline-none data-[active-selection=true]:ring-2 data-[active-selection=true]:ring-$accentColor-400",
+        "group/tag $tagRadius mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) outline-none data-[active-selection=true]:ring-2 data-[active-selection=true]:ring-$accentColor-400",
       tags: "inline-flex flex-wrap items-center w-full -mb-$spacing(-2,0.5,1.5) empty:mb-0",
       tag: "flex items-center cursor-default $tagRadius text-$scale(-1,xs,sm) px-$spacing(-1,1,2) py-$spacing(0,0.5,1.5) h-[1.66em] bg-$accentColor-500 text-white [&>.formkit-removeSelection]:!w-[0.5em] [&>.formkit-removeSelection]:aspect-square [&>.formkit-removeSelection]:!text-inherit [&>.formkit-removeSelection]:cursor-pointer group-data-[active-selection=true]/tag:bg-$accentColor-200 group-data-[active-selection=true]/tag:text-$colorTemperature-700",
       tagLabel: "mr-1",
@@ -676,7 +672,7 @@ export default createTheme({
       fieldset: "",
       legend: "mb-$spacing",
       content:
-        "grow p-$spacing(5,2,10) flex flex-col align-center [&>.formkit-outer:last-child]:mb-0",
+        "grow p-$spacing(5,2,10) flex flex-col align-center [&>.formkit-outer]:max-w-none [&>.formkit-outer:last-child]:mb-0",
       controlLabel: "absolute opacity-0 pointer-events-none text-[0px]",
       controls:
         "flex flex-col items-center justify-center bg-$colorTemperature-100 p-$spacing [&>li]:aspect-square dark:bg-$colorTemperature-800",
@@ -760,9 +756,9 @@ export default createTheme({
         "ml-auto text-xs min-w-[1.5em] [line-height:1.5em] px-$spacing text-center $radius(2) bg-$colorTemperature-200 text-$colorTemperature-700 dark:bg-$colorTemperature-500 dark:text-$colorTemperature-300",
       transferlistListItems:
         "list-none bg-white h-full overflow-x-hidden overflow-y-auto dark:bg-transparent",
-      transferlistListItem: `py-$spacing px-$spacing pl-[1.5em] relative text-$colorTemperature-700 aria-selected:!bg-$accentColor-600 border-$colorTemperature-$borderShadeLightMode(-2,200,400) aria-selected:!text-white first:-mt-px first:border-t flex border-b aria-selected:border-$accentColor-$borderShadeLightMode(-2,400,600) bg-white data-[is-active=true]:text-$accentColor-500 data-[is-active=true]:bg-$colorTemperature-100 cursor-pointer group-data-[is-max=true]:cursor-not-allowed items-center 
+      transferlistListItem: `py-$spacing px-$spacing text-$colorTemperature-700 ring-1 ring-$colorTemperature-$borderShadeLightMode(-2,200,600) aria-selected:bg-$accentColor-100 data-[is-active=true]:bg-$accentColor-100 data-[is-active=true]:ring-$accentColor-$borderShadeLightMode(-2,200,600) aria-selected:ring-$accentColor-$borderShadeLightMode(-2,200,600) relative flex cursor-pointer items-center bg-white pl-[1.5em] first:-mt-px first:border-t aria-selected:z-[2] aria-selected:border-transparent aria-selected:ring-1 data-[is-active=true]:z-[2] data-[is-active=true]:border-transparent data-[is-active=true]:ring-1 group-data-[is-max=true]:cursor-not-allowed 
       
-      dark:bg-$colorTemperature-800 dark:text-$colorTemperature-300 dark:border-$colorTemperature-$borderShadeDarkMode(2,400,600) dark:aria-selected:border-$accentColor-400`,
+      dark:bg-$colorTemperature-800 dark:text-$colorTemperature-300 dark:data-[is-active=true]:bg-$accentColor-800 dark:aria-selected:bg-$accentColor-800 dark:ring-$colorTemperature-$borderShadeDarkMode(2,400,700) dark:data-[is-active=true]:ring-$accentColor-$borderShadeDarkMode(2,300,600) dark:aria-selected:ring-$accentColor-$borderShadeDarkMode(2,300,600)`,
       transferlistOption: "text-$scale(-1,*)",
       transferControls:
         "inline-flex grow-0 shrink border border-$colorTemperature-$borderShadeLightMode(-1,200,900) flex-row sm:flex-col justify-center my-$spacing sm:my-auto mx-auto sm:mx-$spacing $radius overflow-clip $inputShadow(-2) dark:border-$colorTemperature-$borderShadeDarkMode(3,100,800)",
@@ -779,7 +775,8 @@ export default createTheme({
       transferlistSearchInput:
         "border-none px-$spacing py-$spacing(-1) w-full bg-transparent outline-none text-$scale(-1,*)",
       controlLabel: "hidden",
-      selectedIcon: "w-[0.75em] absolute left-[0.5em] select-none",
+      selectedIcon:
+        "w-[0.75em] absolute left-[0.5em] select-none text-$accentColor-500 dark:text-$accentColor-300",
       transferlistButton: `
         sm:w-5 flex justify-center text-$scale(-2) shrink-0 box-content text-$colorTemperature-700 disabled:bg-$colorTemperature-200 disabled:!text-$colorTemperature-400 bg-$colorTemperature-50 hover:text-$accentColor-500 cursor-pointer appearance-none border-none p-$spacing(2) hover:z-10 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:text-current disabled:hover:outline-none
 
