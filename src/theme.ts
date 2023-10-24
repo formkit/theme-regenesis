@@ -200,16 +200,16 @@ export default createTheme({
         "peer pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0",
       decorator: `
         ${"" /* base styles */}
-        mr-$spacing(-1,1.5,2.5) bg-white ring-$accentColor-400 peer-checked:border-$accentColor-500 relative block text-$scale(1,*) w-[1em] aspect-square border border-$colorTemperature-$borderShadeLightMode text-transparent ring-offset-2 peer-checked:text-$accentColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:grayscale $inputShadow group-data-[disabled]/listoption:cursor-not-allowed
+        mr-$spacing(-1,1.5,2.5) bg-white ring-$accentColor-400 peer-checked:border-$accentColor-500 relative block text-$scale(1,*) w-[1em] aspect-square border border-$colorTemperature-$borderShadeLightMode text-transparent peer-checked:bg-$accentColor-50 peer-checked:text-$accentColor-500 peer-focus-visible:ring-2 select-none group-data-[disabled]:!cursor-not-allowed peer-disabled:bg-$colorTemperature-100 group-data-[disabled]:grayscale $inputShadow peer-disabled:cursor-not-allowed
 
         ${"" /* dark mode styles */}
-        dark:border-$colorTemperature-$borderShadeDarkMode dark:bg-transparent dark:group-data-[disabled]:bg-$colorTemperature-700 dark:ring-offset-$accentColor-300 dark:peer-focus-visible:ring-1
+        dark:border-$colorTemperature-$borderShadeDarkMode dark:bg-transparent dark:ring-offset-$accentColor-300 dark:peer-focus-visible:ring-1 dark:peer-disabled:bg-$colorTemperature-600/50
       `,
       decoratorIcon:
         "absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2",
       options: "mb-$spacing",
       option:
-        "group/listoption mb-$spacing(1,*) last:mb-0 data-[disabled]:opacity-50 data-[disabled]:select-none group-data-[disabled]:data-[disabled]:opacity-100",
+        "mb-$spacing(1,*) last:mb-0 data-[disabled]:opacity-50 data-[disabled]:select-none group-data-[disabled]:data-[disabled]:opacity-100",
       label: `
         ${"" /* base styles */}
         !mb-0 !font-normal !text-$scale(-1,sm,lg)
@@ -421,17 +421,14 @@ export default createTheme({
       inner: `
         ${"" /* base styles */}
         relative flex items-center bg-white border border-$colorTemperature-$borderShadeLightMode $radius focus-within:ring-1 focus-within:!ring-$accentColor-400 focus-within:!border-$accentColor-400 group-data-[invalid]:border-red-500 group-data-[invalid]:ring-1 group-data-[invalid]:ring-red-500 group-data-[disabled]:bg-$colorTemperature-100 group-data-[disabled]:!cursor-not-allowed $inputShadow
-
         ${"" /* dark mode styles */}
         dark:bg-transparent dark:border-$colorTemperature-$borderShadeDarkMode dark:group-data-[disabled]:bg-$colorTemperature-700/40 dark:group-data-[invalid]:border-red-400 dark:group-data-[invalid]:ring-red-400
       `,
       input: `
         ${"" /* base styles */}
         grow p-$spacing pr-0 pl-$spacing(2,2,4) text-$scale text-$colorTemperature-700 text-ellipsis min-w-0 outline-none bg-transparent group-data-[disabled]:!cursor-not-allowed group-data-[prefix-icon]:!pl-0 group-data-[suffix-icon]:!pr-0 placeholder:text-$colorTemperature-400 selection:bg-$accentColor-100
-
         ${"" /* dark mode styles */}
         dark:placeholder:text-$colorTemperature-500 dark:text-$colorTemperature-300
-
         ${"" /* Tailwind Forms overrides */}
         border-none focus:ring-0 bg-none
       `,
@@ -644,12 +641,11 @@ export default createTheme({
       placeholder:
         "text-$colorTemperature-400 grow dark:text-$colorTemperature-400/50",
       selector: `
-        ${"" /* base styles */}
-        flex grow justify-between w-full py-$spacing pl-$spacing(2,2,4) pr-0 text-$scale text-$colorTemperature-700 text-left group-data-[disabled]:!cursor-not-allowed group-data-[prefix-icon]:!pl-0 group-data-[suffix-icon]:!pr-0 data-[placeholder]:text-$colorTemperature-400 selection:bg-$accentColor-100
-
-        ${"" /* dark mode styles */}
-        dark:data-[placeholder]:text-$colorTemperature-400/50 dark:text-$colorTemperature-300
-      `,
+          ${"" /* base styles */}
+          flex grow justify-between w-full py-$spacing pl-$spacing(2,2,4) pr-0 text-$scale text-$colorTemperature-700 text-left group-data-[disabled]:!cursor-not-allowed group-data-[prefix-icon]:!pl-0 group-data-[suffix-icon]:!pr-0 data-[placeholder]:text-$colorTemperature-400 selection:bg-$accentColor-100
+          ${"" /* dark mode styles */}
+          dark:data-[placeholder]:text-$colorTemperature-400/50 dark:text-$colorTemperature-300
+        `,
       selectIcon: "shrink-0",
       selectionsWrapper: "w-[85%] overflow-hidden",
       selection: "[&>*]:ml-0",

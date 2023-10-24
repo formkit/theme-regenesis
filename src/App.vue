@@ -88,6 +88,26 @@ const tshirtForm = [
         ],
       },
       {
+        $formkit: "checkbox",
+        label: "What add-ons would you like?",
+        options: [
+          {
+            label: "Pocket",
+          },
+          {
+            label: "Monogram",
+            help: "Include your initials in the notes section.",
+          },
+          {
+            label: "Gift Wrap",
+            help: "Currently unavailable. 😢",
+            attrs: {
+              disabled: true,
+            },
+          },
+        ],
+      },
+      {
         $formkit: "textarea",
         key: "noteskey",
         label: "Additional Notes",
@@ -176,7 +196,10 @@ const registrationForm = [
               {
                 label: "Gold: $599",
                 value: "4",
-                help: "VIP seating, personalized swag, and complimentary food and drink.",
+                help: "SOLD OUT: VIP seating, personalized swag, and complimentary food and drink.",
+                attrs: {
+                  disabled: true,
+                },
               },
               {
                 label: "Platinum: $20,000",
@@ -214,6 +237,7 @@ const registrationForm = [
         $formkit: "dropdown",
         label: "How did you hear about FormConf?",
         placeholder: "Be honest",
+        behavior: "overscroll",
         options: [
           "Podcast advertising",
           "Saw the banner on the side of a bus",
@@ -221,7 +245,6 @@ const registrationForm = [
           "I'm not sure how I got here",
           "Other",
         ],
-        selectionRemovable: true,
       },
       {
         $formkit: "textarea",
