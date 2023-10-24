@@ -447,12 +447,11 @@ export default createTheme({
       suffixIcon:
         "!mr-$spacing !ml-0 text-$colorTemperature-600 dark:text-$colorTemperature-300",
       dropdownWrapper:
-        "hidden $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-2,0.5,2) group-data-[expanded]:block group-data-[overscroll]:m-0  group-data-[overscroll]:shadow-none dark:bg-$colorTemperature-700",
+        "$radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) mt-$spacing(-2,0.5,2) group-data-[expanded]:block group-data-[overscroll]:m-0  group-data-[overscroll]:shadow-none dark:bg-$colorTemperature-700",
       listbox:
         "bg-white $radius(0,rounded-none,rounded-2xl) $inputShadow(2,shadow-md,shadow-2xl) overflow-hidden border border-$colorTemperature-$borderShadeLightMode(-1,200,700) dark:bg-$colorTemperature-700 dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)",
       listitem: `
         relative flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$colorTemperature-700 text-$scale aria-selected:!bg-$accentColor-100 data-[is-active]:bg-$accentColor-100 dark:text-$colorTemperature-200 dark:aria-selected:text-$colorTemperature-700 dark:data-[is-active]:text-$colorTemperature-700
-
         ${"" /* keyboard focus on active items */}
         before:content-['']
         before:absolute
