@@ -465,7 +465,7 @@ export default createTheme({
       tagWrapper:
         "group/tag $tagRadius mr-$spacing(-2,0.5,1.5) mb-$spacing(-2,0.5,1.5) outline-none data-[active-selection=true]:ring-2 data-[active-selection=true]:ring-$accentColor-400",
       tags: "inline-flex flex-wrap items-center w-full -mb-$spacing(-2,0.5,1.5) empty:mb-0",
-      tag: "flex items-center cursor-default $tagRadius text-$scale(-1,xs,sm) px-$spacing(-1,1,2) py-$spacing(0,0.5,1.5) h-[1.66em] bg-$accentColor-500 text-white [&>button]:!w-[0.5em] [&>button]:aspect-square [&>button]:!text-inherit [&>button]:cursor-pointer group-data-[active-selection=true]/tag:bg-$accentColor-200 group-data-[active-selection=true]/tag:text-$colorTemperature-700",
+      tag: "flex items-center cursor-default $tagRadius text-$scale(-1,xs,sm) px-$spacing(-1,1,2) py-$spacing(0,0.5,1.5) h-[1.66em] bg-$accentColor-500 text-white [&>[type=button]]:!w-[0.5em] [&>[type=button]]:aspect-square [&>[type=button]]:!text-inherit [&>[type=button]]:cursor-pointer group-data-[active-selection=true]/tag:bg-$accentColor-200 group-data-[active-selection=true]/tag:text-$colorTemperature-700",
       tagLabel: "mr-1",
       emptyMessage:
         "flex items-center px-$spacing py-$spacing(-1,1) first:pt-$spacing last:pb-$spacing text-$colorTemperature-700 text-$scale(-1,*) aria-selected:text-white aria-selected:bg-$accentColor-500",
@@ -563,21 +563,21 @@ export default createTheme({
         before:content-[''] before:absolute before:inset-0 before:$swatchRadius before:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.2)] before:pointer-events-none before:z-[2] dark:before:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)]
 
         ${"" /* active styles */}
-        data-[active='true']:after:content-['']
-        data-[active='true']:after:block
-        data-[active='true']:after:absolute
-        data-[active='true']:after:w-1.5
-        data-[active='true']:after:h-1.5
-        data-[active='true']:after:top-1/2
-        data-[active='true']:after:left-1/2
-        data-[active='true']:after:pointer-events-none
-        data-[active='true']:after:rounded-full
-        data-[active='true']:after:-translate-x-1/2
-        data-[active='true']:after:-translate-y-1/2
-        data-[active='true']:after:bg-white
-        data-[active='true']:after:z-[2]
-        data-[active='true']:after:ring-1
-        data-[active='true']:after:ring-[rgba(0,0,0,0.33)]
+        data-[active=true]:after:content-['']
+        data-[active=true]:after:block
+        data-[active=true]:after:absolute
+        data-[active=true]:after:w-1.5
+        data-[active=true]:after:h-1.5
+        data-[active=true]:after:top-1/2
+        data-[active=true]:after:left-1/2
+        data-[active=true]:after:pointer-events-none
+        data-[active=true]:after:rounded-full
+        data-[active=true]:after:-translate-x-1/2
+        data-[active=true]:after:-translate-y-1/2
+        data-[active=true]:after:bg-white
+        data-[active=true]:after:z-[2]
+        data-[active=true]:after:ring-1
+        data-[active=true]:after:ring-[rgba(0,0,0,0.33)]
 
         ${"" /* canvas styles */}
         [&>canvas]:block [&>canvas]:w-full [&>canvas]:aspect-square [&>canvas]:$swatchRadius [&>canvas:focus-visible]:outline-none [&>canvas:focus-visible]:ring-2 [&>canvas:focus-visible]:ring-$accentColor-400 [&>canvas:focus-visible]:ring-offset-2 [&>canvas:focus-visible]:ring-offset-white dark:[&>canvas:focus-visible]:ring-offset-$colorTemperature-700
@@ -697,21 +697,21 @@ export default createTheme({
       outer: "data-[disabled]:pointer-events-none",
       help: "-mt-0.5 mb-$spacing(-2)",
       sliderInner:
-        'flex items-center [&>[data-type=number]]:mb-0 [&>[data-type=number]]:ml-$spacing(2) [&>[data-type=number]]:shrink [&>[data-type=number]]:grow-0 [&[data-has-mark-labels="true"]_[id^=track]]:mb-$spacing(5,3,6)',
+        "flex items-center [&>[data-type=number]]:mb-0 [&>[data-type=number]]:ml-$spacing(2) [&>[data-type=number]]:shrink [&>[data-type=number]]:grow-0 [&[data-has-mark-labels=true]_[id^=track]]:mb-$spacing(5,3,6)",
       track: "grow relative z-20 py-$spacing(1) select-none",
       trackWrapper:
         "px-[2px] rounded-full bg-$colorTemperature-300 dark:bg-$colorTemperature-500",
       trackInner: "h-$spacing(-1,1,1.5) mx-0.5 relative",
       fill: "h-full rounded-full absolute top-0 -mx-1 bg-$accentColor-500 group-data-[disabled]:bg-$colorTemperature-500",
       marks: "absolute pointer-events-none inset-0",
-      mark: 'absolute top-1/2 w-[3px] h-[3px] rounded-full -translate-x-1/2 -translate-y-1/2 bg-$colorTemperature-400 data-[active="true"]:bg-white',
+      mark: "absolute top-1/2 w-[3px] h-[3px] rounded-full -translate-x-1/2 -translate-y-1/2 bg-$colorTemperature-400 data-[active=true]:bg-white",
       markLabel:
         "absolute top-[calc(100%+0.5em)] left-1/2 text-$colorTemperature-400 text-$scale(-2,[11px] [line-height:1em],xs) -translate-x-1/2",
       handles: "m-0 p-0 list-none",
       handle:
-        'group select-none w-4 h-4 rounded-full bg-white absolute top-1/2 left-0 z-30 -translate-x-1/2 -translate-y-1/2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1),0_1px_2px_0_rgba(0,0,0,0.5)] focus-visible:outline-0 focus-visible:ring-2 ring-$accentColor-500 data-[is-target="true"]:z-20 dark:bg-$colorTemperature-200',
+        "group select-none w-4 h-4 rounded-full bg-white absolute top-1/2 left-0 z-30 -translate-x-1/2 -translate-y-1/2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1),0_1px_2px_0_rgba(0,0,0,0.5)] focus-visible:outline-0 focus-visible:ring-2 ring-$accentColor-500 data-[is-target=true]:z-20 dark:bg-$colorTemperature-200",
       tooltip:
-        'absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-[4px] bg-$accentColor-500 text-white py-$spacing(-2,1,3) px-$spacing(-1,1,3) text-xs leading-none whitespace-nowrap $radius(0,rounded-none,rounded) opacity-0 pointer-events-none transition-opacity after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:-translate-y-[1px] after:border-4 after:border-transparent after:border-t-$accentColor-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-data-[show-tooltip="true"]:opacity-100',
+        'absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-[4px] bg-$accentColor-500 text-white py-$spacing(-2,1,3) px-$spacing(-1,1,3) text-xs leading-none whitespace-nowrap $radius(0,rounded-none,rounded) opacity-0 pointer-events-none transition-opacity after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:-translate-y-[1px] after:border-4 after:border-transparent after:border-t-$accentColor-500 group-hover:opacity-100 group-focus-visible:opacity-100 group-data-[show-tooltip=true]:opacity-100',
       linkedValues: "flex items-start justify-between",
       minValue:
         'grow max-w-[45%] mb-0 relative [&>div::after]:content-[""] [&>div::after]:absolute [&>div::after]:top-1/2 [&>div::after]:left-[105%] [&>div::after]:-translate-y-1/2 [&>div::after]:w-[10%] [&>div::after]:h-[1px] [&>div::after]:bg-$colorTemperature-500',
@@ -719,7 +719,7 @@ export default createTheme({
       chart:
         "relative z-20 mb-2 flex justify-between items-center w-full aspect-[3/1]",
       chartBar:
-        'absolute bottom-0 h-full bg-$colorTemperature-400 data-[active="false"]:bg-$colorTemperature-300 dark:bg-$colorTemperature-500 dark:data-[active="false"]:bg-$colorTemperature-600',
+        "absolute bottom-0 h-full bg-$colorTemperature-400 data-[active=false]:bg-$colorTemperature-300 dark:bg-$colorTemperature-500 dark:data-[active=false]:bg-$colorTemperature-600",
     },
     taglist: {
       // inherits family:dropdown classes
