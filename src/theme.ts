@@ -453,7 +453,7 @@ export default createTheme({
         border-none focus:ring-0 bg-none
       `,
       listboxButton:
-        "w-[2.5em] self-stretch text-$scale flex items-center text-$colorTemperature-700 z-10 dark:text-$colorTemperature-300",
+        "w-[2.5em] self-stretch text-$scale flex items-center text-$colorTemperature-700 z-10 dark:text-$colorTemperature-300 data-[disabled]:cursor-not-allowed",
       removeSelection:
         "w-[2.5em] self-stretch text-$scale flex items-center text-$colorTemperature-700 hover:text-red-400 z-10 dark:text-$colorTemperature-300",
       selectIcon:
