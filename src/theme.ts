@@ -112,6 +112,13 @@ export default createTheme({
       min: "shadow-none",
       max: "shadow-lg",
     },
+    baseColorShade: {
+      editor: "buttons",
+      value: "600",
+      scale: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+      min: "500",
+      max: "600",
+    },
     borderShadeLightMode: {
       editor: "buttons",
       value: "400",
