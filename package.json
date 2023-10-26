@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsup",
+    "build-web": "vite build",
     "preview": "vite preview",
     "release": "pnpm build && npx publint && npx bumpp && pnpm publish",
     "test": "vitest",
