@@ -113,6 +113,7 @@ export default createTheme({
       max: "shadow-lg",
     },
     baseColorShade: {
+      advanced: true,
       editor: "buttons",
       value: "600",
       scale: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -120,6 +121,7 @@ export default createTheme({
       max: "600",
     },
     borderShadeLightMode: {
+      advanced: true,
       editor: "buttons",
       value: "400",
       scale: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -127,6 +129,7 @@ export default createTheme({
       max: "700",
     },
     borderShadeDarkMode: {
+      advanced: true,
       editor: "buttons",
       value: "500",
       scale: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -134,16 +137,19 @@ export default createTheme({
       max: "800",
     },
     inputMaxWidth: {
+      advanced: true,
       editor: "select",
       value: "max-w-[20em]",
       scale: ["max-w-[15em]", "max-w-[17em]", "max-w-[20em]", "max-w-[24em]"],
     },
     tagRadius: {
+      advanced: true,
       editor: "radius",
       value: "rounded",
       scale: ["rounded-none", "rounded", "rounded-full"],
     },
     swatchRadius: {
+      advanced: true,
       editor: "radius",
       value: "rounded",
       scale: ["rounded-none", "rounded", "rounded-full"],
