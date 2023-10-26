@@ -1,46 +1,5 @@
 <script setup lang="ts">
 import { FormKitKitchenSink } from "@formkit/vue";
-
-const asyncFields = [
-  {
-    $formkit: "autocomplete",
-    loadOnCreated: true,
-    options: "$asyncLoader",
-  },
-  {
-    $formkit: "autocomplete",
-    loadOnCreated: true,
-    options: "$paginatedLoader",
-  },
-  {
-    $formkit: "dropdown",
-    loadOnCreated: true,
-    options: "$asyncLoader",
-  },
-  {
-    $formkit: "dropdown",
-    loadOnCreated: true,
-    options: "$paginatedLoader",
-  },
-  {
-    $formkit: "taglist",
-    loadOnCreated: true,
-    options: "$asyncLoader",
-  },
-  {
-    $formkit: "taglist",
-    loadOnCreated: true,
-    options: "$paginatedLoader",
-  },
-  {
-    $formkit: "transferlist",
-    options: "$asyncLoader",
-  },
-  {
-    $formkit: "transferlist",
-    options: "$paginatedLoader",
-  },
-];
 </script>
 
 <template>

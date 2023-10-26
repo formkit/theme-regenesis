@@ -183,7 +183,7 @@ export default createTheme({
       loaderIcon:
         "animate-spin flex items-center my-auto ml-$spacing text-$scale text-$colorTemperature-500 h-[1em] w-[1em] shrink-0 [&>svg]:w-full",
       loadMoreInner:
-        "flex text-$scale(-1) text-$colorTemperature-500 p-$spacing items-center justify-center [&>span]:mr-$spacing",
+        "flex text-$scale(-1,*) text-$colorTemperature-500 p-$spacing items-center justify-center [&>span]:mr-$spacing",
       help: "text-$colorTemperature-500 text-$scale(-2,*) dark:text-$colorTemperature-400",
       message:
         "text-red-$baseColorShade mb-$spacing(-1) text-$scale(-2,*) dark:text-red-400",
@@ -510,7 +510,7 @@ export default createTheme({
         "data-[disabled]:cursor-not-allowed data-[disabled]:pointer-events-none",
       help: "group-data-[inline]:-mt-1 group-data-[inline]:mb-$spacing",
       inner:
-        "relative inline-flex !w-auto pl-$spacing group-data-[inline]:border-none group-data-[inline]:shadow-none group-data-[inline]:p-0 group-data-[inline]:bg-transparent group-data-[inline]:outline-none group-data-[inline]:ring-0 group-data-[inline]:!w-full",
+        "relative inline-flex !w-auto pl-$spacing group-data-[inline]:border-none group-data-[inline]:shadow-none group-data-[inline]:p-0 group-data-[inline]:bg-transparent group-data-[inline]:outline-none group-data-[inline]:!ring-0 group-data-[inline]:!w-full group-data-[inline]:$radius(0,rounded-none,rounded-2xl)",
       swatchPreview:
         "w-full flex justify-start items-center $radius text-sm cursor-pointer outline-none",
       canvasSwatchPreviewWrapper:
@@ -553,7 +553,7 @@ export default createTheme({
         "[grid-area:e] w-[2em] ml-$spacing inline-flex self-center justify-center justify-self-center aspect-square $radius(0,rounded-none,rounded-2xl) border border-$colorTemperature-$borderShadeLightMode(-1) cursor-pointer content-center items-center text-$colorTemperature-600 dark:border-$colorTemperature-$borderShadeDarkMode(1)",
       eyeDropperIcon: `w-auto [&>svg]:w-[1em] dark:text-$colorTemperature-400`,
       control:
-        "absolute bg-white shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] -translate-x-1/2 -translate-y-1/2 pointer-events-none data-[prevent-focus-style]:shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-$accentColor-$baseColorShade(-1,*)",
+        "absolute bg-white shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] translate-x-1/2 -translate-y-1/2 pointer-events-none data-[prevent-focus-style]:shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-$accentColor-$baseColorShade(-1,*)",
       controlLS: "w-[10px] h-[10px] rounded-full",
       controlHue:
         "w-[4px] h-[calc(100%-2px)] top-1/2 $radius(0,rounded-none,rounded-2xl)",
@@ -695,10 +695,10 @@ export default createTheme({
     },
     repeater: {
       outer: "group/repeater max-w-full",
-      fieldset: "",
+      fieldset: "min-w-0",
       legend: "mb-$spacing",
       content:
-        "grow p-$spacing(5,2,10) flex flex-col align-center [&>div[data-type]]:max-w-none [&>div[data-type]:last-child]:mb-0",
+        "min-w-0 grow p-$spacing(5,2,10) flex flex-col align-center [&>div[data-type]]:max-w-none [&>div[data-type]:last-child]:mb-0",
       addButton: "!mb-0",
       controlLabel: "absolute opacity-0 pointer-events-none text-[0px]",
       controls:
@@ -741,8 +741,8 @@ export default createTheme({
         'absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-[4px] bg-$accentColor-$baseColorShade text-white py-$spacing(-2,1,3) px-$spacing(-1,1,3) text-xs leading-none whitespace-nowrap $radius(0,rounded-none,rounded) opacity-0 pointer-events-none transition-opacity after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:-translate-y-[1px] after:border-4 after:border-transparent after:border-t-$accentColor-$baseColorShade group-hover:opacity-100 group-focus-visible:opacity-100 group-data-[show-tooltip=true]:opacity-100',
       linkedValues: "flex items-start justify-between",
       minValue:
-        'grow max-w-[45%] mb-0 relative [&>div::after]:content-[""] [&>div::after]:absolute [&>div::after]:top-1/2 [&>div::after]:left-[105%] [&>div::after]:-translate-y-1/2 [&>div::after]:w-[10%] [&>div::after]:h-[1px] [&>div::after]:bg-$colorTemperature-500',
-      maxValue: "grow max-w-[45%] mb-0 relative",
+        'grow !max-w-[45%] mb-0 relative [&>div::after]:content-[""] [&>div::after]:absolute [&>div::after]:top-1/2 [&>div::after]:left-[105%] [&>div::after]:-translate-y-1/2 [&>div::after]:w-[10%] [&>div::after]:h-[1px] [&>div::after]:bg-$colorTemperature-500',
+      maxValue: "grow !max-w-[45%] mb-0 relative",
       chart:
         "relative z-20 mb-2 flex justify-between items-center w-full aspect-[3/1]",
       chartBar:

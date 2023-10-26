@@ -30,7 +30,7 @@ html.dark {
 }
 
 #app {
-  padding: 2rem;
+  padding: min(2vw, 2rem);
 }
 
 .formkit-kitchen-sink {
@@ -97,7 +97,7 @@ html.dark {
   width: 100%;
   max-width: 800px;
   background: var(--panel-bg-color);
-  padding: 5em;
+  padding: min(5vw, 5em);
   border: var(--border-color);
   box-shadow:
     0 0 1em 0 rgba(0, 0, 0, 0.1),
