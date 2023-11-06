@@ -159,6 +159,7 @@ export default {
     aspect-square 
     overflow-hidden 
     [grid-area:b] 
+    mr-$spacing
     after:absolute 
     after:left-0 
     after:top-0 
@@ -174,14 +175,12 @@ export default {
     relative 
     inline-flex 
     h-3/4 
-    pl-$spacing
   `,
   alpha: `
     [grid-area:d] 
     relative 
     inline-flex 
     h-3/4 
-    pl-$spacing
   `,
   eyeDropper: `
     [grid-area:e] 
@@ -210,8 +209,8 @@ export default {
     absolute 
     bg-white 
     shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] 
-    translate-x-1/2 
-    -translate-y-1/2 
+    -translate-y-1/2
+    -translate-x-1/2
     pointer-events-none 
     data-[prevent-focus-style]:shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] 
     focus-visible:outline-none 
