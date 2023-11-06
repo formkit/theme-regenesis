@@ -12,6 +12,7 @@ export default {
     border
     border-$colorTemperature-$borderShadeLightMode
     $radius
+    group-data-[is-multiline]:!$radius(0,rounded-none,rounded-2xl)
     focus-within:ring-1
     focus-within:!ring-$accentColor-$baseColorShade(-1,*)
     focus-within:!border-$accentColor-$baseColorShade(-1,*)
@@ -117,6 +118,7 @@ export default {
     $radius(0,rounded-none,rounded-2xl)
     $inputShadow(2,shadow-md,shadow-2xl)
     overflow-clip
+    empty:hidden
     border
     border-$colorTemperature-$borderShadeLightMode(-1,200,700)
     dark:bg-$colorTemperature-700
