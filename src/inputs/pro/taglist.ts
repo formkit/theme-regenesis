@@ -4,7 +4,6 @@ export default {
     py-$spacing
     pr-0
     pl-0
-    $radius(0,rounded-none,rounded-2xl)
   `,
   tags: `
     pl-$spacing(2,2,4)
