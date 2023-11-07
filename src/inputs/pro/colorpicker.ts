@@ -77,7 +77,6 @@ export default {
     $inputShadow(1,*) 
     group-data-[inline]:static 
     group-data-[inline]:max-w-none 
-    group-data-[inline]:bg-transparent 
     border-$colorTemperature-$borderShadeLightMode 
     group-data-[inline]:z-auto 
     group-data-[inline]:w-full 
@@ -88,6 +87,7 @@ export default {
     group-data-[inline]:[&:has([id^=swatches]:first-child:last-child)_[id^=swatches]>div]:w-[1.5em]
     dark:bg-$colorTemperature-800 
     dark:border-$colorTemperature-$borderShadeDarkMode
+    dark:group-data-[inline]:bg-transparent 
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:!fixed
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:top-auto
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:max-w-none
