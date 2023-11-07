@@ -5,7 +5,7 @@ export default {
     peer
     w-full
     min-w-0
-    data-[has-multiple]:mb-$spacing(6,*)
+    data-[has-multiple]:mb-[1.25em]
   `,
   fileItemIcon: `
     h-[1em]
@@ -32,11 +32,6 @@ export default {
   `,
   fileRemove: `
     right-$spacing
-    peer-data-[has-multiple]:text-$scale(-1,*)
-    peer-data-[has-multiple]:bottom-$spacing
-    peer-data-[has-multiple]:left-$spacing
-    group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing(10,*)
-    peer-data-[has-multiple]:text-$accentColor-$baseColorShade
     ring-$accentColor-$baseColorShade(-1,*)
     $radius
     z-20
@@ -48,8 +43,17 @@ export default {
     hover:!text-red-$baseColorShade(-1,*)
     focus-visible:ring-2
     group-data-[disabled]:pointer-events-none
-    peer-data-[has-multiple]:absolute
     group-data-[disabled]:!text-$colorTemperature-500
+    
+    peer-data-[has-multiple]:absolute
+    peer-data-[has-multiple]:bottom-[max(0.5em,8px)]
+    peer-data-[has-multiple]:left-$spacing(2,*)
+    peer-data-[has-multiple]:text-$accentColor-$baseColorShade
+    peer-data-[has-multiple]:text-$scale(-2,*)
+    peer-data-[has-multiple]:whitespace-nowrap
+
+    group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing
+
     dark:hover:!text-red-400
   `,
   fileRemoveIcon: `
@@ -62,7 +66,7 @@ export default {
   inner: `
     relative
     cursor-pointer
-    group-data-[multiple]:$radius(0,rounded-none,rounded-2xl)
+    group-data-[has-multiple]:$radius(0,rounded-none,rounded-2xl)
   `,
   input: `
     cursor-pointer

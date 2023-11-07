@@ -78,7 +78,6 @@ export default {
     group-data-[inline]:static 
     group-data-[inline]:max-w-none 
     group-data-[inline]:bg-transparent 
-    group-data-[inline]:border-none 
     border-$colorTemperature-$borderShadeLightMode 
     group-data-[inline]:z-auto 
     group-data-[inline]:w-full 
