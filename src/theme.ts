@@ -122,7 +122,7 @@ export default createTheme({
     },
     colorTemperature: {
       editor: "color",
-      value: "gray",
+      value: "neutral",
       scale: ["slate", "gray", "zinc", "neutral", "stone"],
     },
     spacing: {
