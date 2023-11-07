@@ -128,8 +128,8 @@ export default createTheme({
     spacing: {
       editor: "spacing",
       value: "2",
-      min: "1",
-      max: "3",
+      min: "1.5",
+      max: "2.5",
     },
     scale: {
       editor: "fontSize",
