@@ -208,8 +208,7 @@ export default {
     $tagRadius
     text-$scale(-1,xs,sm)
     px-$spacing(-1,1,2)
-    py-$spacing(0,0.5,1.5)
-    h-[1.66em]
+    py-$spacing(-3,0.5,1.5)
     bg-$accentColor-$baseColorShade
     text-white
     [&>[type=button]]:!w-[0.5em]

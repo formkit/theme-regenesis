@@ -13,7 +13,9 @@ export default {
     !w-[0%]
     min-w-[1em]
     inline-block
-    mb-$spacing(-2)
+    -mt-$spacing(-2,0.5,1.5)
+    first:mt-0
+    first:mb-$spacing(-2,0.5,1.5)
   `,
   listboxButton: `
     ml-auto
