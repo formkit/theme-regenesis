@@ -19,6 +19,20 @@ export default {
     dark:disabled:bg-$colorTemperature-500
     dark:disabled:text-$colorTemperature-200
     dark:ring-offset-$accentColor-$baseColorShade(-1,*)
+
+    ${"" /* Styles for loading state — before element */}
+    group-data-[loading=true]/form:before:content['']
+    group-data-[loading=true]/form:before:block
+    group-data-[loading=true]/form:before:animate-spin
+    group-data-[loading=true]/form:before:w-5
+    group-data-[loading=true]/form:before:h-5
+    group-data-[loading=true]/form:before:rounded-full
+    group-data-[loading=true]/form:before:mr-$spacing(2,*)
+    group-data-[loading=true]/form:before:-ml-$spacing(-1,*)
+    group-data-[loading=true]/form:before:border-2
+    group-data-[loading=true]/form:before:border-solid
+    group-data-[loading=true]/form:before:border-white
+    group-data-[loading=true]/form:before:border-r-transparent
   `,
   prefixIcon: `
     text-$colorTemperature-100
