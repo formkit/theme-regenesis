@@ -16,6 +16,7 @@ export default {
     group-data-[disabled]:bg-$colorTemperature-100
     $inputShadow
     group-[]/repeater:shadow-none
+    group-[]/multistep:shadow-none
     dark:border-$colorTemperature-$borderShadeDarkMode
     dark:group-data-[disabled]:bg-$colorTemperature-800/5
     dark:group-data-[invalid]:border-red-$baseColorShade(-1,*)

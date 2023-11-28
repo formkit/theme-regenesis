@@ -39,6 +39,9 @@ import slider from "./inputs/pro/slider";
 import taglist from "./inputs/pro/taglist";
 import toggle from "./inputs/pro/toggle";
 import transferlist from "./inputs/pro/transferlist";
+// Addon input imports
+import barcode from "./inputs/addon/barcode";
+import { multiStep, step } from "./inputs/addon/multi-step";
 
 export default createTheme({
   meta: {
@@ -48,38 +51,43 @@ export default createTheme({
     authorName: "FormKit Inc",
     authorWebsite: "https://formkit.com",
     supportedInputs: [
-      "autocomplete",
+      // Core inputs
       "button",
       "checkbox",
       "color",
-      "colorpicker",
       "date",
-      "datepicker",
       "datetime-local",
-      "dropdown",
       "email",
       "file",
-      "mask",
       "month",
       "number",
       "password",
       "radio",
       "range",
-      "rating",
-      "repeater",
       "search",
       "select",
-      "slider",
       "submit",
-      "taglist",
       "tel",
       "text",
       "textarea",
       "time",
-      "toggle",
-      "transferlist",
       "url",
       "week",
+      // Pro inputs
+      "autocomplete",
+      "colorpicker",
+      "datepicker",
+      "dropdown",
+      "mask",
+      "rating",
+      "repeater",
+      "slider",
+      "taglist",
+      "toggle",
+      "transferlist",
+      // Addon inputs
+      "barcode",
+      "multi-step",
     ],
     lightMode: true,
     darkMode: true,
@@ -247,11 +255,9 @@ export default createTheme({
     week: week,
 
     /**
-     * === Pro family groupings ===
-     * These class lists apply to all inputs that are part of the matching pro family.
-     * There is a comment in each input class list that indicates which family it belongs to.
+     * === Pro Inputs ===
+     * These are the Pro inputs that ship with @formkit/pro.
      */
-
     autocomplete: autocomplete,
     colorpicker: colorpicker,
     datepicker: datepicker,
@@ -263,5 +269,14 @@ export default createTheme({
     taglist: taglist,
     toggle: toggle,
     transferlist: transferlist,
+
+    /**
+     * === Addon Inputs ===
+     * These are additional optional add-on inputs for FormKit
+     * that are supported by our theme.
+     */
+    barcode: barcode,
+    "multi-step": multiStep,
+    step: step,
   },
 });

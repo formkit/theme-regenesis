@@ -22,5 +22,11 @@ import { FormKitKitchenSink } from "@formkit/vue";
     <Suspense>
       <FormKitKitchenSink :pro="true" />
     </Suspense>
+    <Suspense>
+      <FormKitKitchenSink :schemas="['barcode']" />
+    </Suspense>
+    <Suspense>
+      <FormKitKitchenSink :schemas="['multi-step']" />
+    </Suspense>
   </div>
 </template>

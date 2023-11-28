@@ -21,6 +21,7 @@ export default {
     min-w-0 
     $inputShadow 
     group-[]/repeater:shadow-none 
+    group-[]/multistep:shadow-none
     aspect-[4/5] 
     flex 
     flex-col 
@@ -123,6 +124,7 @@ export default {
     overflow-clip 
     $inputShadow(-2) 
     group-[]/repeater:shadow-none 
+    group-[]/multistep:shadow-none
     dark:border-$colorTemperature-$borderShadeDarkMode(3,100,800)
   `,
   sourceEmptyMessage: `

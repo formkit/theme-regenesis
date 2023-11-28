@@ -23,6 +23,7 @@ export default {
     group-data-[disabled]:!cursor-not-allowed
     $inputShadow
     group-[]/repeater:shadow-none
+    group-[]/multistep:shadow-none
     ${"" /* dark mode styles */}
     dark:bg-transparent
     dark:border-$colorTemperature-$borderShadeDarkMode

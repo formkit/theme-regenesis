@@ -18,5 +18,13 @@ export default {
     $inputShadow
     group-data-[prefix-icon]:pl-$spacing(5,*)
     group-data-[suffix-icon]:pr-$spacing(5,*)
+    border
+    border-$accentColor-$baseColorShade
+    text-$accentColor-$baseColorShade
+    group-[]/repeater:$inputShadow(-1,*)
+    group-[]/multistep:$inputShadow(-1,*)
+
+    ${"" /* dark mode styles */}
+    dark:border-$accentColor-500
   `,
 };

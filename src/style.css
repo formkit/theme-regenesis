@@ -33,6 +33,10 @@ html.dark {
   padding: min(2vw, 2rem);
 }
 
+#formkit-theme-editor {
+  z-index: 999;
+}
+
 .formkit-kitchen-sink {
   width: 100%;
   max-width: 1300px;
@@ -55,7 +59,8 @@ html.dark {
   grid-template-columns: repeat(auto-fit, 400px);
   margin-bottom: 4em;
 }
-.formkit-input-section[data-type="transferlist"] .formkit-specimen-group {
+.formkit-input-section[data-type="transferlist"] .formkit-specimen-group,
+.formkit-input-section[data-type="multi-step"] .formkit-specimen-group {
   grid-template-columns: repeat(auto-fit, 650px);
 }
 

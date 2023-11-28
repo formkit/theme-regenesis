@@ -5,7 +5,7 @@ export default {
   input: `
     ${"" /* base styles */}
     bg-$accentColor-$baseColorShade
-    text-white
+    !text-white
     active:text-$accentColor-100
     active:bg-$accentColor-$baseColorShade(1,*)
     hover:bg-$accentColor-$baseColorShade(1,*)
@@ -18,6 +18,7 @@ export default {
     dark:disabled:border-$colorTemperature-100
     dark:disabled:bg-$colorTemperature-500
     dark:disabled:text-$colorTemperature-200
+    dark:text-white
     dark:ring-offset-$accentColor-$baseColorShade(-1,*)
 
     ${"" /* Styles for loading state — before element */}
