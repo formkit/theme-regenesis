@@ -27,7 +27,7 @@
     "dist"
   ],
   "dependencies": {
-    "@formkit/theme-creator": "^0.9.0"
+    "@formkit/theme-creator": "^0.9.1"
   },
   "devDependencies": {
     "@formkit/addons": "^1.3.0",
