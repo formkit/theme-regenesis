@@ -2,28 +2,28 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@formkit/theme-creator':
-    specifier: ^0.9.0
-    version: 0.9.0
+    specifier: latest
+    version: 0.9.1
 
 devDependencies:
   '@formkit/addons':
-    specifier: ^1.3.0
-    version: 1.3.0
+    specifier: latest
+    version: 1.3.2
   '@formkit/barcode':
-    specifier: ^1.0.2
+    specifier: latest
     version: 1.0.2
   '@formkit/icons':
-    specifier: ^1.3.0
-    version: 1.3.0
+    specifier: latest
+    version: 1.3.2
   '@formkit/pro':
-    specifier: ^0.117.7
-    version: 0.117.7
+    specifier: latest
+    version: 0.118.1
   '@formkit/theme-editor':
-    specifier: ^0.3.2
-    version: 0.3.3
+    specifier: latest
+    version: 0.4.5
   '@formkit/vue':
-    specifier: ^1.2.2
-    version: 1.3.0(tailwindcss@3.3.5)(typescript@5.2.2)
+    specifier: latest
+    version: 1.3.2(tailwindcss@3.3.5)(typescript@5.2.2)
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.9.1
     version: 6.10.0(eslint@8.52.0)(typescript@5.2.2)
@@ -39,9 +39,6 @@ devDependencies:
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
-  prettier-plugin-tailwindcss:
-    specifier: ^0.5.6
-    version: 0.5.6(prettier@3.0.3)
   publint:
     specifier: ^0.2.5
     version: 0.2.5
@@ -345,13 +342,13 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@formkit/addons@1.3.0:
-    resolution: {integrity: sha512-n8DaBpsewQmqSm5fMNiHo03jvgiUPyW2DorpvxJiiQbCke07PguSxgej3TC34GzYktaWUu4dMQFNLCZoj1MXRA==}
+  /@formkit/addons@1.3.2:
+    resolution: {integrity: sha512-v6u/vDQdqiUz+yE7cV23Xv23hPl4/PGa6jrGuF4ifyvNk+ilThe93VPwn6iaLYSL0fYfK3Pg0HE+BFQQc1CPng==}
     dependencies:
       '@formkit/auto-animate': 0.8.1
-      '@formkit/core': 1.3.0
-      '@formkit/inputs': 1.3.0
-      '@formkit/utils': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/inputs': 1.3.2
+      '@formkit/utils': 1.3.2
     dev: true
 
   /@formkit/auto-animate@0.8.1:
@@ -361,95 +358,89 @@ packages:
   /@formkit/barcode@1.0.2:
     resolution: {integrity: sha512-nFCAPvujE1JWuRG7iEnTfIYUItxxSoGi/cWR2vSeVEhjPKCdMql1hJC8GIyd6YhtRs6wNFvKsvH5Jo4dPj92+A==}
     dependencies:
-      '@formkit/core': 1.2.2
-      '@formkit/inputs': 1.3.0
-      '@formkit/utils': 1.2.2
+      '@formkit/core': 1.3.2
+      '@formkit/inputs': 1.3.2
+      '@formkit/utils': 1.3.2
       '@zxing/library': 0.20.0
     dev: true
 
-  /@formkit/core@1.2.2:
-    resolution: {integrity: sha512-aJoZW7ZWXdwVBdw2acv62aPaecZ44PnK9eyp/hdMrMxT9xW3I84MytCdII8DYpxLmloaE+NoUANZIvlkTRGlHg==}
+  /@formkit/core@1.3.2:
+    resolution: {integrity: sha512-sqspEsp4CnS9cx+HWWZhN91dYyQB2Mgrhtp5tVPHPiNDpS7Wvl1L9xI/6iUc3rXxH0YhHQ8ptyLIQKO2vNpfGg==}
     dependencies:
-      '@formkit/utils': 1.2.2
+      '@formkit/utils': 1.3.2
 
-  /@formkit/core@1.3.0:
-    resolution: {integrity: sha512-g1Cx5US+uYai7PpixGSkJuFgKSEK++7R2xw6im8NuD9YaDQl7jg93yjJoRSHFS+I61xaEstViCrmquNFIcUYBA==}
+  /@formkit/dev@1.3.2:
+    resolution: {integrity: sha512-uv0mbRpOSEQ5cIvtLng5z6IaDcQo3jW6+H6XPzR+qi11qbGQfl3JOOeLRg1caBVxc2VlUEf1ik2pFfgALb48HQ==}
     dependencies:
-      '@formkit/utils': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/utils': 1.3.2
     dev: true
 
-  /@formkit/dev@1.3.0:
-    resolution: {integrity: sha512-Q/MBTGG8Jd5ZlqnQq02EdvH5UIVWPxzJTep+IzqLkPUFspZhMtCU8YV/kEm1QxXntLdFxjQtmjzYHrsuul0dPA==}
+  /@formkit/i18n@1.3.2:
+    resolution: {integrity: sha512-fUp8DXTMcuQh0tR09Lmg1lAgXpVaocahGfYDOGgc5luUAy2MYKi7HXsvAoz3JP7wybwLs31W1LA+bLR26HIAjw==}
     dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/utils': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/utils': 1.3.2
+      '@formkit/validation': 1.3.2
     dev: true
 
-  /@formkit/i18n@1.3.0:
-    resolution: {integrity: sha512-nHMLIWxM9J9o3p94wQwhvWOqz/JtNCxErpuD2bKTxQP5DTwHkYfF0ajHclT/8FdHXx5a9+VhiI7mD9rVCtcdBA==}
+  /@formkit/icons@1.3.2:
+    resolution: {integrity: sha512-ayn7SqwRidOUIDnltLKteKhIEUNobFa6xuKjr6q5ZtEyKjOOltMT5/IepZFWyGPCKcN8oxWZiBTnfrFCjBdj/A==}
     dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/utils': 1.3.0
-      '@formkit/validation': 1.3.0
+      '@formkit/core': 1.3.2
     dev: true
 
-  /@formkit/icons@1.3.0:
-    resolution: {integrity: sha512-FVsBol8mvC28/EYxxK0/E/PpDNEqB+43lG9ICo0JT7ylRfw5IppAMUWyCvJYgPkXQlM/Xuc/J5O2a+qlX9dVww==}
+  /@formkit/inputs@1.3.2:
+    resolution: {integrity: sha512-Z8f3S5j/r7+RS4zexon1mMJbSmqchYtFxAJ7ROJTkA0CA9gA7hwlPAQHmA/+2Tc1PWIexGJEBCqI5IL8gCGCBA==}
     dependencies:
-      '@formkit/core': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/utils': 1.3.2
     dev: true
 
-  /@formkit/inputs@1.3.0:
-    resolution: {integrity: sha512-LlaBjbBCKLt3S1LtalU+j45LWm+y5uy3uwgC+lH5iBosmPfqm5b7Hzok82QyTvaSBIx8CyYIunVlGKK++mmtlg==}
+  /@formkit/observer@1.3.2:
+    resolution: {integrity: sha512-vyBVUUA5JBXfh/3WHKr04z51IYt0FU3ZucR3Us/P0Vr1eFXTnaRaiBTGiBwD39xdi5iBWvSEfpvM8lpwHjh/OA==}
     dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/utils': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/utils': 1.3.2
     dev: true
 
-  /@formkit/observer@1.3.0:
-    resolution: {integrity: sha512-u85sIeacLlqiOFYwgozRADd5QCmj6+wuh1wPDPIfdi1+dSWQR1y0RmSRgOUXxRfz0xA/hQK15zr80s8jRpcqxA==}
+  /@formkit/pro@0.118.1:
+    resolution: {integrity: sha512-AnGcPUOoT6cpp/acOKkWyvFe9yiWcwSdtSxqhvRC/rN0JildNH2H6/RhVpbL9wJHpbgzcbkrXM66xRd+swzHFw==}
     dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/utils': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/inputs': 1.3.2
     dev: true
 
-  /@formkit/pro@0.117.7:
-    resolution: {integrity: sha512-D3tTg1syf1VO/5EMLzW9Um/E8zQJsZtn13JJvGTchKWTXnX5u8fiCj6KyU1CP3Bti7vf1kO7vugVTSsE8Bquhw==}
+  /@formkit/rules@1.3.2:
+    resolution: {integrity: sha512-7sD/S9Rdn6z8RRplKI/Q42duV5085HRRAc15rQwvuxzL9oBhUnu2MXHJWyp+pxBJnuoAqFO0TssSHTVMWIydWA==}
     dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/inputs': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/utils': 1.3.2
+      '@formkit/validation': 1.3.2
     dev: true
 
-  /@formkit/rules@1.3.0:
-    resolution: {integrity: sha512-dWMLnSRK5+ffRkLIWGDojM7eXT6rheI41lVWukcJXhr5avG4AMih0tCLjhLJkVrLERRbnkAD403FGg8JVzPMtw==}
+  /@formkit/theme-creator@0.9.1:
+    resolution: {integrity: sha512-0fdOj5XCr/19paUEWxxwYGkMpz7Ob6HZWyOopo2DVfzFRdsbnlr0030ah9KegcnOBdT1zDA7FrqoT9CaJ49NnA==}
     dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/utils': 1.3.0
-      '@formkit/validation': 1.3.0
-    dev: true
-
-  /@formkit/theme-creator@0.9.0:
-    resolution: {integrity: sha512-RHLhy3hxe/4cwSP2ZC0j6drE2kbPy1uFapGwvPKoL8jr9bXBF5ZZeZJ7ov7q/bZBgTggI0ZPjiQESGG9OfdODg==}
-    dependencies:
-      '@formkit/core': 1.2.2
-      '@formkit/utils': 1.2.2
+      '@formkit/core': 1.3.2
+      '@formkit/utils': 1.3.2
       postcss: 8.4.31
       tailwind-merge: 1.14.0
       tailwindcss: 3.3.5
     transitivePeerDependencies:
       - ts-node
 
-  /@formkit/theme-editor@0.3.3:
-    resolution: {integrity: sha512-1AZkoaJwvVcxd7ulkTBREx4JNS1qzS2XjkaWvKgth57IWVZ+WVsceyw+gbgzGDaql9xurO5Juw/tycRqLydw4A==}
+  /@formkit/theme-editor@0.4.5:
+    resolution: {integrity: sha512-7kcq4h/fXjH0PS3Wrb/9QPfQJX4zV1iBFx5XnXbdvFKDQTpMV5bGpOIGKZupxtRw/T5tPCNhOQ85N3nJlexXUg==}
     dependencies:
       '@arrow-js/core': 1.0.0-alpha.9
-      '@formkit/theme-creator': 0.9.0
+      '@formkit/theme-creator': 0.9.1
     transitivePeerDependencies:
       - ts-node
     dev: true
 
-  /@formkit/themes@1.3.0(tailwindcss@3.3.5):
-    resolution: {integrity: sha512-y9YRhCjYbsgs1piuGaZYgcbXtcsfZqvdeMVM2vypppNdFskx1dhFdaXNDLZf1K2HL6vvx8cJ3AAxay35SAZmtQ==}
+  /@formkit/themes@1.3.2(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-rKa/pL0x6WUyWDox7PfvWvQgJQu3AsuQ30lyd1u848Wmq3LX61IeMx/mg1kYdG2ZOu6V4K07vAVBbDRpPd/UGQ==}
     peerDependencies:
       tailwindcss: ^3.2.0
       unocss: ^0.31.0
@@ -462,37 +453,33 @@ packages:
       windicss:
         optional: true
     dependencies:
-      '@formkit/core': 1.3.0
+      '@formkit/core': 1.3.2
       tailwindcss: 3.3.5
     dev: true
 
-  /@formkit/utils@1.2.2:
-    resolution: {integrity: sha512-4EGm4nfZGSJik0QRAEybxO52F3QhbOfX/KgtWfB3/dDUEOCx5RWDxIs/CU2yI4bceDl2aK8l/yDYwCYK9SO5MA==}
+  /@formkit/utils@1.3.2:
+    resolution: {integrity: sha512-L7ltaR5vV5NK6H4NKYx8xZ85l60TutgvQHv95B7ncj9pDNUUqKK9H56zkYFXPpCQhtKU/UbK19NNOuKI0OVfkw==}
 
-  /@formkit/utils@1.3.0:
-    resolution: {integrity: sha512-0r6/7q40FqHj7800xCVqLvcssGxXDPzgSXrSTRH6XV9tZcycZDvF5Wy+8sJtK6ZgjgOWB2gg86x+8WlZvYv7lg==}
+  /@formkit/validation@1.3.2:
+    resolution: {integrity: sha512-j1lcLHtxV4B2O23ot+S/y5tmL8eqjTYkRMVuTsI9qzQ8xdLcAJSu+KCdO+qL1c2czQ4W1R6e9vhhw0WKk+C3ug==}
+    dependencies:
+      '@formkit/core': 1.3.2
+      '@formkit/observer': 1.3.2
+      '@formkit/utils': 1.3.2
     dev: true
 
-  /@formkit/validation@1.3.0:
-    resolution: {integrity: sha512-U3R1HbF7BEvTlzZxQhNu14Q8DEh9WT9QazSuq9qJNFibB9TmWDy7OT7u5CD69ZrQFedg6NCJU3DRgS9IKuYyiQ==}
+  /@formkit/vue@1.3.2(tailwindcss@3.3.5)(typescript@5.2.2):
+    resolution: {integrity: sha512-6QZD90xx7u1zjrWkplsnYTA0McYlWU8VNu0A6hiPZZF6F+xDUSL/en+V14RgIz6NIrdycUI44taRwmI27/8cjQ==}
     dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/observer': 1.3.0
-      '@formkit/utils': 1.3.0
-    dev: true
-
-  /@formkit/vue@1.3.0(tailwindcss@3.3.5)(typescript@5.2.2):
-    resolution: {integrity: sha512-4MM5qhFlOktJWta7cTG2H+PI8Z8Fm2YH+R3tcPnNEXM+KLLig5Xiy99Aaf3Xef5lR/ZXQdoSCJyT3OUd6V4eTA==}
-    dependencies:
-      '@formkit/core': 1.3.0
-      '@formkit/dev': 1.3.0
-      '@formkit/i18n': 1.3.0
-      '@formkit/inputs': 1.3.0
-      '@formkit/observer': 1.3.0
-      '@formkit/rules': 1.3.0
-      '@formkit/themes': 1.3.0(tailwindcss@3.3.5)
-      '@formkit/utils': 1.3.0
-      '@formkit/validation': 1.3.0
+      '@formkit/core': 1.3.2
+      '@formkit/dev': 1.3.2
+      '@formkit/i18n': 1.3.2
+      '@formkit/inputs': 1.3.2
+      '@formkit/observer': 1.3.2
+      '@formkit/rules': 1.3.2
+      '@formkit/themes': 1.3.2(tailwindcss@3.3.5)
+      '@formkit/utils': 1.3.2
+      '@formkit/validation': 1.3.2
       vue: 3.3.8(typescript@5.2.2)
     transitivePeerDependencies:
       - tailwindcss
@@ -2107,61 +2094,6 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
-    dev: true
-
-  /prettier-plugin-tailwindcss@0.5.6(prettier@3.0.3):
-    resolution: {integrity: sha512-2Xgb+GQlkPAUCFi3sV+NOYcSI5XgduvDBL2Zt/hwJudeKXkyvRS65c38SB0yb9UB40+1rL83I6m0RtlOQ8eHdg==}
-    engines: {node: '>=14.21.3'}
-    peerDependencies:
-      '@ianvs/prettier-plugin-sort-imports': '*'
-      '@prettier/plugin-pug': '*'
-      '@shopify/prettier-plugin-liquid': '*'
-      '@shufo/prettier-plugin-blade': '*'
-      '@trivago/prettier-plugin-sort-imports': '*'
-      prettier: ^3.0
-      prettier-plugin-astro: '*'
-      prettier-plugin-css-order: '*'
-      prettier-plugin-import-sort: '*'
-      prettier-plugin-jsdoc: '*'
-      prettier-plugin-marko: '*'
-      prettier-plugin-organize-attributes: '*'
-      prettier-plugin-organize-imports: '*'
-      prettier-plugin-style-order: '*'
-      prettier-plugin-svelte: '*'
-      prettier-plugin-twig-melody: '*'
-    peerDependenciesMeta:
-      '@ianvs/prettier-plugin-sort-imports':
-        optional: true
-      '@prettier/plugin-pug':
-        optional: true
-      '@shopify/prettier-plugin-liquid':
-        optional: true
-      '@shufo/prettier-plugin-blade':
-        optional: true
-      '@trivago/prettier-plugin-sort-imports':
-        optional: true
-      prettier-plugin-astro:
-        optional: true
-      prettier-plugin-css-order:
-        optional: true
-      prettier-plugin-import-sort:
-        optional: true
-      prettier-plugin-jsdoc:
-        optional: true
-      prettier-plugin-marko:
-        optional: true
-      prettier-plugin-organize-attributes:
-        optional: true
-      prettier-plugin-organize-imports:
-        optional: true
-      prettier-plugin-style-order:
-        optional: true
-      prettier-plugin-svelte:
-        optional: true
-      prettier-plugin-twig-melody:
-        optional: true
-    dependencies:
-      prettier: 3.0.3
     dev: true
 
   /prettier@3.0.3:

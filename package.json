@@ -27,21 +27,20 @@
     "dist"
   ],
   "dependencies": {
-    "@formkit/theme-creator": "^0.9.0"
+    "@formkit/theme-creator": "latest"
   },
   "devDependencies": {
-    "@formkit/addons": "^1.3.0",
-    "@formkit/barcode": "^1.0.2",
-    "@formkit/icons": "^1.3.0",
-    "@formkit/pro": "^0.117.7",
-    "@formkit/theme-editor": "^0.3.2",
-    "@formkit/vue": "^1.2.2",
+    "@formkit/addons": "latest",
+    "@formkit/barcode": "latest",
+    "@formkit/icons": "latest",
+    "@formkit/pro": "latest",
+    "@formkit/theme-editor": "latest",
+    "@formkit/vue": "latest",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@vitejs/plugin-vue": "^4.4.0",
     "bumpp": "^9.2.0",
     "eslint": "^8.52.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
     "publint": "^0.2.5",
     "tailwindcss": "^3.3.5",
     "tsup": "^7.2.0",

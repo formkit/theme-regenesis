@@ -1,4 +1,7 @@
 export default {
+  wrapper: `
+    group-data-[disabled="true"]:grayscale
+  `,
   input: `
     ${"" /* base styles */}
     font-bold
