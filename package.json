@@ -1,6 +1,6 @@
 {
   "name": "@formkit/theme-regenesis",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "author": "Andrew Boyd <andrew@formkit.com>",
   "license": "MIT",
   "main": "dist/theme.js",
