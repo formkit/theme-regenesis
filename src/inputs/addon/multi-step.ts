@@ -91,11 +91,11 @@ export const multiStep = {
     group-data-[tab-style="progress"]/wrapper:after:top-[0.5em]
     group-data-[tab-style="progress"]/wrapper:after:left-[calc(50%+0.5em)]
     group-data-[tab-style="progress"]/wrapper:after:bg-$colorTemperature-$borderShadeLightMode(-1,300,500)
-    group-data-[tab-style="progress"]/wrapper:data-[valid="true"]:data-[visited="true"]:after:bg-green-$baseColorShade
+    group-data-[tab-style="progress"]/wrapper:data-[valid="true"]:data-[visited="true"]:after:bg-$accentColor-$baseColorShade
     group-data-[tab-style="progress"]/wrapper:last:after:hidden
 
     dark:group-data-[tab-style="progress"]/wrapper:after:bg-$colorTemperature-$borderShadeDarkMode(1,400,800)
-    dark:group-data-[tab-style="progress"]/wrapper:data-[valid="true"]:data-[visited="true"]:after:bg-green-500
+    dark:group-data-[tab-style="progress"]/wrapper:data-[valid="true"]:data-[visited="true"]:after:bg-$accentColor-$baseColorShade
   `,
   tabLabel: `
     ${"" /** progress-style tabs */}
@@ -120,7 +120,7 @@ export const multiStep = {
     [line-height:1.25rem]
     text-white
     rounded-full
-    group-data-[valid="true"]/tab:bg-green-$baseColorShade
+    group-data-[valid="true"]/tab:bg-$accentColor-$baseColorShade
     
     group-data-[tab-style="tab"]/wrapper:text-[0.66rem]
     group-data-[tab-style="tab"]/wrapper:p-1.5
