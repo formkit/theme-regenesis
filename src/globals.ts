@@ -2,6 +2,7 @@ export default {
   outer: `
     group
     $inputMaxWidth
+    min-w-0
     grow
     mb-$spacing(4,0.5,4)
     data-[disabled]:select-none
