@@ -33,10 +33,13 @@ export default {
     flex-col
     items-center
     justify-center
-    bg-$colorTemperature-100
+    bg-$colorTemperature-50
     p-$spacing
     [&>li]:aspect-square
     dark:bg-$colorTemperature-800
+    $radius(0,rounded-none,rounded-2xl)
+    rounded-tl-none
+    rounded-bl-none
   `,
   downControl: `
     w-[1.5em]
@@ -122,14 +125,14 @@ export default {
     flex
     w-full
     mb-$spacing
-    bg-transparent
+    bg-white
     rounded
     border
     border-$colorTemperature-$borderShadeLightMode(-1,200,600)
-    overflow-clip
     $radius(0,rounded-none,rounded-2xl)
     $inputShadow
     dark:border-$colorTemperature-$borderShadeDarkMode(1,300,700)
+    dark:bg-transparent
   `,
   moveDownIcon: `
     block
