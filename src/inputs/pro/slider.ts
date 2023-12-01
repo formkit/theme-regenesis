@@ -138,15 +138,16 @@ export default {
     grow
     !max-w-[45%]
     mb-0
-    relative
-    [&>div::after]:content-[""]
-    [&>div::after]:absolute
-    [&>div::after]:top-1/2
-    [&>div::after]:left-[105%]
-    [&>div::after]:-translate-y-1/2
-    [&>div::after]:w-[10%]
-    [&>div::after]:h-[1px]
-    [&>div::after]:bg-$colorTemperature-500
+    
+    [&>div>div]:relative
+    [&>div>div::after]:content-[""]
+    [&>div>div::after]:absolute
+    [&>div>div::after]:top-1/2
+    [&>div>div::after]:left-[105.5%]
+    [&>div>div::after]:w-[12%]
+    [&>div>div::after]:h-[1px]
+    [&>div>div::after]:bg-$colorTemperature-$borderShadeLightMode
+    dark:[&>div>div::after]:bg-$colorTemperature-$borderShadeDarkMode
   `,
   maxValue: `
     grow
