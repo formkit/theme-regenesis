@@ -19,6 +19,18 @@ export default {
     data-[active-selection=true]:ring-$accentColor-$baseColorShade(-1,*)
     dark:bg-$colorTemperature-600
     dark:group-data-[multiple]:border-$colorTemperature-$borderShadeDarkMode(0,300,700)
+
+    ${
+      "" /** Drag and drop styles:
+      - dropZone
+      - touchDropZone
+      - touchDragging
+      - longTouch .*/
+    }
+    [&.formkit-dropZone]:opacity-25
+    [&.formkit-touchDropZone]:opacity-25
+    [&.formkit-touchDragging]:!flex
+    [&.formkit-longTouch]:opacity-25
   `,
   selection: `
     $radius

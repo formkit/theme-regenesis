@@ -43,6 +43,16 @@ export default {
     whitespace-nowrap
     mr-1
   `,
+  tagWrapper: `
+    ${
+      "" /** Drag and drop styles:
+      - dropZone
+      - touchDropZone
+      .*/
+    }
+    [&.formkit-dropZone_.formkit-tag]:opacity-25
+    [&.formkit-touchDropZone_.formkit-tag]:opacity-25
+  `,
   truncationCount: `
     flex
     items-center

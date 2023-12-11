@@ -8,6 +8,16 @@ export default {
   tags: `
     pl-$spacing(2,2,4)
   `,
+  tagWrapper: `
+    ${
+      "" /** Drag and drop styles:
+      - dropZone
+      - touchDropZone
+      .*/
+    }
+    [&.formkit-dropZone_.formkit-tag]:opacity-25
+    [&.formkit-touchDropZone_.formkit-tag]:opacity-25
+  `,
   input: `
     !p-0
     !w-[0%]
