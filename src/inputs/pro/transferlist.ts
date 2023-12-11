@@ -31,6 +31,8 @@ export default {
     $radius(0,rounded-none,rounded-2xl) 
     overflow-hidden 
     select-none 
+    [&:has(:focus-visible)]:ring-1
+    [&:has(:focus-visible)]:ring-$accentColor-$baseColorShade(-1,*)
     dark:border-$colorTemperature-$borderShadeDarkMode(1,100,800) 
     dark:bg-$colorTemperature-900/50
   `,
@@ -69,6 +71,7 @@ export default {
     overflow-x-hidden 
     overflow-y-auto 
     dark:bg-transparent
+    outline-none
   `,
   transferlistListItem: `
     py-$spacing 
@@ -219,6 +222,7 @@ export default {
   `,
   transferlistButton: `
     sm:w-5 
+    relative
     flex 
     justify-center 
     text-$scale(-2) 
@@ -238,6 +242,9 @@ export default {
     disabled:opacity-50 
     disabled:hover:text-current 
     disabled:hover:outline-none
+    focus-visible:ring-1
+    focus-visible:ring-$accentColor-$baseColorShade(-1,*)
+    focus-visible:z-10
 
     dark:bg-$colorTemperature-800 
     dark:text-$colorTemperature-400 
