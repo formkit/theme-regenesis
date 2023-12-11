@@ -103,6 +103,25 @@ export default {
     dark:ring-$colorTemperature-$borderShadeDarkMode(2,400,700) 
     dark:data-[is-active=true]:ring-$accentColor-$borderShadeDarkMode(2,300,600) 
     dark:aria-selected:ring-$accentColor-$borderShadeDarkMode(2,300,600)
+
+    ${
+      "" /** Drag and drop styles:
+      - dropZone
+      - selectionDropZone
+      - touchDropZone
+      - touchSelectionDropZone
+      - longTouch .*/
+    }
+    [&.formkit-dropZone]:bg-$accentColor-100
+    [&.formkit-selectionDropZone]:bg-$accentColor-100
+    [&.formkit-touchDropZone]:bg-$accentColor-100
+    [&.formkit-touchSelectionDropZone]:bg-$accentColor-100
+    [&.formkit-longTouch]:bg-$accentColor-100
+    dark:[&.formkit-dropZone]:bg-$accentColor-900
+    dark:[&.formkit-selectionDropZone]:bg-$accentColor-900
+    dark:[&.formkit-touchDropZone]:bg-$accentColor-900
+    dark:[&.formkit-touchSelectionDropZone]:bg-$accentColor-900
+    dark:[&.formkit-longTouch]:bg-$accentColor-900
   `,
   transferlistOption: `
     text-$scale(-1,*)
