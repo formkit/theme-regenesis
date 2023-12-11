@@ -3,6 +3,21 @@ export default {
     relative
     pl-0
   `,
+  removeSelection: `
+    self-stretch
+    text-$scale
+    flex
+    items-center
+    ml-$spacing(-2,0,1.5)
+    mr-$spacing
+    text-$colorTemperature-700
+    hover:text-red-400
+    z-10
+    dark:text-$colorTemperature-300
+  `,
+  clearIcon: `
+    [&>svg]:w-[0.75em]
+  `,
   panelWrapper: `
     group/panel
     absolute
