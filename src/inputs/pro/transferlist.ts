@@ -209,6 +209,12 @@ export default {
     outline-none 
     text-$scale(-1,*)
   `,
+  transferlistSearchClear: `
+    flex
+    w-[0.75em]
+    mr-$spacing
+    [&_svg]:w-full
+  `,
   controlLabel: `
     hidden
   `,
