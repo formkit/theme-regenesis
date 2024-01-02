@@ -122,7 +122,7 @@ export default {
     empty:hidden
     border
     border-$colorTemperature-$borderShadeLightMode(-1,200,700)
-    dark:bg-$colorTemperature-700
+    dark:bg-$colorTemperature-800
     dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)
   `,
   listitem: `
@@ -135,24 +135,22 @@ export default {
     last:pb-$spacing
     text-$colorTemperature-700
     text-$scale
-    aria-selected:!bg-$accentColor-100
     data-[is-active]:bg-$accentColor-100
     dark:text-$colorTemperature-200
-    dark:aria-selected:text-$colorTemperature-700
     dark:data-[is-active]:text-$colorTemperature-700
     ${"" /* keyboard focus on active items */}
     before:content-['']
     before:absolute
     before:inset-0
-    data-[is-active]:aria-selected:first:before:$radius(0,rounded-none,rounded-2xl)
-    data-[is-active]:aria-selected:first:before:rounded-b-none
-    data-[is-active]:aria-selected:last:before:$radius(0,rounded-none,rounded-2xl)
-    data-[is-active]:aria-selected:last:before:rounded-t-none
-    data-[is-active]:aria-selected:first:last:before:$radius(0,rounded-none,rounded-2xl)
-    data-[is-active]:aria-selected:before:ring-2
-    data-[is-active]:aria-selected:before:ring-$accentColor-$baseColorShade(-1,*)
-    data-[is-active]:aria-selected:before:ring-inset
-    data-[is-active]:aria-selected:before:ring-offset-$accentColor-100
+    data-[is-active]:first:before:$radius(0,rounded-none,rounded-2xl)
+    data-[is-active]:first:before:rounded-b-none
+    data-[is-active]:last:before:$radius(0,rounded-none,rounded-2xl)
+    data-[is-active]:last:before:rounded-t-none
+    data-[is-active]:first:last:before:$radius(0,rounded-none,rounded-2xl)
+    data-[is-active]:before:ring-1
+    data-[is-active]:before:ring-$accentColor-$baseColorShade(-1,*)
+    data-[is-active]:before:ring-inset
+    data-[is-active]:before:ring-offset-$accentColor-100
   `,
   selectedIcon: `
     flex
