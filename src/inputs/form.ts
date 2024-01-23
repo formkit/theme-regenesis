@@ -1,6 +1,6 @@
 export default {
   // https://formkit.com/inputs/form#sections
-  form: ``,
+  form: `group/form`,
   actions: ``,
   summaryInner: `
     group/summary

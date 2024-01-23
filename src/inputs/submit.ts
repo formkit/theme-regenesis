@@ -22,6 +22,7 @@ export default {
     dark:ring-offset-$accentColor-$baseColorShade(-1,*)
 
     ${"" /* Styles for loading state — before element */}
+    before:transition-all
     group-data-[loading=true]/form:before:content['']
     group-data-[loading=true]/form:before:block
     group-data-[loading=true]/form:before:animate-spin
