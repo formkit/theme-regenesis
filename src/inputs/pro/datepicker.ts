@@ -115,9 +115,9 @@ export default {
     focus:bg-white
     focus:text-$colorTemperature-700
     data-[is-extra=true]:opacity-25
-    group-data-[disabled]:opacity-50
-    group-data-[disabled]:cursor-default
-    group-data-[disabled]:pointer-events-none
+    group-data-[disabled=true]:opacity-50
+    group-data-[disabled=true]:cursor-default
+    group-data-[disabled=true]:pointer-events-none
     dark:bg-$colorTemperature-700
     dark:text-$colorTemperature-300
   `,
@@ -152,9 +152,9 @@ export default {
     focus:outline-offset-2
     focus:bg-white
     data-[is-extra=true]:opacity-25
-    group-data-[disabled]:opacity-50
-    group-data-[disabled]:cursor-default
-    group-data-[disabled]:pointer-events-none
+    group-data-[disabled=true]:opacity-50
+    group-data-[disabled=true]:cursor-default
+    group-data-[disabled=true]:pointer-events-none
     dark:bg-$colorTemperature-700
     dark:text-$colorTemperature-300
   `,
@@ -175,9 +175,9 @@ export default {
   week: `
     grid
     grid-cols-7
-    group-data-[disabled]:opacity-50
-    group-data-[disabled]:cursor-default
-    group-data-[disabled]:pointer-events-none
+    group-data-[disabled=true]:opacity-50
+    group-data-[disabled=true]:cursor-default
+    group-data-[disabled=true]:pointer-events-none
   `,
   dayCell: `
     flex
@@ -199,9 +199,9 @@ export default {
     focus:outline-offset-2
     focus:bg-white
     data-[is-extra=true]:opacity-25
-    data-[disabled]:opacity-50
-    data-[disabled]:cursor-default
-    data-[disabled]:pointer-events-none
+    data-[disabled=true]:opacity-50
+    data-[disabled=true]:cursor-default
+    data-[disabled=true]:pointer-events-none
 
     ${"" /* dark mode styles */}
     dark:bg-$colorTemperature-600
