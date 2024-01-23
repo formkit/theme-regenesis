@@ -1,5 +1,8 @@
 export default {
   outer: `
+    $remove:group
+    $remove:data-[disabled]:select-none 
+    $remove:data-[disabled]:opacity-50
     group/repeater
     max-w-full
   `,
@@ -21,6 +24,9 @@ export default {
   `,
   addButton: `
     !mb-0
+    group-data-[disabled]/repeater:pointer-events-none
+    group-data-[disabled]/repeater:opacity-50
+    group-data-[disabled]/repeater:grayscale
   `,
   controlLabel: `
     absolute
