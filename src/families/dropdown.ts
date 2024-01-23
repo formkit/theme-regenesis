@@ -110,20 +110,26 @@ export default {
     $radius(0,rounded-none,rounded-2xl)
     $inputShadow(2,shadow-md,shadow-2xl)
     mt-$spacing(-2,0.5,2)
-    group-data-[expanded]:opacity-100
-    group-data-[overscroll]:m-0
-    group-data-[overscroll]:shadow-none
-  `,
-  listbox: `
-    bg-white
-    $radius(0,rounded-none,rounded-2xl)
-    $inputShadow(2,shadow-md,shadow-2xl)
     overflow-clip
     empty:hidden
     border
     border-$colorTemperature-$borderShadeLightMode(-1,200,700)
-    dark:bg-$colorTemperature-800
     dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)
+    group-data-[expanded]:opacity-100
+    group-data-[overscroll]:m-0
+    group-data-[overscroll]:shadow-none
+    group-data-[overscroll]:border-none
+  `,
+  listbox: `
+    bg-white
+    $radius(0,rounded-none,rounded-2xl)
+    empty:hidden
+    dark:bg-$colorTemperature-800
+    
+    group-data-[overscroll]:$inputShadow(2,shadow-md,shadow-2xl)
+    group-data-[overscroll]:border
+    group-data-[overscroll]:border-$colorTemperature-$borderShadeLightMode(-1,200,700)
+    group-data-[overscroll]:dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)
   `,
   listitem: `
     relative
