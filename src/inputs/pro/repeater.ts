@@ -129,6 +129,7 @@ export default {
   `,
   item: `
     flex
+    relative
     w-full
     mb-$spacing
     bg-white
@@ -139,6 +140,37 @@ export default {
     $inputShadow
     dark:border-$colorTemperature-$borderShadeDarkMode(1,300,700)
     dark:bg-transparent
+
+    [&.formkit-dropZone]:opacity-30
+    [&.formkit-dropZone]:pointer-events-none
+    [&.formkit-dropZone]:blur-[2px]
+  `,
+  dragHandleWrapper: `
+    relative
+    w-8
+    bg-$colorTemperature-50
+    $radius(0,rounded-none,rounded-2xl)
+    rounded-tr-none
+    rounded-br-none
+
+    dark:bg-$colorTemperature-800
+  `,
+  dragHandle: `
+    w-full
+    h-full
+    flex
+    absolute
+    top-0
+    left-0
+    cursor-grab
+    active:cursor-grabbing
+  `,
+  dragHandleIcon: `
+    w-2
+    m-auto
+    text-$colorTemperature-$borderShadeLightMode(1)
+    dark:text-$colorTemperature-$borderShadeDarkMode(-1)
+    [&>svg>path]:fill-current
   `,
   moveDownIcon: `
     block
