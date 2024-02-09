@@ -216,7 +216,10 @@ export default {
     [&_svg]:w-full
   `,
   controlLabel: `
-    hidden
+    absolute
+    opacity-0
+    pointer-events-none
+    text-[0px]
   `,
   selectedIcon: `
     w-[0.75em] 

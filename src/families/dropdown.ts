@@ -78,6 +78,12 @@ export default {
     z-10
     dark:text-$colorTemperature-300
   `,
+  controlLabel: `
+    absolute
+    opacity-0
+    pointer-events-none
+    text-[0px]
+  `,
   selectIcon: `
     text-$scale
     inline-flex
