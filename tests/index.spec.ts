@@ -3,6 +3,6 @@ import theme from "../src/theme";
 
 describe("theme", () => {
   it("has metadata", () => {
-    expect(theme.meta.name).toBe("Regenisis");
+    expect(theme.meta.name).toBe("Regenesis");
   });
 });
