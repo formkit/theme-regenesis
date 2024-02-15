@@ -48,6 +48,7 @@ export default {
     text-$scale
     text-$colorTemperature-700
     min-w-0
+    min-h-[1.5em] ${"" /* fix for iOS which collapses empty date-style inputs (date, month, week, etc) */}
     grow
     outline-none
     bg-transparent
