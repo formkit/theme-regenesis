@@ -1,6 +1,6 @@
 export default {
   wrapper: `
-    group-data-[disabled="true"]:grayscale
+    group-data-[disabled=true]:grayscale
   `,
   input: `
     ${"" /* base styles */}
