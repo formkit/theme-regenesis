@@ -24,7 +24,7 @@ export default {
     block
     text-$scale(1,*)
     w-[1em]
-    aspect-square
+    aspect-[1/1]
     border
     border-$colorTemperature-$borderShadeLightMode
     text-transparent

@@ -41,7 +41,7 @@ export default {
     justify-center
     bg-$colorTemperature-50
     p-$spacing
-    [&>li]:aspect-square
+    [&>li]:aspect-[1/1]
     dark:bg-$colorTemperature-800
     $radius(0,rounded-none,rounded-2xl)
     rounded-tl-none
@@ -56,7 +56,7 @@ export default {
     items-center
     appearance-none
     justify-center
-    aspect-square
+    aspect-[1/1]
     text-$colorTemperature-500
     hover:text-$accentColor-$baseColorShade
     disabled:hover:text-inherit
@@ -75,7 +75,7 @@ export default {
     items-center
     appearance-none
     justify-center
-    aspect-square
+    aspect-[1/1]
     text-$colorTemperature-500
     hover:text-$accentColor-$baseColorShade
     disabled:hover:text-inherit
@@ -94,7 +94,7 @@ export default {
     items-center
     appearance-none
     justify-center
-    aspect-square
+    aspect-[1/1]
     text-$colorTemperature-500
     hover:text-$accentColor-$baseColorShade
     disabled:hover:text-inherit
@@ -113,7 +113,7 @@ export default {
     items-center
     appearance-none
     justify-center
-    aspect-square
+    aspect-[1/1]
     text-$colorTemperature-500
     hover:text-$accentColor-$baseColorShade
     disabled:hover:text-inherit
@@ -175,21 +175,21 @@ export default {
   moveDownIcon: `
     block
     w-[0.75em]
-    aspect-square
+    aspect-[1/1]
   `,
   moveUpIcon: `
     block
     w-[0.75em]
-    aspect-square
+    aspect-[1/1]
   `,
   removeIcon: `
     block
     w-[1.25em]
-    aspect-square
+    aspect-[1/1]
   `,
   addIcon: `
     block
     w-[1.25em]
-    aspect-square
+    aspect-[1/1]
   `,
 };

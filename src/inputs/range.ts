@@ -22,7 +22,7 @@ export default {
     ${"" /* webkit styles - thumb */}
     [&::-webkit-slider-thumb]:appearance-none
     [&::-webkit-slider-thumb]:w-[0.85em]
-    [&::-webkit-slider-thumb]:aspect-square
+    [&::-webkit-slider-thumb]:aspect-[1/1]
     [&::-webkit-slider-thumb]:bg-$accentColor-$baseColorShade
     [&::-webkit-slider-thumb]:rounded-full
     [&::-webkit-slider-thumb]:relative

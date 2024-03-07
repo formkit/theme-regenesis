@@ -43,7 +43,7 @@ export default {
     relative
     p-0.5
     left-0
-    aspect-square
+    aspect-[1/1]
     rounded-full
     transition-all
     w-[1.25em]

@@ -228,7 +228,7 @@ export default {
     bg-$accentColor-$baseColorShade
     text-white
     [&>[type=button]]:!w-[0.5em]
-    [&>[type=button]]:aspect-square
+    [&>[type=button]]:aspect-[1/1]
     [&>[type=button]]:!text-inherit
     [&>[type=button]]:cursor-pointer
     group-data-[active-selection=true]/tag:bg-$accentColor-$baseColorShade(-2,*)
