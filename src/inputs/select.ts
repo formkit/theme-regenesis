@@ -64,6 +64,7 @@ export default {
     "group/optgroup group-data-[multiple]:px-$spacing(-2) pt-$spacing(-2) font-bold text-$scale(-1,*)",
   option: `
     ${"" /* base styles */}
+    text-$colorTemperature-700
     group-data-[disabled]:opacity-50
     group-data-[disabled]:select-none
     group-data-[multiple]:checked:bg-$accentColor-100
@@ -75,6 +76,7 @@ export default {
     group-data-[multiple]:px-$spacing
 
     ${"" /* dark mode styles */}
+    dark:text-$colorTemperature-300
     dark:group-data-[multiple]:focus:bg-$accentColor-$baseColorShade(2,*)
     dark:group-data-[multiple]:checked:bg-$accentColor-$baseColorShade(2,*)
   `,
