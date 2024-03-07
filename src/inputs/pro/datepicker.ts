@@ -21,6 +21,7 @@ export default {
   panelWrapper: `
     group/panel
     absolute
+    z-[99]
     min-w-[20em]
     top-[calc(100%_+_0.5em)]
     shadow-[0_0_1.25em_rgba(0,0,0,.25)]

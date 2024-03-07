@@ -64,7 +64,7 @@ export default {
     absolute 
     left-0 
     top-full 
-    z-10 
+    z-[99]
     flex 
     w-[100vw] 
     max-w-[18.5em] 
