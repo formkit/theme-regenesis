@@ -60,10 +60,21 @@ export default {
   `,
   selectIcon:
     "absolute w-[1em] text-$colorTemperature-700 pointer-events-none right-$spacing group-data-[suffix-icon]:mr-[1.5em] dark:text-$colorTemperature-300",
-  optGroup:
-    "group/optgroup group-data-[multiple]:px-$spacing(-2) pt-$spacing(-2) font-bold text-$scale(-1,*)",
+  optGroup: `
+    bg-white
+    text-$colorTemperature-700
+    group/optgroup 
+    group-data-[multiple]:px-$spacing(-2) 
+    pt-$spacing(-2) 
+    font-bold 
+    text-$scale(-1,*)
+
+    dark:bg-$colorTemperature-800
+    dark:text-$colorTemperature-300
+  `,
   option: `
     ${"" /* base styles */}
+    bg-white
     text-$colorTemperature-700
     group-data-[disabled]:opacity-50
     group-data-[disabled]:select-none
@@ -76,6 +87,7 @@ export default {
     group-data-[multiple]:px-$spacing
 
     ${"" /* dark mode styles */}
+    dark:bg-$colorTemperature-800
     dark:text-$colorTemperature-300
     dark:group-data-[multiple]:focus:bg-$accentColor-$baseColorShade(2,*)
     dark:group-data-[multiple]:checked:bg-$accentColor-$baseColorShade(2,*)
