@@ -179,8 +179,10 @@ export default {
   option: `
     ml-[1.5em]
   `,
+  loadMore: `
+    data-[is-active]:bg-$accentColor-100
+  `,
   loadMoreInner: `
-    hover:text-$accentColor-$baseColorShade
     cursor-pointer
     dark:text-$colorTemperature-200
     dark:hover:text-$accentColor-$baseColorShade(-1,*)
