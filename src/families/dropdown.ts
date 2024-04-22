@@ -126,6 +126,15 @@ export default {
     group-data-[overscroll]:shadow-none
     group-data-[overscroll]:border-none
   `,
+  listitemGroup: `
+    px-2
+    py-2
+  `,
+  groupLabel: `
+    px-2: true
+    py-2: true
+    opacity-50
+  `,
   listbox: `
     bg-white
     $radius(0,rounded-none,rounded-2xl)
