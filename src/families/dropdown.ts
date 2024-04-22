@@ -126,6 +126,25 @@ export default {
     group-data-[overscroll]:shadow-none
     group-data-[overscroll]:border-none
   `,
+  listitemGroup: `
+    group/optgroup
+    last:pb-0
+    border-t
+    border-b
+    -mb-px
+    border-$colorTemperature-$borderShadeLightMode(-1,200,700)
+    dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)
+  `,
+  groupLabel: `
+    block
+    pt-$spacing(-1,*)
+    pb-$spacing(-2,*)
+    px-$spacing(1,*)
+    font-bold
+    pointer-events-none
+    text-$colorTemperature-$borderShadeLightMode(2,400,800)
+    dark:text-$colorTemperature-$borderShadeDarkMode(-2,100,500)
+  `,
   listbox: `
     bg-white
     $radius(0,rounded-none,rounded-2xl)
@@ -163,6 +182,9 @@ export default {
     data-[is-active]:before:ring-$accentColor-$baseColorShade(-1,*)
     data-[is-active]:before:ring-inset
     data-[is-active]:before:ring-offset-$accentColor-100
+
+    group-[]/optgroup:first:before:!rounded-none
+    group-[]/optgroup:last:before:!rounded-none
   `,
   selectedIcon: `
     flex
@@ -179,8 +201,10 @@ export default {
   option: `
     ml-[1.5em]
   `,
+  loadMore: `
+    data-[is-active]:bg-$accentColor-100
+  `,
   loadMoreInner: `
-    hover:text-$accentColor-$baseColorShade
     cursor-pointer
     dark:text-$colorTemperature-200
     dark:hover:text-$accentColor-$baseColorShade(-1,*)
