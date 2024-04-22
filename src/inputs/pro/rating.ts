@@ -1,11 +1,11 @@
 export default {
   inner: `
-    text-neutral-400
+    text-$colorTemperature-300
   `,
   itemsWrapper: `
     relative
     inline-flex
-    focus:border-neutral-400
+    focus:border-$accentColor-$baseColorShade
   `,
   onItemRow: `
     h-full
@@ -23,15 +23,17 @@ export default {
     text-yellow-400
   `,
   offItemWrapper: `
-  text-$colorTemperature-400
+    text-$colorTemperature-$borderShadeLightMode(0,300,500)
     w-full
     h-full
     [&>*]:w-full
     [&>*]:h-full
+    dark:text-$colorTemperature-$borderShadeDarkMode(0,400,600)
   `,
   ratingItem: `
     relative
     focus-within:outline
+    focus-within:outline-$accentColor-$baseColorShade
     w-[1.5em]
     h-[1.5em]
   `,
@@ -50,5 +52,8 @@ export default {
     w-[1.5em]
     h-[1.5em]
     flex
+  `,
+  messages: `
+    mt-$spacing(-1)
   `,
 };

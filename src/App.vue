@@ -4,6 +4,6 @@ import { FormKitKitchenSink } from "@formkit/vue";
 
 <template>
   <Suspense>
-    <FormKitKitchenSink :schemas="['rating']" />
+    <FormKitKitchenSink />
   </Suspense>
 </template>
