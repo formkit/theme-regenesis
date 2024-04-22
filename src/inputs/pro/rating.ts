@@ -53,6 +53,9 @@ export default {
     h-[1.5em]
     flex
   `,
+  input: `
+    outline-none
+  `,
   messages: `
     mt-$spacing(-1)
   `,

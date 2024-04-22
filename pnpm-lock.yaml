@@ -20,8 +20,8 @@ devDependencies:
     specifier: latest
     version: 1.6.2
   '@formkit/pro':
-    specifier: 0.122.16-b9c1fd1
-    version: 0.122.16-b9c1fd1(@formkit/core@1.6.2)(@formkit/inputs@1.6.2)
+    specifier: next
+    version: 0.122.16-2a540d8(@formkit/core@1.6.2)(@formkit/inputs@1.6.2)
   '@formkit/theme-editor':
     specifier: latest
     version: 0.5.1
@@ -435,8 +435,8 @@ packages:
       '@formkit/utils': 1.6.2
     dev: true
 
-  /@formkit/pro@0.122.16-b9c1fd1(@formkit/core@1.6.2)(@formkit/inputs@1.6.2):
-    resolution: {integrity: sha512-HXJF3U4BN6oRH7E7ZSO4dwFKy3eTIz52M6Oss6GAmJDl+sfuPaa6Wugws2QRbbPkQLYj6+rIb8cnSwC1A5UHZA==}
+  /@formkit/pro@0.122.16-2a540d8(@formkit/core@1.6.2)(@formkit/inputs@1.6.2):
+    resolution: {integrity: sha512-wuLMOFTvT7XU/8xMIvChIolU3++m6a/U4/V4+c1RTxTCtZxVcbNAI4XeHD9WQP/8pBj2bQ3lviZD7Xw+9WqUUw==}
     peerDependencies:
       '@formkit/core': ^1.5.9
       '@formkit/inputs': ^1.5.9
