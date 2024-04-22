@@ -127,13 +127,23 @@ export default {
     group-data-[overscroll]:border-none
   `,
   listitemGroup: `
-    px-2
-    py-2
+    group/optgroup
+    last:pb-0
+    border-t
+    border-b
+    -mb-px
+    border-$colorTemperature-$borderShadeLightMode(-1,200,700)
+    dark:border-$colorTemperature-$borderShadeDarkMode(1,200,700)
   `,
   groupLabel: `
-    px-2: true
-    py-2: true
-    opacity-50
+    block
+    pt-$spacing(-1,*)
+    pb-$spacing(-2,*)
+    px-$spacing(1,*)
+    font-bold
+    pointer-events-none
+    text-$colorTemperature-$borderShadeLightMode(2,400,800)
+    dark:text-$colorTemperature-$borderShadeDarkMode(-2,100,500)
   `,
   listbox: `
     bg-white
@@ -172,6 +182,9 @@ export default {
     data-[is-active]:before:ring-$accentColor-$baseColorShade(-1,*)
     data-[is-active]:before:ring-inset
     data-[is-active]:before:ring-offset-$accentColor-100
+
+    group-[]/optgroup:first:before:!rounded-none
+    group-[]/optgroup:last:before:!rounded-none
   `,
   selectedIcon: `
     flex
