@@ -1,7 +1,6 @@
 export default {
   inner: `
     relative
-    pl-0
   `,
   removeSelection: `
     self-stretch
@@ -24,6 +23,7 @@ export default {
     z-[99]
     min-w-[20em]
     top-[calc(100%_+_0.5em)]
+    left-0
     shadow-[0_0_1.25em_rgba(0,0,0,.25)]
     $radius(0,rounded-none,rounded-2xl)
     p-$spacing(4,*)
@@ -78,7 +78,6 @@ export default {
     justify-center
   `,
   input: `
-    pl-$spacing(2,2,4)
     placeholder:text-$colorTemperature-400
   `,
   monthsHeader: `
