@@ -142,7 +142,6 @@ export default {
     dark:bg-transparent
 
     [&.formkit-dropZone]:opacity-30
-    [&.formkit-dropZone]:pointer-events-none
     [&.formkit-dropZone]:blur-[2px]
   `,
   dragHandleWrapper: `
