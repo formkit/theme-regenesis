@@ -39,7 +39,7 @@ export default {
     appearance-none
     items-center
     text-[0px]
-    outline-none
+    outline-hidden
     hover:!text-red-$baseColorShade(-1,*)
     focus-visible:ring-2
     group-data-[disabled]:pointer-events-none

@@ -97,10 +97,10 @@ export default createTheme({
   variables: {
     radius: {
       editor: "radius",
-      value: "rounded",
+      value: "rounded-sm",
       scale: [
         "rounded-none",
-        "rounded",
+        "rounded-sm",
         "rounded-lg",
         "rounded-xl",
         "rounded-2xl",
@@ -158,7 +158,7 @@ export default createTheme({
     },
     inputShadow: {
       editor: "shadow",
-      value: "shadow",
+      value: "shadow-sm",
       min: "shadow-none",
       max: "shadow-lg",
     },
@@ -201,14 +201,14 @@ export default createTheme({
     tagRadius: {
       advanced: true,
       editor: "radius",
-      value: "rounded",
-      scale: ["rounded-none", "rounded", "rounded-full"],
+      value: "rounded-sm",
+      scale: ["rounded-none", "rounded-sm", "rounded-full"],
     },
     swatchRadius: {
       advanced: true,
       editor: "radius",
-      value: "rounded",
-      scale: ["rounded-none", "rounded", "rounded-full"],
+      value: "rounded-sm",
+      scale: ["rounded-none", "rounded-sm", "rounded-full"],
     },
   },
   inputs: {

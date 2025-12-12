@@ -240,7 +240,7 @@ export default {
     $radius
     col-start-1
     col-end-1
-    focus-visible:outline-none
+    focus-visible:outline-hidden
     focus-visible:ring-2
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:ring-offset-2
@@ -265,7 +265,7 @@ export default {
     $radius
     mx-1
     hover:border-$accentColor-$baseColorShade
-    focus-visible:outline-none
+    focus-visible:outline-hidden
     focus-visible:ring-2
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:ring-offset-2
@@ -285,7 +285,7 @@ export default {
     $radius
     mx-1
     hover:border-$accentColor-$baseColorShade
-    focus-visible:outline-none
+    focus-visible:outline-hidden
     focus-visible:ring-2
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:ring-offset-2
@@ -304,7 +304,7 @@ export default {
     $radius
     mx-1
     hover:border-$accentColor-$baseColorShade
-    focus-visible:outline-none
+    focus-visible:outline-hidden
     focus-visible:ring-2
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:ring-offset-2
@@ -321,7 +321,7 @@ export default {
     hover:rounded
     col-start-3
     col-end-3
-    focus-visible:outline-none
+    focus-visible:outline-hidden
     focus-visible:ring-2
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:ring-offset-2
@@ -345,7 +345,7 @@ export default {
     p-0
     self-stretch
     cursor-pointer
-    focus-visible:outline-none
+    focus-visible:outline-hidden
     focus-visible:ring-2
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:ring-offset-2

@@ -14,7 +14,7 @@ export default {
     group-data-[multiple]:border
     group-data-[multiple]:border-$colorTemperature-$borderShadeLightMode(-1,200,600)
     group-data-[multiple]:mb-$spacing(-1,0.5,2)
-    outline-none
+    outline-hidden
     data-[active-selection=true]:ring-2
     data-[active-selection=true]:ring-$accentColor-$baseColorShade(-1,*)
     dark:bg-$colorTemperature-600

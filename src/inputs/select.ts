@@ -40,7 +40,7 @@ export default {
     text-$colorTemperature-700
     text-ellipsis
     min-w-0
-    outline-none
+    outline-hidden
     bg-transparent
     group-data-[disabled]:!cursor-not-allowed
     group-data-[prefix-icon]:!pl-0
@@ -81,7 +81,7 @@ export default {
     group-data-[multiple]:checked:bg-$accentColor-100
     group-data-[multiple]:focus:bg-$accentColor-100
     group-data-[multiple]:text-$scale(-1,*)
-    group-data-[multiple]:outline-none
+    group-data-[multiple]:outline-hidden
     group-data-[multiple]:border-none
     group-data-[multiple]:py-$spacing(-1)
     group-data-[multiple]:px-$spacing

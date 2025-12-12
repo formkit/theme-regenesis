@@ -33,7 +33,7 @@ export default {
     shrink
     !py-$spacing
     !px-$spacing(2,2,4)
-    outline-none
+    outline-hidden
     bg-transparent
     selection:bg-$accentColor-100
     placeholder:text-$colorTemperature-400

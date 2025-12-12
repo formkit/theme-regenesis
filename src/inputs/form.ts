@@ -26,7 +26,7 @@ export default {
     group-[]/summary:text-$scale(-1,*)
   `,
   messageLink: `
-    group-[]/summary:outline-none
+    group-[]/summary:outline-hidden
     group-[]/summary:focus-visible:ring-2
     group-[]/summary:ring-$accentColor-$baseColorShade
   `,

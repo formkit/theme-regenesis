@@ -41,7 +41,7 @@ export default {
     text-$colorTemperature-700
     text-ellipsis
     min-w-0
-    outline-none
+    outline-hidden
     bg-transparent
     group-data-[disabled]:!cursor-not-allowed
     group-data-[prefix-icon]:!pl-0
@@ -229,7 +229,7 @@ export default {
     $tagRadius
     mr-$spacing(-2,0.5,1.5)
     mb-$spacing(-2,0.5,1.5)
-    outline-none
+    outline-hidden
     data-[active-selection=true]:ring-2
     data-[active-selection=true]:ring-$accentColor-$baseColorShade(-1,*)
   `,

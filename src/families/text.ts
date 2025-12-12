@@ -50,7 +50,7 @@ export default {
     min-w-0
     min-h-[1.5em] ${"" /* fix for iOS which collapses empty date-style inputs (date, month, week, etc) */}
     grow
-    outline-none
+    outline-hidden
     bg-transparent
     selection:bg-$accentColor-100
     placeholder:text-$colorTemperature-400

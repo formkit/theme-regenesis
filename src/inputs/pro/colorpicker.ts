@@ -17,7 +17,7 @@ export default {
     group-data-[inline]:shadow-none 
     group-data-[inline]:p-0 
     group-data-[inline]:bg-transparent 
-    group-data-[inline]:outline-none 
+    group-data-[inline]:outline-hidden 
     group-data-[inline]:!ring-0 
     group-data-[inline]:!w-full 
     group-data-[inline]:$radius(0,rounded-none,rounded-2xl)
@@ -30,7 +30,7 @@ export default {
     $radius 
     text-sm 
     cursor-pointer 
-    outline-none
+    outline-hidden
   `,
   canvasSwatchPreviewWrapper: `
     relative 
@@ -212,7 +212,7 @@ export default {
     -translate-x-1/2
     pointer-events-none 
     data-[prevent-focus-style]:shadow-[0_0_0_2px_rgba(255,255,255,1),0_0_0_3px_rgba(0,0,0,0.2)] 
-    focus-visible:outline-none 
+    focus-visible:outline-hidden 
     focus-visible:ring-2 
     focus-visible:ring-offset-2 
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
@@ -281,7 +281,7 @@ export default {
     [&>input::-webkit-outer-spin-button]:appearance-none
     [&>input::-webkit-inner-spin-button]:appearance-none
     [&>input::-webkit-inner-spin-button]:m-0
-    [&>input:focus]:outline-none
+    [&>input:focus]:outline-hidden
     [&>input:focus]:ring-1
     [&>input:focus]:ring-$accentColor-$baseColorShade
     [&>input:focus]:border-$accentColor-$baseColorShade
@@ -389,7 +389,7 @@ export default {
     [&>canvas]:w-full
     [&>canvas]:aspect-[1/1]
     [&>canvas]:$swatchRadius
-    [&>canvas:focus-visible]:outline-none
+    [&>canvas:focus-visible]:outline-hidden
     [&>canvas:focus-visible]:ring-2
     [&>canvas:focus-visible]:ring-$accentColor-$baseColorShade(-1,*)
     [&>canvas:focus-visible]:ring-offset-2

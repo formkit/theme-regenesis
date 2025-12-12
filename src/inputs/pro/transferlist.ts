@@ -71,7 +71,7 @@ export default {
     overflow-x-hidden 
     overflow-y-auto 
     dark:bg-transparent
-    outline-none
+    outline-hidden
   `,
   transferlistListItem: `
     py-$spacing 
@@ -206,7 +206,7 @@ export default {
     py-$spacing(-1) 
     w-full 
     bg-transparent 
-    outline-none 
+    outline-hidden 
     text-$scale(-1,*)
   `,
   transferlistSearchClear: `
@@ -250,7 +250,7 @@ export default {
     disabled:cursor-not-allowed 
     disabled:opacity-50 
     disabled:hover:text-current 
-    disabled:hover:outline-none
+    disabled:hover:outline-hidden
     focus-visible:ring-1
     focus-visible:ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:z-10
@@ -261,7 +261,7 @@ export default {
     dark:disabled:!text-$colorTemperature-600 
     dark:disabled:bg-$colorTemperature-900 
     dark:disabled:hover:text-current 
-    dark:disabled:hover:outline-none 
+    dark:disabled:hover:outline-hidden 
     dark:hover:text-$accentColor-$baseColorShade(-1,*)
   `,
   fastForwardIcon: `

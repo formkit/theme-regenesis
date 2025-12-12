@@ -6,7 +6,7 @@ export default {
     ${"" /* base styles */}
     font-bold
     $radius
-    outline-none
+    outline-hidden
     flex
     !text-$scale(-1,*)
     px-$spacing(7,*)
