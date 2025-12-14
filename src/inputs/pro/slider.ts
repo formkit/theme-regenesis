@@ -112,7 +112,7 @@ export default {
     text-xs
     leading-none
     whitespace-nowrap
-    $radius(0,rounded-none,rounded)
+    $radius(0,rounded-none,rounded-sm)
     opacity-0
     pointer-events-none
     transition-opacity

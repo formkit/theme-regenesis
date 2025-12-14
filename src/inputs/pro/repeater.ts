@@ -133,7 +133,7 @@ export default {
     w-full
     mb-$spacing
     bg-white
-    rounded
+    rounded-sm
     border
     border-$colorTemperature-$borderShadeLightMode(-1,200,600)
     $radius(0,rounded-none,rounded-2xl)

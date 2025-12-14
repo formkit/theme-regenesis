@@ -302,7 +302,7 @@ export default {
     p-1
     mt-0.5
     text-$colorTemperature-600
-    $radius(0,rounded-none,rounded)
+    $radius(0,rounded-none,rounded-sm)
     select-none
     dark:text-$colorTemperature-400
   `,

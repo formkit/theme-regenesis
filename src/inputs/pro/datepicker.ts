@@ -318,7 +318,7 @@ export default {
     py-$spacing(-3,*)
     $radius
     hover:bg-$colorTemperature-100
-    hover:rounded
+    hover:rounded-sm
     col-start-3
     col-end-3
     focus-visible:outline-hidden

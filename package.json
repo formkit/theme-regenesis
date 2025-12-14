@@ -28,7 +28,7 @@
     "lint": "eslint"
   },
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "dependencies": {
     "@formkit/theme-creator": "latest"
