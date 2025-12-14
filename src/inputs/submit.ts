@@ -21,7 +21,7 @@ export default {
     dark:text-white
     dark:ring-offset-$accentColor-$baseColorShade(-1,*)
 
-    ${"" /* Styles for loading state — before element */}
+    ${"" /* Styles for loading state - before element */}
     before:transition-all
     group-data-[loading=true]/form:before:content['']
     group-data-[loading=true]/form:before:block
