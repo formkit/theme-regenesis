@@ -14,9 +14,9 @@ export default {
     items-center
     mb-$spacing(-1)
     text-$scale(-1,*)
-    ring-offset-2
     ring-$accentColor-$baseColorShade(-1,*)
     focus-visible:ring-2
+    focus-visible:ring-offset-2
     group-data-[disabled]:!cursor-not-allowed
     $inputShadow
     group-data-[prefix-icon]:pl-$spacing(5,*)
