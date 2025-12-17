@@ -22,8 +22,8 @@ export default {
     group-data-[disabled]:bg-$colorTemperature-100
     group-data-[disabled]:!cursor-not-allowed
     $inputShadow
-    group-[]/repeater:shadow-none
-    group-[]/multistep:shadow-none
+    group-[&]/repeater:shadow-none
+    group-[&]/multistep:shadow-none
     ${"" /* dark mode styles */}
     dark:bg-transparent
     dark:border-$colorTemperature-$borderShadeDarkMode
@@ -183,8 +183,8 @@ export default {
     data-[is-active]:before:ring-inset
     data-[is-active]:before:ring-offset-$accentColor-100
 
-    group-[]/optgroup:first:before:!rounded-none
-    group-[]/optgroup:last:before:!rounded-none
+    group-[&]/optgroup:first:before:!rounded-none
+    group-[&]/optgroup:last:before:!rounded-none
   `,
   selectedIcon: `
     flex

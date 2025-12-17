@@ -24,8 +24,8 @@ export default {
     border
     border-$accentColor-$baseColorShade
     text-$accentColor-$baseColorShade
-    group-[]/repeater:$inputShadow(-1,*)
-    group-[]/multistep:$inputShadow(-1,*)
+    group-[&]/repeater:$inputShadow(-1,*)
+    group-[&]/multistep:$inputShadow(-1,*)
 
     ${"" /* dark mode styles */}
     dark:border-$accentColor-500

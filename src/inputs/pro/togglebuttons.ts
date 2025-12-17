@@ -35,15 +35,15 @@ export default {
     dark:aria-[pressed=true]:text-white
     
     ${
-      "" /** 
+      "" /**
       if our button is part of an option group
       then by default, turn off all rounding.
       We will need to selectively re-enable based
-      on they layout of the group and a given 
+      on they layout of the group and a given
       buttons position within the group.
     */
     }
-    group-[]/option:!rounded-none
+    group-[&]/option:!rounded-none
 
     ${"" /** selectively add back and override rounding for first child */}
     group-data-[vertical=false]/options:group-first/option:!$radius
@@ -69,25 +69,25 @@ export default {
       then we need to selectively manage borders.
     */
     }
-    group-data-[vertical=false]/options:group-[]/option:!border-r-0
+    group-data-[vertical=false]/options:group-[&]/option:!border-r-0
     group-data-[vertical=false]/options:group-last/option:!border-r
 
-    group-data-[vertical=false]/options:group-[]/option:aria-[pressed=true]:border-x-$accentColor-500
+    group-data-[vertical=false]/options:group-[&]/option:aria-[pressed=true]:border-x-$accentColor-500
     group-data-[vertical=false]/options:group-first/option:aria-[pressed=true]:border-l-$accentColor-$baseColorShade
     group-data-[vertical=false]/options:group-last/option:aria-[pressed=true]:border-r-$accentColor-$baseColorShade
 
-    dark:group-data-[vertical=false]/options:group-[]/option:aria-[pressed=true]:border-x-$accentColor-$baseColorShade
+    dark:group-data-[vertical=false]/options:group-[&]/option:aria-[pressed=true]:border-x-$accentColor-$baseColorShade
     dark:group-data-[vertical=false]/options:group-first/option:aria-[pressed=true]:border-l-$accentColor-$baseColorShade
     dark:group-data-[vertical=false]/options:group-last/option:aria-[pressed=true]:border-r-$accentColor-$baseColorShade
     
-    group-data-[vertical=true]/options:group-[]/option:!border-b-0
+    group-data-[vertical=true]/options:group-[&]/option:!border-b-0
     group-data-[vertical=true]/options:group-last/option:!border-b
 
-    group-data-[vertical=true]/options:group-[]/option:aria-[pressed=true]:border-y-$accentColor-500
+    group-data-[vertical=true]/options:group-[&]/option:aria-[pressed=true]:border-y-$accentColor-500
     group-data-[vertical=true]/options:group-first/option:aria-[pressed=true]:border-t-$accentColor-$baseColorShade
     group-data-[vertical=true]/options:group-last/option:aria-[pressed=true]:border-b-$accentColor-$baseColorShade
 
-    dark:group-data-[vertical=true]/options:group-[]/option:aria-[pressed=true]:border-y-$accentColor-$baseColorShade
+    dark:group-data-[vertical=true]/options:group-[&]/option:aria-[pressed=true]:border-y-$accentColor-$baseColorShade
     dark:group-data-[vertical=true]/options:group-first/option:aria-[pressed=true]:border-t-$accentColor-$baseColorShade
     dark:group-data-[vertical=true]/options:group-last/option:aria-[pressed=true]:border-b-$accentColor-$baseColorShade
   `,

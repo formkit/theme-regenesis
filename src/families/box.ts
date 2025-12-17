@@ -38,8 +38,8 @@ export default {
     group-data-[disabled]:grayscale
     $inputShadow
     peer-disabled:cursor-not-allowed
-    group-[]/repeater:shadow-none
-    group-[]/multistep:shadow-none
+    group-[&]/repeater:shadow-none
+    group-[&]/multistep:shadow-none
 
     ${"" /* dark mode styles */}
     dark:border-$colorTemperature-$borderShadeDarkMode

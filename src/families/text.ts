@@ -33,8 +33,8 @@ export default {
     group-data-[disabled]:bg-$colorTemperature-100
     group-data-[disabled]:!cursor-not-allowed
     $inputShadow
-    group-[]/repeater:shadow-none
-    group-[]/multistep:shadow-none
+    group-[&]/repeater:shadow-none
+    group-[&]/multistep:shadow-none
 
     ${"" /* dark mode styles */}
     dark:bg-transparent

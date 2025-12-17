@@ -23,11 +23,11 @@ export default {
   `,
   messages: ``,
   message: `
-    group-[]/summary:text-$scale(-1,*)
+    group-[&]/summary:text-$scale(-1,*)
   `,
   messageLink: `
-    group-[]/summary:outline-hidden
-    group-[]/summary:focus-visible:ring-2
-    group-[]/summary:ring-$accentColor-$baseColorShade
+    group-[&]/summary:outline-hidden
+    group-[&]/summary:focus-visible:ring-2
+    group-[&]/summary:ring-$accentColor-$baseColorShade
   `,
 };
