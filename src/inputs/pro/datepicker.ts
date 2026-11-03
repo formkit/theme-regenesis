@@ -184,6 +184,7 @@ export default {
     items-center
     justify-center
     text-center
+    select-none
     text-$colorTemperature-700
     w-[2.25em]
     h-[2.25em]
