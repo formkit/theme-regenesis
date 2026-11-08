@@ -31,6 +31,14 @@ export default {
     z-10
     dark:bg-$colorTemperature-800
 
+    ${"" /* inline: render in place (#1187) */}
+    group-data-[inline]:static
+    group-data-[inline]:mt-$spacing
+    group-data-[inline]:shadow-none
+    group-data-[inline]:border
+    group-data-[inline]:border-$colorTemperature-$borderShadeLightMode(-1,200,600)
+    group-data-[inline]:dark:border-$colorTemperature-$borderShadeDarkMode(1,400,700)
+
     ${"" /* mobile touch styles */}
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:!fixed
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:top-auto
