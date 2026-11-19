@@ -2,11 +2,11 @@ export default {
   // inherits family:dropdown classes
   inner: `
     py-$spacing
-    pr-0
-    pl-0
+    pe-0
+    ps-0
   `,
   tags: `
-    pl-$spacing(2,2,4)
+    ps-$spacing(2,2,4)
   `,
   tagWrapper: `
     ${
@@ -28,7 +28,7 @@ export default {
     first:mb-$spacing(-2,0.5,1.5)
   `,
   listboxButton: `
-    ml-auto
+    ms-auto
     shrink-0
   `,
 };

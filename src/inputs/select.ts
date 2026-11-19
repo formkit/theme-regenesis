@@ -35,7 +35,7 @@ export default {
     p-$spacing
     py-$spacing
     px-$spacing(2,2,4)
-    pr-[2em]
+    pe-[2em]
     text-$scale
     text-$colorTemperature-700
     text-ellipsis
@@ -43,8 +43,8 @@ export default {
     outline-hidden
     bg-transparent
     group-data-[disabled]:!cursor-not-allowed
-    group-data-[prefix-icon]:!pl-0
-    group-data-[suffix-icon]:!pr-0
+    group-data-[prefix-icon]:!ps-0
+    group-data-[suffix-icon]:!pe-0
     data-[placeholder]:text-$colorTemperature-400
     group-data-[multiple]:!p-0
     selection:bg-$accentColor-100
@@ -59,7 +59,7 @@ export default {
     bg-none
   `,
   selectIcon:
-    "absolute w-[1em] text-$colorTemperature-700 pointer-events-none right-$spacing group-data-[suffix-icon]:mr-[1.5em] dark:text-$colorTemperature-300",
+    "absolute w-[1em] text-$colorTemperature-700 pointer-events-none end-$spacing group-data-[suffix-icon]:me-[1.5em] dark:text-$colorTemperature-300",
   optGroup: `
     bg-white
     text-$colorTemperature-700
@@ -93,7 +93,7 @@ export default {
     dark:group-data-[multiple]:checked:bg-$accentColor-$baseColorShade(2,*)
   `,
   prefixIcon:
-    "ml-$spacing text-$colorTemperature-600 dark:text-$colorTemperature-300",
+    "ms-$spacing text-$colorTemperature-600 dark:text-$colorTemperature-300",
   suffixIcon:
-    "mr-$spacing text-$colorTemperature-600 dark:text-$colorTemperature-300",
+    "me-$spacing text-$colorTemperature-600 dark:text-$colorTemperature-300",
 };

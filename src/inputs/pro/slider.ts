@@ -10,7 +10,7 @@ export default {
     flex
     items-center
     [&>[data-type=number]]:mb-0
-    [&>[data-type=number]]:ml-$spacing(2)
+    [&>[data-type=number]]:ms-$spacing(2)
     [&>[data-type=number]]:shrink
     [&>[data-type=number]]:grow-0
     [&[data-has-mark-labels=true]_[id^=track]]:mb-$spacing(5,3,6)
@@ -143,7 +143,7 @@ export default {
     [&>div>div::after]:content-[""]
     [&>div>div::after]:absolute
     [&>div>div::after]:top-1/2
-    [&>div>div::after]:left-[105.5%]
+    [&>div>div::after]:start-[105.5%]
     [&>div>div::after]:w-[12%]
     [&>div>div::after]:h-[1px]
     [&>div>div::after]:bg-$colorTemperature-$borderShadeLightMode

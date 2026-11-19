@@ -11,14 +11,14 @@ export default {
     justify-between
     w-full
     py-$spacing
-    pl-$spacing(2,2,4)
-    pr-0
+    ps-$spacing(2,2,4)
+    pe-0
     text-$scale
     text-$colorTemperature-700
-    text-left
+    text-start
     group-data-[disabled]:!cursor-not-allowed
-    group-data-[prefix-icon]:!pl-0
-    group-data-[suffix-icon]:!pr-0
+    group-data-[prefix-icon]:!ps-0
+    group-data-[suffix-icon]:!pe-0
     data-[placeholder]:text-$colorTemperature-400
     selection:bg-$accentColor-100
     ${"" /* dark mode styles */}
@@ -33,7 +33,7 @@ export default {
     overflow-hidden
   `,
   selection: `
-    [&>*]:ml-0
+    [&>*]:ms-0
   `,
   selections: `
     inline-flex
@@ -41,7 +41,7 @@ export default {
   `,
   selectionsItem: `
     whitespace-nowrap
-    mr-1
+    me-1
   `,
   tagWrapper: `
     ${

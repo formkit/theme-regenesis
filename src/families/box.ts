@@ -16,7 +16,7 @@ export default {
   `,
   decorator: `
     ${"" /* base styles */}
-    mr-$spacing(-1,1.5,2.5)
+    me-$spacing(-1,1.5,2.5)
     bg-white
     ring-$accentColor-$baseColorShade(-1,*)
     peer-checked:border-$accentColor-$baseColorShade
@@ -81,9 +81,9 @@ export default {
     text-$scale(-2,*)
     -mt-1
     mb-$spacing(-2,1.5,3)
-    ml-[min(2em,1.7rem)]
+    ms-[min(2em,1.7rem)]
     relative
-    left-$spacing(-4,*)
+    start-$spacing(-4,*)
   `,
   help: `
     mb-$spacing(-2,0.5,2)

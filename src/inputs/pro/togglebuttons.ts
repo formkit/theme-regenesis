@@ -49,19 +49,19 @@ export default {
     group-data-[vertical=false]/options:group-first/option:!$radius
     group-data-[vertical=true]/options:group-first/option:!$radius(0,rounded-none,rounded-2xl)
 
-    group-data-[vertical=false]/options:group-first/option:!rounded-tr-none
-    group-data-[vertical=false]/options:group-first/option:!rounded-br-none
-    group-data-[vertical=true]/options:group-first/option:!rounded-bl-none
-    group-data-[vertical=true]/options:group-first/option:!rounded-br-none
+    group-data-[vertical=false]/options:group-first/option:!rounded-se-none
+    group-data-[vertical=false]/options:group-first/option:!rounded-ee-none
+    group-data-[vertical=true]/options:group-first/option:!rounded-es-none
+    group-data-[vertical=true]/options:group-first/option:!rounded-ee-none
 
     ${"" /** selectively add back and override rounding for last child */}
     group-data-[vertical=false]/options:group-last/option:!$radius
     group-data-[vertical=true]/options:group-last/option:!$radius(0,rounded-none,rounded-2xl)
 
-    group-data-[vertical=false]/options:group-last/option:!rounded-tl-none
-    group-data-[vertical=false]/options:group-last/option:!rounded-bl-none
-    group-data-[vertical=true]/options:group-last/option:!rounded-tl-none
-    group-data-[vertical=true]/options:group-last/option:!rounded-tr-none
+    group-data-[vertical=false]/options:group-last/option:!rounded-ss-none
+    group-data-[vertical=false]/options:group-last/option:!rounded-es-none
+    group-data-[vertical=true]/options:group-last/option:!rounded-ss-none
+    group-data-[vertical=true]/options:group-last/option:!rounded-se-none
 
     ${
       "" /** 
@@ -69,16 +69,16 @@ export default {
       then we need to selectively manage borders.
     */
     }
-    group-data-[vertical=false]/options:group-[&]/option:!border-r-0
-    group-data-[vertical=false]/options:group-last/option:!border-r
+    group-data-[vertical=false]/options:group-[&]/option:!border-e-0
+    group-data-[vertical=false]/options:group-last/option:!border-e
 
     group-data-[vertical=false]/options:group-[&]/option:aria-[pressed=true]:border-x-$accentColor-500
-    group-data-[vertical=false]/options:group-first/option:aria-[pressed=true]:border-l-$accentColor-$baseColorShade
-    group-data-[vertical=false]/options:group-last/option:aria-[pressed=true]:border-r-$accentColor-$baseColorShade
+    group-data-[vertical=false]/options:group-first/option:aria-[pressed=true]:border-s-$accentColor-$baseColorShade
+    group-data-[vertical=false]/options:group-last/option:aria-[pressed=true]:border-e-$accentColor-$baseColorShade
 
     dark:group-data-[vertical=false]/options:group-[&]/option:aria-[pressed=true]:border-x-$accentColor-$baseColorShade
-    dark:group-data-[vertical=false]/options:group-first/option:aria-[pressed=true]:border-l-$accentColor-$baseColorShade
-    dark:group-data-[vertical=false]/options:group-last/option:aria-[pressed=true]:border-r-$accentColor-$baseColorShade
+    dark:group-data-[vertical=false]/options:group-first/option:aria-[pressed=true]:border-s-$accentColor-$baseColorShade
+    dark:group-data-[vertical=false]/options:group-last/option:aria-[pressed=true]:border-e-$accentColor-$baseColorShade
     
     group-data-[vertical=true]/options:group-[&]/option:!border-b-0
     group-data-[vertical=true]/options:group-last/option:!border-b

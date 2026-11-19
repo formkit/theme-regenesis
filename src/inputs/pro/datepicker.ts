@@ -7,8 +7,8 @@ export default {
     text-$scale
     flex
     items-center
-    ml-$spacing(-2,0,1.5)
-    mr-$spacing
+    ms-$spacing(-2,0,1.5)
+    me-$spacing
     text-$colorTemperature-700
     hover:text-red-400
     z-10
@@ -23,7 +23,7 @@ export default {
     z-[99]
     min-w-[20em]
     top-[calc(100%_+_0.5em)]
-    left-0
+    start-0
     shadow-[0_0_1.25em_rgba(0,0,0,.25)]
     $radius(0,rounded-none,rounded-2xl)
     p-$spacing(4,*)
@@ -44,7 +44,7 @@ export default {
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:top-auto
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:max-w-none
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:bottom-0
-    [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:left-0
+    [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:start-0
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:rounded-none
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:w-full
   `,
@@ -242,7 +242,7 @@ export default {
     justify-center
   `,
   prev: `
-    mr-auto
+    me-auto
     px-$spacing(1,*)
     py-$spacing(-3,*)
     hover:bg-$colorTemperature-100
@@ -259,6 +259,7 @@ export default {
     flex
     w-[0.75em]
     select-none
+    rtl:-scale-x-100
     text-$colorTemperature-700
     [&>svg]:w-full
     dark:text-$colorTemperature-300
@@ -322,7 +323,7 @@ export default {
     dark:hover:border-$accentColor-$baseColorShade(-1,*)
   `,
   next: `
-    ml-auto
+    ms-auto
     px-$spacing(1,*)
     py-$spacing(-3,*)
     $radius
@@ -342,6 +343,7 @@ export default {
     flex
     w-[0.75em]
     select-none
+    rtl:-scale-x-100
     text-$colorTemperature-700
     [&>svg]:w-full
     dark:text-$colorTemperature-300

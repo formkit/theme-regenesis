@@ -49,7 +49,7 @@ export default {
     focus:ring-0
   `,
   prefixIcon:
-    "!ml-$spacing !mr-0 text-$colorTemperature-600 dark:text-$colorTemperature-300",
+    "!ms-$spacing !me-0 text-$colorTemperature-600 dark:text-$colorTemperature-300",
   suffixIcon:
-    "!mr-$spacing !ml-0 text-$colorTemperature-600 dark:text-$colorTemperature-300",
+    "!me-$spacing !ms-0 text-$colorTemperature-600 dark:text-$colorTemperature-300",
 };
