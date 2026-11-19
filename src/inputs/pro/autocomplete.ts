@@ -35,8 +35,8 @@ export default {
   selection: `
     $radius
     just
-    pl-$spacing
-    [&>*]:ml-0
+    ps-$spacing
+    [&>*]:ms-0
     dark:text-$colorTemperature-200
   `,
 };

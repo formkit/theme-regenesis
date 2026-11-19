@@ -29,12 +29,12 @@ export default {
     group-data-[loading=true]/form:before:w-5
     group-data-[loading=true]/form:before:h-5
     group-data-[loading=true]/form:before:rounded-full
-    group-data-[loading=true]/form:before:mr-$spacing(2,*)
-    group-data-[loading=true]/form:before:-ml-$spacing(-1,*)
+    group-data-[loading=true]/form:before:me-$spacing(2,*)
+    group-data-[loading=true]/form:before:-ms-$spacing(-1,*)
     group-data-[loading=true]/form:before:border-2
     group-data-[loading=true]/form:before:border-solid
     group-data-[loading=true]/form:before:border-white
-    group-data-[loading=true]/form:before:border-r-transparent
+    group-data-[loading=true]/form:before:border-e-transparent
   `,
   prefixIcon: `
     text-$colorTemperature-100

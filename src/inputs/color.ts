@@ -28,10 +28,10 @@ export default {
   `,
   prefixIcon: `
     group-data-[prefix-icon]:m-$spacing(-2)
-    group-data-[prefix-icon]:mr-0
+    group-data-[prefix-icon]:me-0
   `,
   suffixIcon: `
     group-data-[suffix-icon]:m-$spacing(-2)
-    group-data-[prefix-icon]:ml-0
+    group-data-[prefix-icon]:ms-0
   `,
 };

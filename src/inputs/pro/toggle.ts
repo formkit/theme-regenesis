@@ -14,7 +14,7 @@ export default {
   inner: `
     peer
     inline-block
-    mr-$spacing
+    me-$spacing
   `,
   input: `
     peer
@@ -33,16 +33,17 @@ export default {
     text-[10px]
     font-bold
     select-none
-    left-full
+    start-full
     top-1/2
     -translate-x-full
+    rtl:translate-x-full
     -translate-y-1/2
     px-1
   `,
   thumb: `
     relative
     p-0.5
-    left-0
+    start-0
     aspect-[1/1]
     rounded-full
     transition-all
@@ -61,9 +62,10 @@ export default {
     transition-all
     bg-$colorTemperature-400
     peer-checked:bg-$accentColor-$baseColorShade
-    peer-checked:[&>div:last-child]:left-full
+    peer-checked:[&>div:last-child]:start-full
     peer-checked:[&>div:last-child]:-translate-x-full
-    peer-checked:[&>div:first-child:not(:last-child)]:left-0
+    rtl:peer-checked:[&>div:last-child]:translate-x-full
+    peer-checked:[&>div:first-child:not(:last-child)]:start-0
     peer-checked:[&>div:first-child:not(:last-child)]:translate-x-0
     $inputShadow(-1,*)
     peer-focus-visible:ring-2

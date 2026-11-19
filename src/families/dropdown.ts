@@ -35,8 +35,8 @@ export default {
     ${"" /* base styles */}
     grow
     p-$spacing
-    pr-0
-    pl-$spacing(2,2,4)
+    pe-0
+    ps-$spacing(2,2,4)
     text-$scale
     text-$colorTemperature-700
     text-ellipsis
@@ -44,8 +44,8 @@ export default {
     outline-hidden
     bg-transparent
     group-data-[disabled]:!cursor-not-allowed
-    group-data-[prefix-icon]:!pl-0
-    group-data-[suffix-icon]:!pr-0
+    group-data-[prefix-icon]:!ps-0
+    group-data-[suffix-icon]:!pe-0
     placeholder:text-$colorTemperature-400
     selection:bg-$accentColor-100
     ${"" /* dark mode styles */}
@@ -101,14 +101,14 @@ export default {
     m-auto
   `,
   prefixIcon: `
-    !ml-$spacing
-    !mr-0
+    !ms-$spacing
+    !me-0
     text-$colorTemperature-600
     dark:text-$colorTemperature-300
   `,
   suffixIcon: `
-    !mr-$spacing
-    !ml-0
+    !me-$spacing
+    !ms-0
     text-$colorTemperature-600
     dark:text-$colorTemperature-300
   `,
@@ -191,7 +191,7 @@ export default {
     absolute
     items-center
     text-$accentColor-$baseColorShade
-    left-$spacing
+    start-$spacing
     text-$scale
     h-[1em]
     w-[1em]
@@ -199,7 +199,7 @@ export default {
     [&>svg]:w-full
   `,
   option: `
-    ml-[1.5em]
+    ms-[1.5em]
   `,
   loadMore: `
     data-[is-active]:bg-$accentColor-100
@@ -227,7 +227,7 @@ export default {
   tagWrapper: `
     group/tag
     $tagRadius
-    mr-$spacing(-2,0.5,1.5)
+    me-$spacing(-2,0.5,1.5)
     mb-$spacing(-2,0.5,1.5)
     outline-hidden
     data-[active-selection=true]:ring-2
@@ -259,7 +259,7 @@ export default {
     group-data-[active-selection=true]/tag:text-$colorTemperature-700
   `,
   tagLabel: `
-    mr-1
+    me-1
   `,
   emptyMessage: `
     flex

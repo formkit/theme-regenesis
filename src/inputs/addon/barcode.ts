@@ -35,7 +35,7 @@ export default {
     $radius
     flex
     top-$spacing
-    right-$spacing
+    end-$spacing
     z-20
 
     [&>svg]:w-[1.25em]
@@ -65,11 +65,11 @@ export default {
     h-[1.5rem]
     $radius(0,rounded-none,rounded-xl)
     top-0
-    left-0
-    border-l-4
+    start-0
+    border-s-4
     border-t-4
-    rounded-tr-none
-    rounded-bl-none
+    rounded-se-none
+    rounded-es-none
   `,
   overlayDecoratorTopRight: `
     absolute
@@ -77,11 +77,11 @@ export default {
     h-[1.5rem]
     $radius(0,rounded-none,rounded-xl)
     top-0
-    right-0
-    border-r-4
+    end-0
+    border-e-4
     border-t-4
-    rounded-tl-none
-    rounded-br-none
+    rounded-ss-none
+    rounded-ee-none
   `,
   overlayDecoratorBottomRight: `
     absolute
@@ -89,11 +89,11 @@ export default {
     h-[1.5rem]
     $radius(0,rounded-none,rounded-xl)
     bottom-0
-    right-0
-    border-r-4
+    end-0
+    border-e-4
     border-b-4
-    rounded-tr-none
-    rounded-bl-none
+    rounded-se-none
+    rounded-es-none
   `,
   overlayDecoratorBottomLeft: `
     absolute
@@ -101,10 +101,10 @@ export default {
     h-[1.5rem]
     $radius(0,rounded-none,rounded-xl)
     bottom-0
-    left-0
-    border-l-4
+    start-0
+    border-s-4
     border-b-4
-    rounded-tl-none
-    rounded-br-none
+    rounded-ss-none
+    rounded-ee-none
   `,
 };

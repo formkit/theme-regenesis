@@ -10,7 +10,7 @@ export default {
   fileItemIcon: `
     h-[1em]
     w-[1em]
-    mr-$spacing
+    me-$spacing
     shrink-0
   `,
   fileItem: `
@@ -31,7 +31,7 @@ export default {
     group-data-[has-multiple]/list:text-$scale(-1,*)
   `,
   fileRemove: `
-    right-$spacing
+    end-$spacing
     ring-$accentColor-$baseColorShade(-1,*)
     $radius
     z-20
@@ -47,12 +47,12 @@ export default {
     
     peer-data-[has-multiple]:absolute
     peer-data-[has-multiple]:bottom-[max(0.5em,8px)]
-    peer-data-[has-multiple]:left-$spacing(2,*)
+    peer-data-[has-multiple]:start-$spacing(2,*)
     peer-data-[has-multiple]:text-$accentColor-$baseColorShade
     peer-data-[has-multiple]:text-$scale(-2,*)
     peer-data-[has-multiple]:whitespace-nowrap
 
-    group-data-[prefix-icon]:peer-data-[has-multiple]:left-$spacing
+    group-data-[prefix-icon]:peer-data-[has-multiple]:start-$spacing
 
     dark:hover:!text-red-400
   `,
@@ -89,6 +89,6 @@ export default {
   `,
   noFilesIcon: `
     w-[1em]
-    mr-$spacing
+    me-$spacing
   `,
 };

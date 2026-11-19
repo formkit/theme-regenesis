@@ -44,8 +44,8 @@ export default {
     [&>li]:aspect-[1/1]
     dark:bg-$colorTemperature-800
     $radius(0,rounded-none,rounded-2xl)
-    rounded-tl-none
-    rounded-bl-none
+    rounded-ss-none
+    rounded-es-none
   `,
   downControl: `
     w-[1.5em]
@@ -149,8 +149,8 @@ export default {
     w-8
     bg-$colorTemperature-50
     $radius(0,rounded-none,rounded-2xl)
-    rounded-tr-none
-    rounded-br-none
+    rounded-se-none
+    rounded-ee-none
 
     dark:bg-$colorTemperature-800
   `,
@@ -160,7 +160,7 @@ export default {
     flex
     absolute
     top-0
-    left-0
+    start-0
     cursor-grab
     active:cursor-grabbing
   `,

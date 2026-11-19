@@ -20,8 +20,8 @@ export const multiStep = {
     group-data-[tab-style=tab]/wrapper:border-b-0
     group-data-[tab-style=tab]/wrapper:border-$colorTemperature-$borderShadeLightMode(-1,*)
     group-data-[tab-style=tab]/wrapper:$radius(0,rounded-none,rounded-2xl)
-    group-data-[tab-style=tab]/wrapper:rounded-bl-none
-    group-data-[tab-style=tab]/wrapper:rounded-br-none
+    group-data-[tab-style=tab]/wrapper:rounded-es-none
+    group-data-[tab-style=tab]/wrapper:rounded-ee-none
 
     dark:group-data-[tab-style=tab]/wrapper:border-$colorTemperature-$borderShadeDarkMode(1,200,800)
 
@@ -46,10 +46,10 @@ export const multiStep = {
     group-data-[tab-style=tab]/wrapper:bg-$colorTemperature-100
     group-data-[tab-style=tab]/wrapper:py-$spacing(3,*)
     group-data-[tab-style=tab]/wrapper:px-$spacing(4,*)
-    group-data-[tab-style=tab]/wrapper:border-r
+    group-data-[tab-style=tab]/wrapper:border-e
     group-data-[tab-style=tab]/wrapper:border-b
     group-data-[tab-style=tab]/wrapper:border-$colorTemperature-$borderShadeLightMode(-1,*)
-    group-data-[tab-style=tab]/wrapper:last:border-r-0
+    group-data-[tab-style=tab]/wrapper:last:border-e-0
     group-data-[tab-style=tab]/wrapper:shadow-[inset_0_-0.5em_0.5em_-0.5em_rgba(0,0,0,0.1)]
     group-data-[tab-style=tab]/wrapper:data-[active=true]:bg-white
     group-data-[tab-style=tab]/wrapper:data-[active=true]:font-bold
@@ -89,7 +89,7 @@ export const multiStep = {
     group-data-[tab-style=progress]/wrapper:after:w-full
     group-data-[tab-style=progress]/wrapper:after:absolute
     group-data-[tab-style=progress]/wrapper:after:top-[0.5em]
-    group-data-[tab-style=progress]/wrapper:after:left-[calc(50%+0.5em)]
+    group-data-[tab-style=progress]/wrapper:after:start-[calc(50%+0.5em)]
     group-data-[tab-style=progress]/wrapper:after:bg-$colorTemperature-$borderShadeLightMode(-1,300,500)
     group-data-[tab-style=progress]/wrapper:data-[valid=true]:data-[visited=true]:after:bg-$accentColor-$baseColorShade
     group-data-[tab-style=progress]/wrapper:last:after:hidden
@@ -127,7 +127,7 @@ export const multiStep = {
     group-data-[tab-style=tab]/wrapper:w-5
     group-data-[tab-style=tab]/wrapper:h-5
     group-data-[tab-style=tab]/wrapper:top-$spacing(-1,*)
-    group-data-[tab-style=tab]/wrapper:right-$spacing(-1,*)
+    group-data-[tab-style=tab]/wrapper:end-$spacing(-1,*)
 
     group-data-[tab-style=progress]/wrapper:w-[1.25rem]
     group-data-[tab-style=progress]/wrapper:h-[1.25rem]
@@ -154,8 +154,8 @@ export const multiStep = {
     dark:border-$colorTemperature-$borderShadeDarkMode(1,200,800)
     
     group-data-[tab-style=tab]/wrapper:border-t-0
-    group-data-[tab-style=tab]/wrapper:rounded-tl-none
-    group-data-[tab-style=tab]/wrapper:rounded-tr-none
+    group-data-[tab-style=tab]/wrapper:rounded-ss-none
+    group-data-[tab-style=tab]/wrapper:rounded-se-none
 
     group-data-[tab-style=progress]/wrapper:$inputShadow
 
@@ -173,9 +173,9 @@ export const step = {
     [&>*]:grow-0
   `,
   stepPrevious: `
-    mr-$spacing(-1,*)
+    me-$spacing(-1,*)
   `,
   stepNext: `
-    ml-auto
+    ms-auto
   `,
 };

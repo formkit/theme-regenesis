@@ -31,8 +31,8 @@ export default {
   prefixIcon: `
     flex
     items-center
-    -ml-$spacing(-2,0,1)
-    mr-$spacing
+    -ms-$spacing(-2,0,1)
+    me-$spacing
     text-$scale
     h-[1em]
     w-[1em]
@@ -41,8 +41,8 @@ export default {
   suffixIcon: `
     flex
     items-center
-    -mr-$spacing(-2,0,1.5)
-    ml-$spacing
+    -me-$spacing(-2,0,1.5)
+    ms-$spacing
     text-$scale
     h-[1em]
     w-[1em]
@@ -53,7 +53,7 @@ export default {
     flex
     items-center
     my-auto
-    ml-$spacing
+    ms-$spacing
     text-$scale
     text-$colorTemperature-500
     h-[1em]
@@ -67,7 +67,7 @@ export default {
     p-$spacing
     items-center
     justify-center
-    [&>span]:mr-$spacing`,
+    [&>span]:me-$spacing`,
   help: `
     text-$colorTemperature-500
     text-$scale(-2,*)

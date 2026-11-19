@@ -52,7 +52,7 @@ export default {
     dark:text-$colorTemperature-400
   `,
   transferlistHeaderItemCount: `
-    ml-auto 
+    ms-auto 
     text-xs 
     min-w-[1.5em] 
     [line-height:1.5em] 
@@ -88,7 +88,7 @@ export default {
     cursor-pointer 
     items-center 
     bg-white 
-    pl-[1.5em] 
+    ps-[1.5em] 
     first:-mt-px 
     first:border-t 
     aria-selected:z-[2] 
@@ -212,7 +212,7 @@ export default {
   transferlistSearchClear: `
     flex
     w-[0.75em]
-    mr-$spacing
+    me-$spacing
     [&_svg]:w-full
   `,
   controlLabel: `
@@ -224,7 +224,7 @@ export default {
   selectedIcon: `
     w-[0.75em] 
     absolute 
-    left-[0.5em] 
+    start-[0.5em] 
     select-none 
     text-$accentColor-$baseColorShade 
     dark:text-$accentColor-$baseColorShade(-1,*)
@@ -274,6 +274,7 @@ export default {
     [&>svg]:max-h-[1rem] 
     rotate-90 
     sm:rotate-0
+    rtl:sm:-scale-x-100
   `,
   moveRightIcon: `
     w-4 
@@ -285,6 +286,7 @@ export default {
     [&>svg]:max-h-[1rem] 
     rotate-90 
     sm:rotate-0
+    rtl:sm:-scale-x-100
   `,
   moveLeftIcon: `
     w-4 
@@ -296,6 +298,7 @@ export default {
     [&>svg]:max-h-[1rem] 
     rotate-90 
     sm:rotate-0
+    rtl:sm:-scale-x-100
   `,
   rewindIcon: `
     w-4 
@@ -307,6 +310,7 @@ export default {
     [&>svg]:max-h-[1rem] 
     rotate-90 
     sm:rotate-0
+    rtl:sm:-scale-x-100
   `,
   messages: `
     mt-$spacing

@@ -19,8 +19,8 @@ export default {
     focus-visible:ring-offset-2
     group-data-[disabled]:!cursor-not-allowed
     $inputShadow
-    group-data-[prefix-icon]:pl-$spacing(5,*)
-    group-data-[suffix-icon]:pr-$spacing(5,*)
+    group-data-[prefix-icon]:ps-$spacing(5,*)
+    group-data-[suffix-icon]:pe-$spacing(5,*)
     border
     border-$accentColor-$baseColorShade
     text-$accentColor-$baseColorShade

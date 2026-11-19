@@ -12,7 +12,7 @@ export default {
     relative 
     inline-flex 
     !w-auto 
-    pl-$spacing 
+    ps-$spacing 
     group-data-[inline]:border-none 
     group-data-[inline]:shadow-none 
     group-data-[inline]:p-0 
@@ -55,14 +55,14 @@ export default {
     selection:bg-$accentColor-100 
     font-mono 
     inline-block 
-    ml-$spacing 
-    mr-$spacing(-2) 
+    ms-$spacing 
+    me-$spacing(-2) 
     dark:text-$colorTemperature-300 
     dark:selection:text-$colorTemperature-700
   `,
   panel: `
     absolute 
-    left-0 
+    start-0 
     top-full 
     z-[99]
     flex 
@@ -92,7 +92,7 @@ export default {
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:top-auto
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:max-w-none
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:bottom-0
-    [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:left-0
+    [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:start-0
     [@media(max-width:431px)_and_(hover:none)]:group-[&:not([data-inline])]:rounded-none
   `,
   panelClose: `
@@ -107,11 +107,11 @@ export default {
     border-b 
     border-$colorTemperature-$borderShadeLightMode(-1) 
     w-[calc(100%+1rem)] 
-    -ml-2 
+    -ms-2 
     pt-0 
-    pr-$spacing 
+    pe-$spacing 
     pb-$spacing(-2) 
-    pl-$spacing 
+    ps-$spacing 
     dark:border-$colorTemperature-$borderShadeDarkMode(1)
   `,
   closeIcon: `
@@ -158,9 +158,9 @@ export default {
     aspect-[1/1] 
     overflow-hidden 
     [grid-area:b] 
-    mr-$spacing
+    me-$spacing
     after:absolute 
-    after:left-0 
+    after:start-0 
     after:top-0 
     after:h-full 
     after:w-full 
@@ -184,7 +184,7 @@ export default {
   eyeDropper: `
     [grid-area:e] 
     w-[2em] 
-    ml-$spacing 
+    ms-$spacing 
     inline-flex 
     self-center 
     justify-center 
@@ -262,7 +262,7 @@ export default {
     items-center
     justify-center
     w-full
-    mr-$spacing(-2,0.5,1.5)
+    me-$spacing(-2,0.5,1.5)
     
     ${"" /* nested input styles */}
     [&>input]:p-1
@@ -341,7 +341,7 @@ export default {
     last:mb-0
   `,
   swatchGroupLabel: `
-    ml-1
+    ms-1
     block
     w-full
     text-$scale(-1,xs,sm)
